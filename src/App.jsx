@@ -5,13 +5,13 @@ import Test1 from "./Test1";
 
 function App() {
     return (
-        <div>
-            <Header />
-            <ThemeProvider>
+        <ThemeProvider>
+            <div>
+                <Header />
                 <ThemeSwitch />
-            </ThemeProvider>
-            <Test1 />
-        </div>
+                <Test1 />
+            </div>
+        </ThemeProvider>
     );
 }
 

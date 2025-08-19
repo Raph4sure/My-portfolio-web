@@ -29,11 +29,28 @@
 
 
     /* screen */
-    --breakpoint-phone: 600px;
+
+    
+
+
+    /* --breakpoint-phone: 600px;
     --breakpoint-tablet: 900px;
     --breakpoint-laptop: 1200px;
-    --breakpoint-desktop: 1920px;
+    --breakpoint-desktop: 1920px; */
 }
+
+
+
+/* @custom-variant 2xl (@media (max-width: 1535px));
+@custom-variant xl (@media (max-width: 1279px));
+@custom-variant lg (@media (max-width: 1023px));
+@custom-variant md (@media (max-width: 767px));
+@custom-variant phone (@media (max-width: 639px)); */
+
+@custom-variant desktop (@media (max-width: 1920px));
+@custom-variant laptop (@media (max-width: 1200px));
+@custom-variant tablet (@media (max-width: 900px));
+@custom-variant phone (@media (max-width: 600px));
 
 
 @layer base {

@@ -29,10 +29,10 @@
 
 
     /* screen */
-    /* --breakpoint-phone: 600px;
-    --breakpoint-tab-port: 900px;
-    --breakpoint-tab-land: 1200px;
-    --breakpoint-desktop: 1920px; */
+    --breakpoint-phone: 600px;
+    --breakpoint-tablet: 900px;
+    --breakpoint-laptop: 1200px;
+    --breakpoint-desktop: 1920px;
 }
 
 
@@ -91,7 +91,7 @@
 
 
 /* Desktop-first responsive utilities - default is >1920px */
-@utility desktop {
+/* @utility desktop {
   @media (width <= 1920px) { @slot; }
 }
 
@@ -105,7 +105,7 @@
 
 @utility mobile {
   @media (width <= 600px) { @slot; }
-}
+} */
 
 
 /* :root {
