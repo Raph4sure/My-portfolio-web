@@ -167,3 +167,463 @@ button:focus-visible {
         background-color: #f9f9f9;
     }
 } */
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0;200;300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
+}
+
+html,
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+  font-family: "Mona Sans", sans-serif;
+}
+
+@theme {
+  --font-sans: "Mona Sans", sans-serif;
+  --color-white-50: #d9ecff;
+  --color-black-50: #1c1c21;
+  --color-black-100: #0e0e10;
+  --color-black-200: #282732;
+  --color-blue-50: #839cb5;
+  --color-blue-100: #2d2d38;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  
+  .flex-col-center {
+    @apply flex flex-col justify-center items-center;
+  }
+  
+  .padding-x {
+    @apply px-5 md:px-10;
+  }
+  
+  .section-padding {
+    @apply px-5 md:px-10 md:mt-40 mt-20;
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
+  }
+  
+  .app-showcase {
+    @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
+  }
+  
+  .container {
+    @apply mx-auto;
+  }
+  
+  .timeline-logo {
+    @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:mr-20;
+  }
+  
+  .showcase-layout {
+    @apply flex xl:flex-row flex-col gap-10 justify-between;
+  }
+  
+  .exp-card-wrapper {
+    @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
+  }
+  
+  .hero-text {
+    @apply size-8 md:size-10 object-contain;
+  }
+  
+  .grid-3-cols-md-tight {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0;
+  }
+  
+  .grid-4-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7;
+  }
+  
+  .grid-12-cols {
+    @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
+  }
+  
+  .hero-badge {
+    @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
+  }
+  
+  .hero-layout {
+    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start;
+  }
+  
+  .hero-3d-layout {
+    @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative;
+  }
+  
+  .grid-base {
+    @apply grid grid-cols-1;
+  }
+  
+  .section-padding {
+    @apply px-5 md:px-10 md:mt-40 mt-20;
+  }
+  
+  .grid-2-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+  
+  .mt-responsive {
+    @apply xl:mt-20 md:mt-0 mt-40;
+  }
+  
+  .grid-3-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
+  }
+  
+  .tech-icon-wrapper {
+    @apply flex justify-center items-center w-52 h-60 relative;
+  }
+  
+  .footer {
+    @apply my-10 md:mt-20 mt-10 text-white-50 px-5 md:px-20 xl:px-20 flex items-center justify-center;
+  }
+  
+  form {
+    @apply block text-white-50 grid grid-cols-3 gap-5 md:gap-0 w-full;
+  }
+  
+  input,
+  textarea {
+    @apply w-full px-4 py-4 md:text-base text-sm placeholder:text-blue-50 bg-blue-100 border-0 focus:ring-0 outline-none rounded-lg;
+  }
+  
+  a {
+    @apply text-white-50 hover:text-blue-100 transition-all duration-300 ease-in-out;
+  }
+  
+  .glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(10px);
+    filter: saturate(200);
+  }
+  
+  .card:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Additional styles that were in the video */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #ffffff, #a0a0a0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  @apply px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300;
+}
+
+.section-title {
+  @apply text-4xl md:text-6xl font-bold mb-10 text-center;
+}
+
+.section-subtitle {
+  @apply text-lg md:text-xl text-blue-50 text-center max-w-3xl mx-auto mb-20;
+}
+
+.timeline-item {
+  @apply relative pl-16 pb-10 border-l-2 border-blue-100 last:border-0;
+}
+
+.timeline-date {
+  @apply absolute left-0 top-0 text-blue-50 font-semibold;
+}
+
+.timeline-content {
+  @apply bg-black-200 p-6 rounded-xl;
+}
+
+.project-card {
+  @apply bg-black-200 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105;
+}
+
+.skill-card {
+  @apply bg-black-200 p-6 rounded-xl flex flex-col items-center text-center hover:bg-black-100 transition-all duration-300;
+}
+
+.skill-icon {
+  @apply w-16 h-16 mb-4;
+}
+
+.contact-input {
+  @apply col-span-3 md:col-span-1;
+}
+
+.contact-textarea {
+  @apply col-span-3;
+}
+
+.contact-button {
+  @apply col-span-3 bg-white text-black font-semibold py-4 rounded-lg hover:bg-gray-200 transition-all duration-300;
+}
+
+.social-link {
+  @apply w-12 h-12 rounded-full bg-black-200 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300;
+}
+
+.nav-link {
+  @apply text-white hover:text-blue-100 transition-colors duration-300;
+}
+
+.nav-link.active {
+  @apply text-blue-100;
+}
+
+.mobile-menu {
+  @apply fixed top-0 right-0 h-full w-80 bg-black-100 z-50 p-10 transform translate-x-full transition-transform duration-300 ease-in-out;
+}
+
+.mobile-menu.open {
+  @apply translate-x-0;
+}
+
+.overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-40 hidden;
+}
+
+.overlay.open {
+  @apply block;
+}
+
+.hamburger {
+  @apply flex flex-col justify-center items-center w-8 h-8 space-y-1 cursor-pointer;
+}
+
+.hamburger-line {
+  @apply w-6 h-0.5 bg-white transition-all duration-300;
+}
+
+.hamburger.open .hamburger-line:nth-child(1) {
+  @apply rotate-45 translate-y-1.5;
+}
+
+.hamburger.open .hamburger-line:nth-child(2) {
+  @apply opacity-0;
+}
+
+.hamburger.open .hamburger-line:nth-child(3) {
+  @apply -rotate-45 -translate-y-1.5;
+}
+
+.scroll-indicator {
+  @apply absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce;
+}
+
+.scroll-indicator span {
+  @apply block w-4 h-4 border-r-2 border-b-2 border-white rotate-45;
+}
+
+.tech-stack {
+  @apply flex flex-wrap justify-center gap-4 mt-10;
+}
+
+.tech-item {
+  @apply bg-black-200 px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition-all duration-300;
+}
+
+.project-image {
+  @apply w-full h-64 object-cover;
+}
+
+.project-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition-opacity duration-300;
+}
+
+.project-card:hover .project-overlay {
+  @apply opacity-100;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.cursor-dot.hover {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.cursor-outline.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.preloader {
+  @apply fixed inset-0 bg-black z-50 flex items-center justify-center;
+}
+
+.preloader-content {
+  @apply text-2xl font-semibold;
+}
+
+.preloader-dot {
+  @apply inline-block w-2 h-2 bg-white rounded-full mx-1 animate-pulse;
+}
+
+.preloader-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.preloader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.preloader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading-bar {
+  @apply fixed top-0 left-0 h-1 bg-white transition-all duration-300;
+  width: 0%;
+}
+
+@media (max-width: 768px) {
+  .hero-layout {
+    height: 90vh;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-input,
+  .contact-textarea {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile-menu {
+    width: 100%;
+  }
+  
+  .hero-3d-layout {
+    font-size: 24px;
+  }
+  
+  .section-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 5rem;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-left.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-right.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scale-in.appear {
+  opacity: 1;
+  transform: scale(1);
+}

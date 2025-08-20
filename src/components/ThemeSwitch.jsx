@@ -7,7 +7,7 @@ function ThemeSwitch() {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <div className="fixed top-8 right-[20%]  cursor-pointer tablet:right-[17%] laptop:right-[2%] ">
+        <div className="fixed top-3 right-[20%]  cursor-pointer tablet:right-[17%] laptop:right-[2%] ">
             <div onClick={toggleTheme}>
                 {theme === "light" ? (
                     <img src={dayMode} alt="day mode" className="w-15 h-auto" />
