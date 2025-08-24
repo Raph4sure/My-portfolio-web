@@ -3,19 +3,21 @@ import ThemeSwitch from "./components/ThemeSwitch";
 import { ThemeProvider } from "./context/ThemeContext";
 import Section1 from "./components_main/sections/Section1";
 import Test1 from "./Test1";
+import NavBar from "./components_main/NavBar";
 
 function App() {
     return (
         <ThemeProvider>
             <section className="">
-                {/* <div className="flex flex-col"> */}
+                {/* <div className="z-50">
                     <Header />
                     <ThemeSwitch />
-                {/* </div> */}
+                </div> */}
                 {/* <Test1 /> */}
-                {/* <div> */}
+                <NavBar/>
+                <div>
                 <Section1 />
-                {/* </div> */}
+                </div>
             </section>
         </ThemeProvider>
     );

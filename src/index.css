@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0;200;300;400;500;600;700;800;900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&family=Signika:wght@300..700&display=swap");
+
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -26,6 +28,9 @@
         153,
         153
     ); /* NavBarMenuHeaderText,  NavBarMenuHeaderBorder*/
+
+    --font-playwrite: "Playwrite CA", cursive;
+    --font-signika: "Signika", sans-serif;
 
     --font-sans: "Mona Sans", sans-serif;
     --color-white-50: #d9ecff;
@@ -52,9 +57,12 @@
 @custom-variant phone (@media (max-width: 639px)); */
 
 @custom-variant desktop (@media (max-width: 1920px));
+@custom-variant laptop-land (@media (max-width: 1620px));
+@custom-variant laptop-land2 (@media (max-width: 1480px));
 @custom-variant laptop (@media (max-width: 1200px));
+@custom-variant tablet-land (@media (max-width: 1069px));
 @custom-variant tablet (@media (max-width: 900px));
-@custom-variant phone (@media (max-width: 600px));
+@custom-variant phone (@media (max-width: 640px));
 
 @layer base {
     *,
@@ -121,7 +129,7 @@ body {
     scroll-behavior: smooth;
     /* font-family: "Mona Sans", sans-serif; */
     font-family: Signika, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 
 @layer utilities {
@@ -143,6 +151,59 @@ body {
 }
 
 @layer components {
+    .underline-animation {
+        @apply relative;
+      }
+      
+      .underline-animation::before {
+        content: '';
+        @apply absolute bottom-[-10px] left-0 w-0 h-[0.1rem] bg-[#ee0653] transition-all duration-500;
+      }
+      
+      .underline-animation:hover::before {
+        @apply w-full;
+      }
+
+    .group1 {
+        @apply flex flex-col;
+    }
+    .cta-wrapper {
+        @apply relative z-20 cursor-pointer;
+    }
+
+    .cta-button {
+        @apply px-4 py-2 laptop:py-1  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    }
+    .bg-circle {
+        @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] group-hover:size-10 group-hover:right-1 rounded-full bg-white-50 transition-all duration-500;
+    }
+    .text {
+        @apply md:text-lg text-black transition-all duration-300 group-hover:text-white-50 group-hover:-translate-x-[0.2rem] xl:translate-x-0  z-30;
+    }
+
+    .arrow-wrapper {
+        @apply group-hover:bg-white-50 size-9 rounded-full absolute top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden right-1;
+    }
+
+    @keyframes bounce-x {
+        0%,
+        100% {
+            transform: translateX(-25%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+    }
+
+    .animate-bounce-x {
+        animation: bounce-x 1s infinite;
+    }
+    /* .img {
+        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce-x;
+      } */
+
     .navbar {
         @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
     }
@@ -233,7 +294,7 @@ body {
     }
 
     a {
-        @apply text-white-50 hover:text-blue-100 transition-all duration-300 ease-in-out;
+        @apply text-white-50 hover:text-blue-50 transition-all duration-300 ease-in-out;
     }
 
     .glow {
@@ -527,7 +588,7 @@ body {
     flex-direction: column;
     transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
     overflow: hidden;
-    height: 1.5rem; /* Adjust based on your text size */
+    /* height: 1.9rem; Adjust based on your text size */
 }
 
 .wrapper {
