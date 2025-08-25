@@ -1,5 +1,5 @@
-import {navItems} from "../components/header/nav/Nav"
-import Buttton from "./reUsable/Buttton";
+import {navItems} from "../../components/header/nav/Nav"
+import Buttton from "../reUsable/Buttton";
 
 function NavBar() {
     return (
