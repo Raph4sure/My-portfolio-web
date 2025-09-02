@@ -28,8 +28,8 @@ const sliding1 = {
 
 function Section1() {
     return (
-        <section className="relative overflow-hidden grid grid-cols-2 place-items-center tablet:grid-cols-1 gap-8 t-[1.8rem] laptop-land2:text-[1.4rem] laptop:text-[1.4rem] tablet-land:text-[1.2rem] tablet:text-[1.7rem] phone:text-[1.4rem]">
-            <header className="ml-2 laptop:mr-[-2rem] tablet:mr-0">
+        <main className="w-full h-fullrelative overflow-hidden grid grid-cols-2 place-items-center tablet:grid-cols-1 gap-8 t-[1.8rem] laptop-land2:text-[1.4rem] laptop:text-[1.4rem] tablet-land:text-[1.2rem] tablet:text-[1.7rem] phone:text-[1.4rem]">
+            <header className="w-full ml-2 laptop:mr-[-2rem] tablet:mr-0">
                 <div className="flex flex-col gap-7">
                     <motion.div
                         variants={sliding1}
@@ -104,7 +104,7 @@ function Section1() {
                     />
                 </div>
             </header>
-        </section>
+        </main>
         // <section id="hero" className="relative overflow-hidden">
         //     <div className="absolute top-0 left-0 z-10">
         //         <img />
