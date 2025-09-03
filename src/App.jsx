@@ -9,6 +9,7 @@ import Services from "./components_main/sections/services/Services";
 import Portfolio from "./components_main/sections/Portfolio";
 import Certification from "./components_main/sections/Certification";
 import Tools from "./components_main/sections/Tools";
+import Review from "./components_main/sections/Review";
 
 function App() {
     return (
@@ -43,9 +44,14 @@ function App() {
         // <section>
         //     <Certification />
         // </section>
+        // <section>
+        //     <Tools />
+        // </section>
+
         <section>
-            <Tools />
+            <Review/>
         </section>
+
     );
 }
 

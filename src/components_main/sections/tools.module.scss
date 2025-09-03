@@ -1,19 +1,20 @@
-@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
-@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
+@import url("https://fonts.cdnfonts.com/css/poppins");
 
 // These styles were on the `body` tag, we move them to a container
 .sceneContainer {
-    background-color: #D2D2D2;
-    background-image:
-        repeating-linear-gradient(
-            to right, transparent 0 100px,
+    background-color: #d2d2d2;
+    background-image: repeating-linear-gradient(
+            to right,
+            transparent 0 100px,
             #25283b22 100px 101px
         ),
         repeating-linear-gradient(
-            to bottom, transparent 0 100px,
+            to bottom,
+            transparent 0 100px,
             #25283b22 100px 101px
         );
-    
+
     // The `body::before` styles are now applied to our container
     &::before {
         position: absolute;
@@ -22,8 +23,8 @@
         left: 50%;
         height: 90%;
         transform: translateX(-50%);
-        content: '';
-        background-image: url(/images/bg.png); // Path from public folder
+        content: "";
+        background-image: url(/tools/bg.png); // Path from public folder
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: top center;
@@ -52,8 +53,9 @@
         .item {
             position: absolute;
             inset: 0;
-            transform: 
-                rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            transform: rotateY(
+                    calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+                )
                 translateZ(550px);
 
             img {
@@ -66,24 +68,28 @@
 
     .content {
         position: absolute;
-        bottom: 0;
-        left: 50%;
+        bottom: 47%;
+        left: 45%;
         transform: translateX(-50%);
         width: min(1400px, 100vw);
         height: max-content;
         padding-bottom: 100px;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         z-index: 1;
 
         h1 {
-            font-family: 'ICA Rubrik', sans-serif;
-            font-size: 16em;
-            line-height: 1em;
-            color: #25283B;
-            position: relative;
+            font-family: "ICA Rubrik", sans-serif;
+            font-size: 5rem;
+            // line-height: 1em;
+            color: #25283b;
+            position: absolute;
+            left: -30%;
+            top: -10%;
+            transform: rotate(-90deg);
 
             &::after {
                 position: absolute;
@@ -96,17 +102,29 @@
         }
 
         .author {
-            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
             text-align: right;
             max-width: 200px;
-            
+            // position: absolute;
+
             h2 {
-                font-size: 3em;
+                font-size: 2em;
+                position: absolute;
+                bottom: 90%;
+                left: 35%;
+
+            
+            }
+
+            p{
+                position: absolute;
+                top: 13.5rem;
+                left: 15%;
             }
         }
 
         .model {
-            background-image: url(/tools/model.png); // Path from public folder
+            // background-image: url(/tools/model.png); // Path from public folder
             width: 100%;
             height: 75vh;
             position: absolute;
@@ -130,17 +148,23 @@
 }
 
 // Media Queries (nested inside the main .banner selector for clarity)
-@media screen and (max-width: 1023px) {
+
+@media screen and (max-width: 1223px) {
     .banner {
         .slider {
-            width: 160px;
+            width: 180px;
             height: 200px;
-            left: calc(50% - 80px);
+            top: 10%;
+            left: calc(50% - 100px);
 
             .item {
-                transform: 
-                    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-                    translateZ(300px);
+                transform: rotateY(
+                        calc(
+                            (var(--position) - 1) * (360 / var(--quantity)) *
+                                1deg
+                        )
+                    )
+                    translateZ(450px);
             }
         }
         .content {
@@ -148,7 +172,8 @@
                 text-align: center;
                 width: 100%;
                 text-shadow: 0 10px 20px #000;
-                font-size: 7em;
+                font-size: 7rem;
+                opacity: 0;
             }
             .author {
                 color: #fff;
@@ -159,6 +184,80 @@
                 width: 100%;
                 text-align: center;
                 padding: 0 30px;
+
+                    h2 {
+                        // font-size: 2em;
+                        // position: absolute;
+                        // bottom: 90%;
+                        // left: 35%;
+                        opacity: 0;
+        
+                    
+                    }
+        
+                    p{
+                        position: absolute;
+                        top: 8rem;
+                        left: 15%;
+                        font-size: 1.3rem;
+                    }
+
+            }
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .banner {
+        .slider {
+            width: 160px;
+            height: 200px;
+            left: calc(50% - 80px);
+
+            .item {
+                transform: rotateY(
+                        calc(
+                            (var(--position) - 1) * (360 / var(--quantity)) *
+                                1deg
+                        )
+                    )
+                    translateZ(300px);
+            }
+        }
+        .content {
+            h1 {
+                text-align: center;
+                width: 100%;
+                text-shadow: 0 10px 20px #000;
+                font-size: 7rem;
+                opacity: 0;
+            }
+            .author {
+                color: #fff;
+                padding: 20px;
+                text-shadow: 0 10px 20px #000;
+                z-index: 2;
+                max-width: unset;
+                width: 100%;
+                text-align: center;
+                padding: 0 30px;
+
+                    h2 {
+                        // font-size: 2em;
+                        // position: absolute;
+                        // bottom: 90%;
+                        // left: 35%;
+                        opacity: 0;
+        
+                    
+                    }
+        
+                    p{
+                        position: absolute;
+                        top: 8rem;
+                        left: 15%;
+                        font-size: 1.3rem;
+                    }
+
             }
         }
     }
@@ -170,15 +269,42 @@
             width: 100px;
             height: 150px;
             left: calc(50% - 50px);
-            
+
             .item {
-                transform: 
-                    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+                transform: rotateY(
+                        calc(
+                            (var(--position) - 1) * (360 / var(--quantity)) *
+                                1deg
+                        )
+                    )
                     translateZ(180px);
             }
         }
-        .content h1 {
-            font-size: 5em;
+        .content{
+            h1 {
+                font-size: 5em;
+
+            }
+
+        }
+        .author{
+            // h2 {
+            //     font-size: 2em;
+            //     position: absolute;
+            //     bottom: 90%;
+            //     left: 35%;
+
+            
+            // }
+
+            // p{
+            //     position: absolute;
+            //     top: 13.5rem;
+            //     left: 15%;
+            //     font-size: 1rem;
+            // }
+        }
+
         }
     }
-}
+

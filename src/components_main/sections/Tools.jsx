@@ -19,7 +19,7 @@ const carouselItems = [
     { id: 13, src: "/tools/7.jpeg", alt: "girl9" },
 ];
 
-const ImageCarousel = () => {
+const Tools = () => {
     // Dynamically get the number of items for our CSS variable
     const itemCount = carouselItems.length;
 
@@ -32,27 +32,26 @@ const ImageCarousel = () => {
                     // Set the --quantity CSS variable dynamically
                     style={{ "--quantity": itemCount }}
                 >
-                    {carouselItems.map((item) => (
+                    {carouselItems.map((item, index) => (
                         <div
-                            key={item.id}
+                            key={index}
                             className={styles.item}
                             // Set the --position CSS variable for each item
-                            style={{ "--position": item.id }}
+                            style={{ "--position": index }}
                         >
                             <img src={item.src} alt={item.alt} />
                         </div>
                     ))}
                 </div>
                 <div className={styles.content}>
-                    <h1 data-content="CSS ONLY">CSS ONLY</h1>
+                    <h1 data-content="3D Image">3D Image</h1>
                     <div className={styles.author}>
-                        <h2>LUN DEV</h2>
-                        <p>
+                        <h2>RAPH <span>WEB</span></h2>
+                        {/* <p>
                             <b>Web Design</b>
-                        </p>
+                        </p> */}
                         <p>
-                            Subscribe to the channel to watch many interesting
-                            videos
+                           My frequently used Stacks and Tools
                         </p>
                     </div>
                     <div className={styles.model}></div>
@@ -62,4 +61,4 @@ const ImageCarousel = () => {
     );
 };
 
-export default ImageCarousel;
+export default Tools;
