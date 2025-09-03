@@ -10,6 +10,7 @@ import Portfolio from "./components_main/sections/Portfolio";
 import Certification from "./components_main/sections/Certification";
 import Tools from "./components_main/sections/Tools";
 import Review from "./components_main/sections/Review";
+import Counter from "./components_main/sections/Counter";
 
 function App() {
     return (
@@ -48,10 +49,15 @@ function App() {
         //     <Tools />
         // </section>
 
+        // <section>
+        //     <Review/>
+        // </section>
+        // <section>
+        //     <Counter/>
+        // </section>
         <section>
-            <Review/>
+            <LogoSection />
         </section>
-
     );
 }
 

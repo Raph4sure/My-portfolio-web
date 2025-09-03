@@ -1,3 +1,5 @@
+import Counter from "./Counter";
+
 const logoIconList = [
     {
         imagePath: "/images1/upwork.svg",
@@ -32,32 +34,37 @@ const LogoIcon = ({ icon }) => {
 
 function LogoSection() {
     return (
-        <div className="relative">
-            {/* Edge fade handled by CSS mask on .marquee; keep these if you plan custom edges */}
-            <h1 className="font-playwrite -mb-9 mt-9 text-center text-lg">My work Experience</h1>
-            <div className="marquee h-52">
-                <div className="marquee-track md:gap-12 gap-5">
-                    {/* Start label */}
-                    <div className="marquee-item flex items-center">
-                        {/* <span className="text-sm font-semibold">
+        <main>
+            <div className="relative">
+                {/* Edge fade handled by CSS mask on .marquee; keep these if you plan custom edges */}
+                <h1 className="font-playwrite -mb-9 mt-9 text-center text-lg">
+                    My work Experience
+                </h1>
+                <div className="marquee h-52">
+                    <div className="marquee-track md:gap-12 gap-5">
+                        {/* Start label */}
+                        <div className="marquee-item flex items-center">
+                            {/* <span className="text-sm font-semibold">
                             Work Experience
                         </span> */}
-                    </div>
-                    {logoIconList.map((icon, index) => (
-                        <LogoIcon icon={icon} key={`logo-a-${index}`} />
-                    ))}
-                    {/* Repeat label for seamless loop */}
-                    {/* <div className="marquee-item flex items-center">
+                        </div>
+                        {logoIconList.map((icon, index) => (
+                            <LogoIcon icon={icon} key={`logo-a-${index}`} />
+                        ))}
+                        {/* Repeat label for seamless loop */}
+                        {/* <div className="marquee-item flex items-center">
                         <span className="text-sm font-semibold font-playwrite">
                             My Working Experience
                         </span>
                     </div> */}
-                    {logoIconList.map((icon, index) => (
-                        <LogoIcon icon={icon} key={`logo-b-${index}`} />
-                    ))}
+                        {logoIconList.map((icon, index) => (
+                            <LogoIcon icon={icon} key={`logo-b-${index}`} />
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+            <Counter />
+        </main>
     );
 }
 
