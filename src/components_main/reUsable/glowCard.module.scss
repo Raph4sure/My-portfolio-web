@@ -31,11 +31,11 @@
 
 // This div ensures that the content sits correctly within the card
 .cardContent {
-    background-color: #1a1a1a; // Same as the card's background
+    background-color: var(--color-background); // Same as the card's background
     border-radius: 10px; // Slightly smaller than the parent's radius
     padding: 30px; // The original padding
     position: relative;
     z-index: 2;
 }
 
-// Removed the old .glow class as it's no longer used
+

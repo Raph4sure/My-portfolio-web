@@ -11,36 +11,48 @@ import Certification from "./components_main/sections/Certification";
 import Tools from "./components_main/sections/Tools";
 import Review from "./components_main/sections/Review";
 import Counter from "./components_main/sections/Counter";
+import Test1 from "./Test1";
 
 function App() {
     return (
-        // <ThemeProvider>
-        //     <div className="container">
-        //         <section >
-        //             {/* <div className="z-50">
-        //             <Header />
-        //             <ThemeSwitch />
-        //         </div> */}
-        //             {/* <Test1 /> */}
-        //             <NavBar />
-        //             <div>
-        //                 <Section1 />
-        //             </div>
-        //         </section>
-        //         <section>
-        //             <LogoSection />
-        //         </section>
-        //         {/* <section > */}
-        //         <Portfolio />
-        //         {/* </section> */}
-        //         <section>
-        //             <Certification />
-        //         </section>
-        //         <section>
-        //             <Services />
-        //         </section>
-        //     </div>
-        // </ThemeProvider>
+        <ThemeProvider>
+            <div className="container">
+        
+
+                <section className="bg-p">
+                    <div className="z-50 bg-green-400">
+                        {/* <Header /> */}
+                        {/* <ThemeSwitch /> */}
+                    </div>
+                    {/* <Test1 /> */}
+                    {/* <Test2 /> */}
+                    <NavBar className="bg-brown-400" />
+
+                    <div>
+                        <Section1 />
+                    </div>
+                </section>
+
+                 
+
+            
+                <section className='bg-yellow-400'>
+                    <LogoSection />
+                </section>
+                <section >
+                <Portfolio />
+                </section>
+                <section>
+                    <Certification />
+                </section>
+                <section className="bg-black-50">
+                    <Tools />
+                </section>
+                <section>
+                    <Services />
+                </section>
+            </div>
+        </ThemeProvider>
 
         // <section>
         //     <Certification />
@@ -55,9 +67,10 @@ function App() {
         // <section>
         //     <Counter/>
         // </section>
-        <section>
-            <LogoSection />
-        </section>
+        // <section className="">
+        //     <LogoSection />
+        //     {/* <Test1/> */}
+        // </section>
     );
 }
 

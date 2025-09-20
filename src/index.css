@@ -28,6 +28,8 @@
         153,
         153
     ); /* NavBarMenuHeaderText,  NavBarMenuHeaderBorder*/
+    /* --color-text-primary: #1c1c21; */
+    --color-text-primary: "var(--color-text-primary)";
 
     --font-playwrite: "Playwrite CA", cursive;
     --font-signika: "Signika", sans-serif;
@@ -62,53 +64,70 @@
 @custom-variant md (@media (max-width: 767px));
 @custom-variant phone (@media (max-width: 639px)); */
 
-@custom-variant desktop (@media (max-width: 1920px));
-@custom-variant laptop-land (@media (max-width: 1620px));
-@custom-variant laptop-land2 (@media (max-width: 1480px));
-@custom-variant laptop (@media (max-width: 1200px));
-@custom-variant tablet-land (@media (max-width: 1069px));
-@custom-variant tablet (@media (max-width: 900px));
-@custom-variant phone (@media (max-width: 640px));
+@custom-variant desk-wide (@media (max-width: 2560px));
+@custom-variant desk-land (@media (max-width: 1920px));
+@custom-variant desktop (@media (max-width: 1366px));
+@custom-variant tab-land (@media (max-width: 1024px));
+@custom-variant tablet (@media (max-width: 768px));
+@custom-variant mob-land (@media (max-width: 440px));
+@custom-variant mobile (@media (max-width: 360px));
 
 @layer base {
+    /* --- LIGHT MODE (DEFAULT) --- */
+    :root {
+        /* Background Colors */
+        --color-background: #ffffff;
+        --color-background-secondary: #f0f0f0;
+
+        /* Text Colors */
+        --color-text-primary: #1c1c21; /* Dark color for main text */
+        --color-text-secondary: #666666; /* Lighter grey for secondary text */
+        --color-text-accent: #dd4c62; /* Your pink for accents */
+
+        /* Border Colors */
+        --color-border: #cccccc;
+
+        /* Your other specific variables */
+        --font-playwrite: "Playwrite CA", cursive;
+        --font-signika: "Signika", sans-serif;
+
+        --font-sans: "Mona Sans", sans-serif;
+        --color-white-50: #d9ecff;
+        --color-black-50: #1c1c21;
+        --color-black-100: #0e0e10;
+        --color-black-200: #282732;
+        --color-blue-50: #839cb5;
+        --color-blue-100: #2d2d38;
+        --color-pink-button: #dd4c62;
+        --color-pink-button-hover: #ee0653;
+        --color-pink-button-active: #b0033e;
+        --color-pink-button-disabled: #ff8b9c;
+        --color-pink-button-text: #ffffff;
+        --color-red-error-text: #ee0653;
+    }
+
+    /* --- DARK MODE OVERRIDES --- */
+    .dark {
+        /* Background Colors */
+        /* --color-background: #0e0e10; */
+        --color-background: black;
+        --color-background-secondary: #1c1c21;
+
+        /* Text Colors */
+        --color-text-primary: #d9ecff; /* Light color for main text */
+        --color-text-secondary: #839cb5; /* Lighter blue for secondary text */
+        --color-text-accent: #dd4c62; /* Pink can often stay the same */
+
+        /* Border Colors */
+        --color-border: #2d2d38;
+    }
+
     *,
     *::before,
     *::after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
-
-    html {
-        font-size: 62.5%;
-    }
-
-    /* Desktop breakpoint - 1920px */
-    @media (max-width: 1920px) {
-        html {
-            font-size: 58%;
-        }
-    }
-
-    /* Tablet landscape - 1200px */
-    @media (max-width: 1200px) {
-        html {
-            font-size: 56.25%;
-        }
-    }
-
-    /* Tablet portrait - 900px */
-    @media (max-width: 900px) {
-        html {
-            font-size: 50%;
-        }
-    }
-
-    /* Phone - 600px */
-    @media (max-width: 600px) {
-        html {
-            font-size: 35%;
-        }
     }
 
     /* body {
@@ -126,22 +145,23 @@
     --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
 
-body{
+body {
     /* min-height: 100vh; */
     overflow-x: hidden;
 }
 
 html,
 body {
-    width: 100dvw;
+    width: 100vw;
     /* height: 100dvh; */
-    min-height: 100dvh;
+    min-height: 100vh;
     /* overflow-x: hidden; */
-    background-color: black;
-    color: white;
+    /* background-color: black;
+    color: white; */
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-   
 
     /* font-family: "Mona Sans", sans-serif; */
     font-family: Signika, Roboto, Helvetica, Arial, sans-serif;
@@ -149,23 +169,6 @@ body {
 }
 
 @layer utilities {
-    /* portfolio */
-    /* .item:nth-child(1) {
-        background: linear-gradient(to right, #12071f, #210b3a);
-    }
-    .item:nth-child(2) {
-        background: linear-gradient(to right, #210b3a, #12071f);
-    }
-    .item:nth-child(3) {
-        background: linear-gradient(to right, #27084a, #220345);
-    }
-    .item:nth-child(4) {
-        background: linear-gradient(to right, #220345, #2a0159);
-    }
-    .item:nth-child(5) {
-        background: linear-gradient(to right, #2a0159, #12071f);
-    } */
-
     input,
     textarea {
         padding: 1.2rem;
@@ -174,24 +177,40 @@ body {
         background-color: var(--color-white-50);
         height: 1rem;
         color: var(--color-black-100);
+
+        @media (max-width: 768px) {
+            font-size: 0.5rem;
+            height: 0.2rem;
+            padding: 0.5rem;
+        }
     }
 
     textarea {
         height: 8rem;
+        @media (max-width: 768px) {
+            height: 3rem;
+        }
     }
 
     form {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.7rem;
         /* width: 80%; */
         /* height: 40%; */
+        @media (max-width: 768px) {
+            gap: 0.1rem;
+        }
     }
 
     .formitem {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+
+        @media (max-width: 768px) {
+            gap: 0.2rem;
+        }
     }
 
     label {
@@ -199,6 +218,11 @@ body {
         /* color: var(--color-black-100); */
         font-weight: 500;
         margin-bottom: 0.5rem;
+
+        @media (max-width: 768px) {
+            font-size: 0.6rem;
+            /* margin-bottom: -1rem; */
+        }
     }
 
     .formButton {
@@ -238,8 +262,8 @@ body {
         height: 100dvh;
         scroll-snap-align: center;
     } */
-    section{
-        height: 100dvh;
+    section {
+        height: 100vh;
         scroll-snap-align: center;
     }
 
@@ -261,6 +285,7 @@ body {
         width: 100dvw;
         overflow: hidden;
         position: relative;
+        height: 6rem;
     }
 
     .marquee:before,
@@ -357,7 +382,7 @@ body {
     }
 
     .cta-button {
-        @apply px-4 py-2 laptop:py-1  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+        @apply px-4 py-2 desktop:py-1  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
     }
     .bg-circle {
         @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] group-hover:size-10 group-hover:right-1 rounded-full bg-white-50 transition-all duration-500;
@@ -506,7 +531,6 @@ body {
 }
 
 .card::before {
-
 }
 
 .hero-title {
@@ -841,9 +865,6 @@ body {
     transform: scale(1);
 }
 
-
-
-
 /* Review Section */
 .page-container {
     display: flex;
@@ -897,6 +918,3 @@ body {
 .author-handle {
     color: #888;
 }
-
-
-

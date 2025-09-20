@@ -1,28 +1,15 @@
-// function Test1() {
-//     return (
-//         <section className="">
-//             <div>Just testing</div>
-//             <button className="text-[4rem] phone:text-red-500">
-//                 Testing Responsive Text
-//             </button>
-//         </section>
-//     );
-// }
-
-// export default Test1;
+import React from 'react';
+import Button2 from './components_main/reUsable/Button2';
 
 
-export default function Test1() {
+function Test1() {
     return (
-        <div className="p-6 text-red-600">
-            <div>Just testing</div>
-
-            <button className="text-[40px] tablet:bg-yellow-500 phone:bg-red-500 dark:bg-blue-500 dark:text-red-500">
-                Resize me!!
-            </button>
-
-            <div className="mt-4 text-grey-l1">This should be grey</div>
+        <div>
+            <p>hi there</p>
+            <Button2 to="/some-path">Click Me</Button2>
         </div>
     );
 }
-  
+
+export default Test1
+// 

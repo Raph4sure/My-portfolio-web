@@ -96,11 +96,11 @@ function Services() {
     };
 
     return (
-        <div className="services grid grid-cols-2 w-full h-auto text-lg gap-1">
-            <div className="Section_left w-[85%] flex flex-col gap-4 justify-self-center px-5 h-full">
-                <div className="flex justify-center">
+        <div className="services grid grid-cols-2 w-full h-full text-lg gap-1 tablet:grid-cols-1 tablet:text-[1rem]">
+            <div className="Section_left w-[95%] h-full flex flex-col gap-4 justify-self-center px-4 rounded-2xl bg-amber-500">
+                <div className="flex justify-center h-full">
                     <form action="" ref={form} onSubmit={sendEmail}>
-                        <h1 className="text-2xl font-bold text-center">
+                        <h1 className="text-2xl font-bold text-center tablet:text-[1rem]">
                             Hire Me
                         </h1>
                         <div className="formItem">
@@ -172,9 +172,9 @@ function Services() {
                         )}
                     </form>
                 </div>
-                <div className="contact_div">SVG</div>
+                {/* <div className="contact_div">SVG</div> */}
             </div>
-            <div className="Section_right place-self-center w-full h-full">
+            <div className="Section_right place-self-center w-full h-[50%]">
                 <ComputerModelContainer />
             </div>
         </div>

@@ -1,143 +1,347 @@
-.portfolio {
-    // background-color: #f5f5f5;
-    height: 600vh;
+// .portfolio {
+//     // background-color: #f5f5f5;
+//     height: 600vh;
 
-    position: relative;
-}
+//     position: relative;
+// }
 
-.pList {
-    position: sticky;
-    top: 0;
-    display: flex;
-    height: 100vh;
-    width: max-content;
-}
+// .pList {
+//     position: sticky;
+//     top: 0;
+//     display: flex;
+//     height: 100vh;
+//     width: max-content;
+// }
 
-.pItem {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-}
+// .pItem {
+//     height: 100vh;
+//     width: 100vw;
+//     overflow: hidden;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 100px;
 
-.pImg {
-    width: 40%;
-    border-radius: 20px;
-    overflow: hidden;
-}
+//     // controlling light and dark mode
+//     background: var(--item-background);
+// }
 
-.pImg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+// .pImg {
+//     width: 40%;
+//     border-radius: 20px;
+//     overflow: hidden;
+// }
 
-.pText {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
+// .pImg img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
 
-.pText h1 {
-    font-size: 56px;
-}
-.pText p {
-    // font-size: 20px;
-    // color: #555;
-    font-weight: 300;
-    font-size: 20px;
-}
+// .pText {
+//     width: 40%;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 24px;
+// }
 
-.pText button {
-    background-color: pink;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 30px;
-}
+// .pText h1 {
+//     font-size: 56px;
+// }
+// .pText p {
+//     // font-size: 20px;
+//     // color: #555;
+//     font-weight: 300;
+//     font-size: 20px;
+// }
 
-.pItem:nth-child(1) {
-    background: rgb(100, 49, 49);
-}
-.pItem:nth-child(2) {
-    background: rgb(70, 122, 70);
-}
-.pItem:nth-child(3) {
-    background: rgb(56, 56, 104);
-}
-.pItem:nth-child(4) {
-    background: rgb(116, 60, 116);
-}
-.pItem:nth-child(5) {
-    background: rgb(117, 93, 49);
-}
-.pItem:nth-child(6) {
-    background: rgb(100, 49, 49);
-}
+// .pText button {
+//     background-color: pink;
+//     padding: 12px;
+//     border-radius: 10px;
+//     border: none;
+//     font-weight: 500;
+//     cursor: pointer;
+//     font-size: 30px;
+// }
+
 // .pItem:nth-child(1) {
-//     background: linear-gradient(to right, #12071f, #210b3a);
+//     --item-background: rgb(100, 49, 49);
 // }
 // .pItem:nth-child(2) {
-//     background: linear-gradient(to right, #210b3a, #12071f);
+//     --item-background: rgb(70, 122, 70);
 // }
 // .pItem:nth-child(3) {
-//     background: linear-gradient(to right, #27084a, #220345);
+//     --item-background: rgb(56, 56, 104);
 // }
 // .pItem:nth-child(4) {
-//     background: linear-gradient(to right, #220345, #2a0159);
+//     --item-background: rgb(116, 60, 116);
 // }
 // .pItem:nth-child(5) {
-//     background: linear-gradient(to right, #2a0159, #12071f);
+//     --item-background: rgb(117, 93, 49);
+// }
+// .pItem:nth-child(6) {
+//     --item-background: rgb(100, 49, 49);
 // }
 
-.progress{
-    position: sticky;
-    top: 0;
-    left: 2%;
-    width: 80px;
-    height: 80px;
-    bottom: 85%;
-    // background: rgba(0,0,0,0.1);
-    z-index: 10;
+// :global(.dark) {
+//   .pItem:nth-child(1) {
+//       --item-background: red; // Your original dark color
+//   }
+//   .pItem:nth-child(2) {
+//       --item-background: rgb(172, 43, 43); // Your original dark color
+//   }
+//   .pItem:nth-child(3) {
+//       --item-background: rgb(40, 40, 175); // Your original dark color
+//   }
+//   .pItem:nth-child(4) {
+//       --item-background: rgb(116, 60, 116); // Your original dark color
+//   }
+//   .pItem:nth-child(5) {
+//       --item-background: rgb(117, 93, 49); // Your original dark color
+//   }
+//   .pItem:nth-child(6) {
+//       --item-background: rgb(100, 49, 49); // Your original dark color
+//   }
+// }
+
+// // .pItem:nth-child(1) {
+// //     background: linear-gradient(to right, #12071f, #210b3a);
+// // }
+// // .pItem:nth-child(2) {
+// //     background: linear-gradient(to right, #210b3a, #12071f);
+// // }
+// // .pItem:nth-child(3) {
+// //     background: linear-gradient(to right, #27084a, #220345);
+// // }
+// // .pItem:nth-child(4) {
+// //     background: linear-gradient(to right, #220345, #2a0159);
+// // }
+// // .pItem:nth-child(5) {
+// //     background: linear-gradient(to right, #2a0159, #12071f);
+// // }
+
+// .progress{
+//     position: sticky;
+//     top: 0;
+//     left: 2%;
+//     width: 80px;
+//     height: 80px;
+//     bottom: 85%;
+//     // background: rgba(0,0,0,0.1);
+//     z-index: 10;
+// }
+
+// @media (max-width: 1536px) {
+//     .pItem {
+//       gap: 50px;
+//     }
+//   }
+
+//   @media (max-width: 1280px) {
+//     .pText h1 {
+//       font-size: 48px;
+//     }
+//   }
+
+//   @media (max-width: 1024px) {
+//     .pItem {
+//       flex-direction: column;
+//     }
+
+//     .pImg,
+//     .pText {
+//       width: 80%;
+//     }
+
+//     .pProgress {
+//       bottom: 100px;
+//       left: 100%;
+//     }
+//   }
+
+//   @media (max-width: 768px) {
+//     .pProgress {
+//       width: 50px;
+//       height: 50px;
+//     }
+//   }
+
+.sliderContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; // This is crucial to hide the other slides
+    background-color: #111; // Fallback background
+    // padding-top: -20rem;
 }
 
-@media (max-width: 1536px) {
-    .pItem {
-      gap: 50px;
+.slider {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0; // Prevents slides from squashing
+    color: white;
+
+    .content {
+        display: grid;
+        grid-template-rows: 1fr auto 1fr;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        width: 100%;
+        height: 100%;
+        gap: 5%;
+        padding: 5vw;
+        // For mobile, stack the content vertically
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .title {
+            grid-row: 1 / 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 500;
+        }
+
+        .slide_content {
+            display: flex;
+        }
+        .textInner {
+            display: flex;
+            flex-direction: column;
+
+            .projectLink {
+                text-align: end;
+            }
+        }
+
+        .navButtons {
+            grid-row: 3/4;
+            display: flex;
+
+            // width: auto;
+            justify-content: space-between;
+            // justify-items: center;
+            // gap: 12rem;
+
+            // position: absolute;
+            // bottom: 30px;
+            // right: 30px;
+            // display: flex;
+            // gap: 15px;
+            z-index: 10;
+            pointer-events: auto;
+
+            button {
+                padding: 10px 20px;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: white;
+                border-radius: 50px;
+                cursor: pointer;
+                backdrop-filter: blur(5px);
+                transition: background-color 0.2s ease;
+                &:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
     }
-  }
-  
-  @media (max-width: 1280px) {
-    .pText h1 {
-      font-size: 48px;
+}
+
+.imageContainer {
+    flex: 1;
+    max-width: 50%;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
-  }
-  
-  @media (max-width: 1024px) {
-    .pItem {
-      flex-direction: column;
+    @media (max-width: 768px) {
+        max-width: 80%;
+        margin-bottom: 2rem;
     }
-  
-    .pImg,
-    .pText {
-      width: 80%;
+}
+
+.textContainer {
+    flex: 1;
+    max-width: 100%;
+    h1 {
+        font-size: clamp(2rem, 5vw, 1.5rem);
+        margin-bottom: 1rem;
+        font-weight: 700;
     }
-  
-    .pProgress {
-      bottom: 100px;
-      left: 100%;
+    p {
+        font-size: clamp(1rem, 2vw, 1rem);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.8);
     }
-  }
-  
-  @media (max-width: 768px) {
-    .pProgress {
-      width: 50px;
-      height: 50px;
+    button {
+        background-color: #ffdde1; // A soft pink
+        color: #d92d53;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
-  }
+    @media (max-width: 768px) {
+        max-width: 90%;
+    }
+}
+
+// --- UI Controls Styling ---
+
+.uiControls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; // Allows clicks to pass through
+}
+
+.progressBarContainer {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 80px;
+    height: 80px;
+    z-index: 10;
+    pointer-events: auto;
+
+    svg {
+        transform: rotate(-90deg);
+    }
+
+    .progressTrack {
+        fill: none;
+        stroke: rgba(255, 255, 255, 0.2);
+        stroke-width: 5;
+    }
+
+    .progressBar {
+        fill: none;
+        stroke: #ffdde1; // Same pink as the button
+        stroke-width: 5;
+        stroke-linecap: round;
+    }
+}

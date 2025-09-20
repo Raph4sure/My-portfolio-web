@@ -17,13 +17,13 @@ export default function Header() {
     return (
         <>
             <div className={styles.main}>
-                <div className={`${styles.header} invisible tablet:visible`}>
+                <div className={`${styles.header} invisible laptop:visible`}>
                     {/* <div className="fixed right-0 top-0 p-[30px] z-10"> */}
                     <div
                         onClick={() => {
                             setIsActive(!isActive);
                         }}
-                        className={`${styles.button} bg-red-500`}
+                        className={`${styles.button} bg-blue-500`}
                         // className="bg-red-900"
                     >
                         <div

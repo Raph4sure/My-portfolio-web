@@ -9,14 +9,14 @@ function Buttton({ text, className, id, link, variants }) {
         >
             <div className="cta-button group">
                 <div className="bg-circle" />
-                <p className="text -ml-6 my-[-5%] laptop:my-[-3%] tablet:pl-[-0%]">
+                <p className="text -ml-6 my-[-5%] laptop:my-[-3%] tablet:pl-[-0%] phone:text-[0.5rem] font-[500]">
                     {text}
                 </p>
                 <div className="arrow-wrapper">
                     <img
                         src="/images1/arrow-right1.svg"
                         alt="arrow"
-                        className="w-6 object-cover img animate-bounce-x ml-2 laptop:w-5"
+                        className="w-6 object-cover img animate-bounce-x ml-2 phone:w-[0.6rem] laptop:w-5"
                     />
                 </div>
             </div>

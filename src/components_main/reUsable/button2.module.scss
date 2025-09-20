@@ -1,0 +1,65 @@
+// We keep the font import here as it's specific to this component's style
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+.button {
+    // --- Sizing and Shape ---
+    width: 200px;
+    height: 60px;
+    border-radius: 3rem 0 3rem 0; // The unique border radius
+
+    // --- Basic Styling ---
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #e3e3e3;
+    
+    // --- Font Styling ---
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #333333; // Default text color
+
+    // --- Crucial Additions for NavLink (<a> tag) ---
+    text-decoration: none; // Removes the default link underline
+    display: inline-flex;  // Ensures proper alignment and sizing
+    justify-content: center;
+    align-items: center;
+
+    // --- Smooth Transition ---
+    transition: all 0.1s;
+
+    /*
+      ===============================================================
+      ==>  1. THE "RAISED" (DEFAULT) STATE - Your exact shadows  <==
+      ===============================================================
+      A complex stack of 7 shadows to create a unique beveled look.
+    */
+    box-shadow: 
+        5px 5px 2px #00000043, 
+        -5px -5px 5px #00000033,
+        inset 0 0 0 0 #333333, 
+        inset 2px 5px 6px white,
+        inset 8px 15px 6px -5px #b0b0b032, 
+        inset 0 0 3px 6px #d3d3d3,
+        inset 0 -4px 5px 7px #b0b0b0b3;
+
+    /*
+      ===============================================================
+      ==>  2. THE "PRESSED IN" (:active) STATE - Your exact shadows <==
+      ===============================================================
+      A different stack of 8 inset shadows for the press effect.
+    */
+    &:active {
+        background: #e3e3e3;
+        color: #333333;
+        box-shadow: 
+            0 0 0 #00000093, 
+            -5px -5px 5px #00000033,
+            inset 3px 6px 0 #33333399, 
+            inset 3px 6px 5px #333333,
+            inset 2px 5px 6px transparent, 
+            inset 8px 15px 6px -5px #b0b0b032,
+            inset 0 0 3px 6px #d3d3d3, 
+            inset 0 -12px 5px 0 #ffffff32;
+    }
+}

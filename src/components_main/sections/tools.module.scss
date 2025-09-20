@@ -3,17 +3,17 @@
 
 // These styles were on the `body` tag, we move them to a container
 .sceneContainer {
-    background-color: #d2d2d2;
-    background-image: repeating-linear-gradient(
-            to right,
-            transparent 0 100px,
-            #25283b22 100px 101px
-        ),
-        repeating-linear-gradient(
-            to bottom,
-            transparent 0 100px,
-            #25283b22 100px 101px
-        );
+    // background-color: #d2d2d2;
+    // background-image: repeating-linear-gradient(
+    //         to right,
+    //         transparent 0 100px,
+    //         #25283b22 100px 101px
+    //     ),
+    //     repeating-linear-gradient(
+    //         to bottom,
+    //         transparent 0 100px,
+    //         #25283b22 100px 101px
+    //     );
 
     // The `body::before` styles are now applied to our container
     &::before {
@@ -24,7 +24,7 @@
         height: 90%;
         transform: translateX(-50%);
         content: "";
-        background-image: url(/tools/bg.png); // Path from public folder
+        // background-image: url(/tools/bg.png); // Path from public folder
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: top center;
