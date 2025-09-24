@@ -264,7 +264,7 @@ const PortfolioSlider = () => {
                         style={{ backgroundColor: item.bgColor }}
                     >
                         <div className={styles.content}>
-                            <h1 className={styles.title}>Completed Project {item.id}</h1>
+                            <h2 className={styles.title}>Completed Project {item.id}</h2>
                             <div className={styles.slide_content}>
                                 <motion.div
                                     className={styles.imageContainer}

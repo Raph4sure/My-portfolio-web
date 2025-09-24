@@ -45,7 +45,7 @@ function App() {
                 <section>
                     <Certification />
                 </section>
-                <section className="bg-black-50">
+                <section className="">
                     <Tools />
                 </section>
                 <section>
