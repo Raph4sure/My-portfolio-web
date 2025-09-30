@@ -5,20 +5,19 @@ import Section1 from "./components_main/sections/Section1";
 import Test2 from "./Test2";
 import NavBar from "./components_main/sections/NavBar";
 import LogoSection from "./components_main/sections/LogoSection";
-import Services from "./components_main/sections/services/Services";
+import Contact from "./components_main/sections/Contact";
 import Portfolio from "./components_main/sections/Portfolio";
 import Certification from "./components_main/sections/Certification";
 import Tools from "./components_main/sections/Tools";
 import Review from "./components_main/sections/Review";
 import Counter from "./components_main/sections/Counter";
 import Test1 from "./Test1";
+import About from "./components_main/sections/About";
 
 function App() {
     return (
         <ThemeProvider>
             <div className="container">
-        
-
                 <section className="bg-p">
                     <div className="z-50 bg-green-400">
                         {/* <Header /> */}
@@ -33,24 +32,24 @@ function App() {
                     </div>
                 </section>
 
-                 
-
-            
-                <section className='bg-yellow-400'>
+                {/* <section className="bg-yellow-400">
                     <LogoSection />
                 </section>
-                <section >
-                <Portfolio />
+                <section>
+                    <Portfolio />
                 </section>
                 <section>
                     <Certification />
                 </section>
                 <section className="">
                     <Tools />
-                </section>
+                </section> */}
                 <section>
-                    <Services />
+                    <Contact/>
                 </section>
+                {/* <section>
+                    <About />
+                </section> */}
             </div>
         </ThemeProvider>
 

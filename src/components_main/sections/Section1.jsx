@@ -48,7 +48,7 @@ function Section1() {
                             className="flex gap-2 items-center"
                             variants={sliding1}
                         >
-                            <span> I am a</span>
+                            <span> Am a</span>
                             <span className="slide h-[1.9rem] laptop:h-[1.5rem] phone:h-[0.8rem]">
                                 <span className="wrapper">
                                     {skills.map((skill) => (
