@@ -1,20 +1,71 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import images from "../../helpers/imageLoader.";
+
 const certificateItems = [
+    // {
+    //     id: 1,
+    //     img: images["certificate/BSc_Stats.png"],
+    //     title: "B.Sc Statistics",
+    // },
     {
-        id: 1,
-        img: "/images2/img1.png",
-        title: "Certificate of Web Development",
+        id: 2,
+        img: images["certificate/Alx.png"],
+        title: "Software Engineering(Backend)",
     },
-    { id: 2, img: "/images2/img2.png", title: "Advanced React Course" },
-    { id: 3, img: "/images2/img3.png", title: "Framer Motion Certificate" },
-    { id: 4, img: "/images2/img4.png", title: "Node.js Essentials" },
-    { id: 5, img: "/images2/img5.png", title: "Database Management" },
-    { id: 6, img: "/images2/img6.png", title: "UI/UX Fundamentals" },
-    { id: 7, img: "/images2/img6.png", title: "UI/UX Fundamentals" },
-    { id: 8, img: "/images2/img6.png", title: "UI/UX Fundamentals" },
-    { id: 9, img: "/images2/img6.png", title: "UI/UX Fundamentals" },
+    {
+        id: 3,
+        img: images["certificate/PLP.png"],
+        title: "Software Development(FullStack)",
+    },
+    {
+        id: 4,
+        img: images["certificate/DIF.jpg"],
+        title: "DIF (Internship)",
+    },
+    {
+        id: 5,
+        img: images["certificate/Web_Dev.jpg"],
+        title: "Udemy (Web Development)",
+    },
+    {
+        id: 6,
+        img: images["certificate/React_cert.jpg"],
+        title: "Udemy (React, Next.js Course)",
+    },
+    {
+        id: 7,
+        img: images["certificate/Typescript.png"],
+        title: "LinkedIn (TypeScript Course)",
+    },
+    {
+        id: 8,
+        img: images["certificate/INCO.png"],
+        title: "INCO (Green Digital Skills)",
+    },
+    {
+        id: 9,
+        img: images["certificate/Data_Science.png"],
+        title: "Hp Life (Data Science and Analytics)",
+    },
+    {
+        id: 10,
+        img: images[
+            "certificate/Data_Science_in_Precision_Medicine_and_Cloud_Computing.jpg"
+        ],
+        title: "Stanford Medicine (Data Science)",
+    },
+    {
+        id: 11,
+        img: images["certificate/Data Analysis certificate.jpg"],
+        title: "Udemy (Python Data Analysis)",
+    },
+    {
+        id: 12,
+        img: images["certificate/Oracle_new.jpg"],
+        title: "Power Concept (Oracle DataBase Admin)",
+    },
 ];
 
 // Custom hook to get screen width

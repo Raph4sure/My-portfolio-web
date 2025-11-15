@@ -1,66 +1,96 @@
+// Import the responsive mixins using modern @use syntax
+@use "../../styles/responsive.scss" as *;
+
 .header {
-    padding: 30px;
+    @include responsive-spacing("padding", 20);
     position: fixed;
     right: 0;
     top: -1%;
     z-index: 120;
-    // visibility: hidden;
-    @media (max-width: 1020px) {
+
+    @include tab-land {
         right: -2%;
         top: -2%;
-        
     }
 
     .button {
-        width: 50px;
-        height: 50px;
+        @include responsive-spacing("width", 25);
+        @include responsive-spacing("height", 25);
         border-radius: 50%;
-        // background-color: #455ce9;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        @media (max-width: 768px) {
-            width: 35px;
-            height: 35px;
-            
-        }
-        
+        // @include tablet {
+        //     @include responsive-spacing("width", 25);
+        //     @include responsive-spacing("height", 25);
+        // }
     }
 
     .burger {
-        width: 100%;
-        &::after,
-        &::before {
+        width: 50%;
+        height: 2px;
+        background-color: white;
+        position: relative;
+        transition: background-color 0.3s;
+           @include mobile{
+                height: 1px;
+            }
+            
+
+        &::before,
+        &::after {
             content: "";
             display: block;
-            height: 1px;
-            width: 40%;
+            height: 2px;
+            width: 100%;
             margin: auto;
             background-color: white;
-            position: relative;
-            transition: transform 0.3s;
+            position: absolute;
+            transition: transform 0.3s, top 0.3s;
+            @include mobile{
+                height: 1px;
+            }
+            
+        }
+
+        &::before {
+            top: -10px;
+                @include mob-land{
+                top: -8px;
+            }
+                @include mobile{
+                top: -7px;
+            }
+          
+           
+            
+           
         }
 
         &::after {
-            top: -5px;
-        }
-
-        &::before {
-            top: 5px;
+            top: 10px;
+               @include mob-land{
+                top: 8px;
+            }
+               @include mobile{
+                top: 7px;
+            }
         }
     }
 
     .burgerActive {
-        &::after {
-            transform: rotate(45deg);
-            top: -1px;
-        }
+        background-color: transparent; // Hide the middle line
 
         &::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        &::after {
             transform: rotate(-45deg);
-            top: 0px;
+            top: 0;
         }
     }
 }

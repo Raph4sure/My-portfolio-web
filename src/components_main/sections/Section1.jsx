@@ -31,9 +31,9 @@ function Section1() {
     const { theme } = useTheme();
 
     return (
-        <main className="w-full h-full relative overflow-hidden grid grid-cols-2 place-items-center tablet:grid-cols-1 gap-8 t-[1.8rem] laptop-land2:text-[1.4rem] laptop:text-[1.4rem] tablet-land:text-[1.2rem] tablet:text-[1.7rem] phone:text-[0.6rem]">
+        <main className="w-full h-full relative overflow-hidden grid grid-cols-2 place-items-center tab-land:grid-cols-1 gap-8 t-[1.8rem]">
             <header className="w-full grid grid-cols-1 place-items-center ">
-                <div className="flex flex-col gap-7 tablet:-ml-7 mt-3">
+                <div className="flex flex-col gap-7 tab-land:-ml-7 mt-3">
                     <motion.div
                         variants={sliding1}
                         initial="initial"
@@ -49,19 +49,19 @@ function Section1() {
                             variants={sliding1}
                         >
                             <span> Am a</span>
-                            <span className="slide h-[1.9rem] laptop:h-[1.5rem] phone:h-[0.8rem]">
+                            <span className="slide h-[1.5rem]">
                                 <span className="wrapper">
-                                    {skills.map((skill) => (
+                                    {skills.map((skill, index) => (
                                         <span
-                                            key={skill.text}
-                                            className=" pl-2 phone:pl-0 flex gap-2 items-start laptop-land2:mb-[1.5rem]"
+                                            key={index}
+                                            className="pl-2 flex gap-2 item"
                                         >
                                             <img
                                                 src={skill.imgPath}
                                                 alt={skill.text}
-                                                className="size-6 p-0.5 phone:size-3 phone:p-[0.05rem] rounded-full bg-white-50"
+                                                className="size-6 p-0.5 rounded-full bg-white-50"
                                             />
-                                            <span className="mt-[-0.6rem] laptop-land2:mt-[-0.3rem] laptop:mt-[-0.3rem] tablet:mt-[-0.5rem] phone:mt-[-0.05rem] text-blue-700">
+                                            <span className="text-blue-700">
                                                 {skill.text}
                                             </span>
                                         </span>
@@ -75,18 +75,18 @@ function Section1() {
                     variants={sliding1}
                     initial="initial"
                     animate="animate"
-                    className="w-full grid grid-cols-2 place-items-center gap-3 phone:gap-1 mt-6 laptop-land2:mt-4 laptop:mt-4 tablet:mt-3 phone:mt-2 laptop:text-[1rem]"
+                    className="w-full grid grid-cols-2 place-items-center gap-3 phone:gap-1 mt-6 laptop-land2:mt-4 laptop:mt-4 tablet:mt-3 phone:mt-2"
                 >
                     <Buttton
                         variants={sliding1}
-                        className="w-[80%]  laptop:w-full tablet:w-[85%]"
+                        className=""
                         id="button"
                         text="My Resume"
                         link="https://drive.google.com/drive/folders/14F3sKJKJ4hMEs893wt3uF9cVbVCeM8MZ?usp=sharing"
                     />
                     <Buttton
                         variants={sliding1}
-                        className="w-[80%] laptop:w-full tablet:w-[85%] "
+                        className=""
                         id="button"
                         text="My Github"
                         link="https://github.com/Raph4sure"
@@ -96,7 +96,7 @@ function Section1() {
             <header className="relative w-[25rem] h-[25rem] laptop-land2:w-[19rem] laptop-land2:h-[19rem] laptop:w-[20rem] laptop:h-[20rem] tablet:w-[20rem] tablet:h-[20rem] laptop:mr-[-1rem] phone:w-[14rem] phone:h-[20rem] phone:-mt-5">
                 <Canvas>
                     <Suspense fallback="Loading...">
-                        <Shape />   
+                        <Shape />
                     </Suspense>
                 </Canvas>
                 <div className="absolute z-10 top-0 left-0 w-full h-full flex items-center justify-center">

@@ -103,10 +103,12 @@ function Contact() {
                 .then(
                     () => {
                         setSuccess(true);
-                        setFormData({ name: "", email: "", message: "" }); // Reset form data
-                        setTouched({}); // Reset touched state
-                        setErrors({}); // Clear any errors
-                        // console.log("SUCCESS!");
+                        setFormData({ name: "", email: "", message: "" }); // Reset form on success
+                        setTouched({}); // Reset the touched state
+                        if (form.current) {
+                            form.current.reset(); // Also reset the actual form element
+                        }
+                        console.log("SUCCESS!");
                     },
                     (error) => {
                         setError(true); // Set error on failure
@@ -122,7 +124,7 @@ function Contact() {
     return (
         <div className="w-full h-screen flex flex-col items-center">
             <h1 className="pb-4">Contact Me </h1>
-            <div className="w-[50%] rounded-4xl py-3 bg-text-primary/10">
+            <div className={`${styles.container_form} w-[50%] rounded-4xl py-3 bg-text-primary/10`}>
                 <div className="flex justify-center h-full items-center p-0">
                     <form
                         onSubmit={handleSubmit}

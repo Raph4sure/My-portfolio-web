@@ -5,64 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&family=Signika:wght@300..700&display=swap");
 
 @import "tailwindcss";
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@theme {
-    /* color */
-    /* light */
-    --color-grey-l1: #666666;
-    --color-blue-l1: rgb(69, 92, 233); /* NavbarButton,  */
-    --color-white-l1: rgb(
-        255,
-        255,
-        255
-    ); /* NavBarLine, NavBarMenuText,  NavBarMenuLink NavBarLinkIndicator */
-    --color-black-l1: rgb(41, 41, 41); /* NavBarMenuBg, NavBarCurveFIll */
-    --color-grey-l2: rgb(
-        153,
-        153,
-        153
-    ); /* NavBarMenuHeaderText,  NavBarMenuHeaderBorder*/
-    /* --color-text-primary: #1c1c21; */
-    --color-text-primary: "var(--color-text-primary)";
-
-    --font-playwrite: "Playwrite CA", cursive;
-    --font-signika: "Signika", sans-serif;
-
-    --font-sans: "Mona Sans", sans-serif;
-    --color-white-50: #d9ecff;
-    --color-black-50: #1c1c21;
-    --color-black-100: #0e0e10;
-    --color-black-200: #282732;
-    --color-blue-50: #839cb5;
-    --color-blue-100: #2d2d38;
-    --color-pink-button: #dd4c62;
-    --color-pink-button-hover: #ee0653;
-    --color-pink-button-active: #b0033e;
-    --color-pink-button-disabled: #ff8b9c;
-    --color-pink-button-text: #ffffff;
-    --color-red-error-text: #ee0653;
-
-    /* dark */
-
-    /* screen */
-
-    /* --breakpoint-phone: 600px;
-    --breakpoint-tablet: 900px;
-    --breakpoint-laptop: 1200px;
-    --breakpoint-desktop: 1920px; */
-}
-
-/* @custom-variant 2xl (@media (max-width: 1535px));
-@custom-variant xl (@media (max-width: 1279px));
-@custom-variant lg (@media (max-width: 1023px));
-@custom-variant md (@media (max-width: 767px));
-@custom-variant phone (@media (max-width: 639px)); */
+/* @import "./styles/responsive.scss"; */
 
 @custom-variant desk-wide (@media (max-width: 2560px));
 @custom-variant desk-land (@media (max-width: 1920px));
@@ -72,9 +15,53 @@
 @custom-variant mob-land (@media (max-width: 440px));
 @custom-variant mobile (@media (max-width: 360px));
 
+@theme {
+    /* Font families for Tailwind utilities */
+    --font-family-playwrite: "Playwrite CA", cursive;
+    --font-family-signika: "Signika", sans-serif;
+    --font-family-mona: "Mona Sans", sans-serif;
+
+    /* Custom color palette for Tailwind classes */
+    --color-white-50: #d9ecff;
+    --color-black-50: #1c1c21;
+    --color-black-100: #0e0e10;
+    --color-black-200: #282732;
+    --color-blue-50: #839cb5;
+    --color-blue-100: #2d2d38;
+    --color-grey-l1: #666666;
+    --color-blue-l1: rgb(69, 92, 233);
+    --color-white-l1: rgb(255, 255, 255);
+    --color-black-l1: rgb(41, 41, 41);
+    --color-grey-l2: rgb(153, 153, 153);
+    --color-pink-button: #dd4c62;
+    --color-pink-button-hover: #ee0653;
+    --color-pink-button-active: #b0033e;
+    --color-pink-button-disabled: #ff8b9c;
+    --color-pink-button-text: #ffffff;
+    --color-red-error-text: #ee0653;
+
+    /* Text colors for Tailwind classes */
+    --color-text-primary: var(--color-text-primary);
+    --color-text-secondary: var(--color-text-secondary);
+    --color-text-accent: var(--color-text-accent);
+
+    /* Standard colors for basic usage */
+    --color-white: #ffffff;
+    --color-black: #000000;
+}
+
 @layer base {
     /* --- LIGHT MODE (DEFAULT) --- */
     :root {
+        /* Custom breakpoints for responsive design */
+        /* --breakpoint-mobile: 360px;
+        --breakpoint-mob-land: 440px;
+        --breakpoint-tablet: 768px;
+        --breakpoint-tab-land: 1024px;
+        --breakpoint-desktop: 1366px;
+        --breakpoint-desk-land: 1920px;
+        --breakpoint-desk-wide: 2560px; */
+
         /* Background Colors */
         --color-background: #ffffff;
         --color-background-secondary: #f0f0f0;
@@ -87,11 +74,19 @@
         /* Border Colors */
         --color-border: #cccccc;
 
-        /* Your other specific variables */
-        --font-playwrite: "Playwrite CA", cursive;
-        --font-signika: "Signika", sans-serif;
+        /* Color palette */
+        --color-grey-l1: #666666;
+        --color-blue-l1: rgb(69, 92, 233);
+        --color-white-l1: rgb(255, 255, 255);
+        --color-black-l1: rgb(41, 41, 41);
+        --color-grey-l2: rgb(153, 153, 153);
 
-        --font-sans: "Mona Sans", sans-serif;
+        /* Font families */
+        --font-family-sans: "Mona Sans", sans-serif;
+        --font-family-playwrite: "Playwrite CA", cursive;
+        --font-family-signika: "Signika", sans-serif;
+
+        /* Color system */
         --color-white-50: #d9ecff;
         --color-black-50: #1c1c21;
         --color-black-100: #0e0e10;
@@ -104,6 +99,34 @@
         --color-pink-button-disabled: #ff8b9c;
         --color-pink-button-text: #ffffff;
         --color-red-error-text: #ee0653;
+
+        /* Gradients */
+        --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
+
+   /* Base font scale - starts small for mobile */
+    --font-scale: 0.75;
+
+    /* Responsive font sizes using the scale */
+    --text-xs: calc(12px * var(--font-scale));
+    --text-sm: calc(14px * var(--font-scale));
+    --text-base: calc(16px * var(--font-scale));
+    --text-lg: calc(18px * var(--font-scale));
+    --text-xl: calc(20px * var(--font-scale));
+    --text-2xl: calc(24px * var(--font-scale));
+    --text-3xl: calc(30px * var(--font-scale));
+    --text-4xl: calc(36px * var(--font-scale));
+    --text-5xl: calc(48px * var(--font-scale));
+    --text-6xl: calc(60px * var(--font-scale));
+
+    /* Spacing scale */
+    --space-scale: var(--font-scale);
+    --space-1: calc(4px * var(--space-scale));
+    --space-2: calc(8px * var(--space-scale));
+    --space-3: calc(12px * var(--space-scale));
+    --space-4: calc(16px * var(--space-scale));
+    --space-5: calc(20px * var(--space-scale));
+    --space-6: calc(24px * var(--space-scale));
+        
     }
 
     /* --- DARK MODE OVERRIDES --- */
@@ -139,11 +162,59 @@
         width: 100%;
         overflow-x: hidden;
     } */
+
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
-:root {
-    --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
+
+
+
+/* Responsive breakpoints - scale increases with screen size */
+@media (min-width: 360px) {
+    :root {
+        --font-scale: 1.3;
+    }
 }
+
+@media (min-width: 430px) {
+    :root {
+        --font-scale: 1.6;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --font-scale: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --font-scale: 2.4;
+    }
+}
+
+@media (min-width: 1366px) {
+    :root {
+        --font-scale: 2;
+    }
+}
+
+@media (min-width: 1920px) {
+    :root {
+        --font-scale: 2.45;
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        --font-scale: 2.7;
+    }
+}
+
+/* Moved gradient to main :root selector above */
 
 body {
     /* min-height: 100vh; */
@@ -153,22 +224,83 @@ body {
 html,
 body {
     width: 100vw;
-    /* height: 100dvh; */
     min-height: 100vh;
     /* overflow-x: hidden; */
-    /* background-color: black;
-    color: white; */
     background-color: var(--color-background);
     color: var(--color-text-primary);
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-
-    /* font-family: "Mona Sans", sans-serif; */
     font-family: Signika, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 2rem;
+    /* Responsive base font size using CSS custom properties */
+    font-size: var(--text-base);
+    line-height: 1.5;
 }
 
 @layer utilities {
+
+/* Utility classes that work with Tailwind */
+.text-responsive-xs {
+    font-size: var(--text-xs) !important;
+}
+.text-responsive-sm {
+    font-size: var(--text-sm) !important;
+}
+.text-responsive-base {
+    font-size: var(--text-base) !important;
+}
+.text-responsive-lg {
+    font-size: var(--text-lg) !important;
+}
+.text-responsive-xl {
+    font-size: var(--text-xl) !important;
+}
+.text-responsive-2xl {
+    font-size: var(--text-2xl) !important;
+}
+.text-responsive-3xl {
+    font-size: var(--text-3xl) !important;
+}
+.text-responsive-4xl {
+    font-size: var(--text-4xl) !important;
+}
+.text-responsive-5xl {
+    font-size: var(--text-5xl) !important;
+}
+.text-responsive-6xl {
+    font-size: var(--text-6xl) !important;
+}
+
+
+
+
+
+
+
+    /* Font family utilities */
+    .font-playwrite {
+        font-family: var(--font-family-playwrite);
+    }
+
+    .font-signika {
+        font-family: var(--font-family-signika);
+    }
+
+    .font-mona {
+        font-family: var(--font-family-mona);
+    }
+
+    /* Text color utilities */
+    .text-text-primary {
+        color: var(--color-text-primary);
+    }
+
+    .text-text-secondary {
+        color: var(--color-text-secondary);
+    }
+
+    .text-text-accent {
+        color: var(--color-text-accent);
+    }
     input,
     textarea {
         padding: 0.8rem;
@@ -235,7 +367,7 @@ body {
     }
     .span_errors {
         color: var(--color-red-error-text);
-        font-size: 0.9 rem;
+        font-size: 0.9rem;
         display: flex;
         justify-self: center;
         padding-top: 0.3rem;
@@ -255,6 +387,181 @@ body {
 
     .section-padding {
         @apply px-5 md:px-10 md:mt-40 mt-20;
+    }
+
+    /* Custom responsive utility classes */
+    @media (max-width: 360px) {
+        .mobile-hidden {
+            display: none !important;
+        }
+        .mobile-block {
+            display: block !important;
+        }
+        .mobile-flex {
+            display: flex !important;
+        }
+        .mobile-text-sm {
+            font-size: 0.875rem !important;
+        }
+        .mobile-text-xs {
+            font-size: 0.75rem !important;
+        }
+        .mobile-p-2 {
+            padding: 0.5rem !important;
+        }
+        .mobile-p-4 {
+            padding: 1rem !important;
+        }
+        .mobile-m-2 {
+            margin: 0.5rem !important;
+        }
+        .mobile-m-4 {
+            margin: 1rem !important;
+        }
+    }
+
+    @media (max-width: 440px) {
+        .mob-land-hidden {
+            display: none !important;
+        }
+        .mob-land-block {
+            display: block !important;
+        }
+        .mob-land-flex {
+            display: flex !important;
+        }
+        .mob-land-text-sm {
+            font-size: 0.875rem !important;
+        }
+        .mob-land-p-2 {
+            padding: 0.5rem !important;
+        }
+        .mob-land-p-4 {
+            padding: 1rem !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tablet-hidden {
+            display: none !important;
+        }
+        .tablet-block {
+            display: block !important;
+        }
+        .tablet-flex {
+            display: flex !important;
+        }
+        .tablet-flex-col {
+            flex-direction: column !important;
+        }
+        .tablet-text-sm {
+            font-size: 0.875rem !important;
+        }
+        .tablet-text-base {
+            font-size: 1rem !important;
+        }
+        .tablet-p-2 {
+            padding: 0.5rem !important;
+        }
+        .tablet-p-4 {
+            padding: 1rem !important;
+        }
+        .tablet-p-6 {
+            padding: 1.5rem !important;
+        }
+        .tablet-m-2 {
+            margin: 0.5rem !important;
+        }
+        .tablet-m-4 {
+            margin: 1rem !important;
+        }
+        .tablet-grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .tablet-grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .tab-land-hidden {
+            display: none !important;
+        }
+        .tab-land-block {
+            display: block !important;
+        }
+        .tab-land-flex {
+            display: flex !important;
+        }
+        .tab-land-flex-col {
+            flex-direction: column !important;
+        }
+        .tab-land-p-4 {
+            padding: 1rem !important;
+        }
+        .tab-land-p-6 {
+            padding: 1.5rem !important;
+        }
+        .tab-land-grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+        .tab-land-grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        }
+    }
+
+    @media (max-width: 1366px) {
+        .desktop-hidden {
+            display: none !important;
+        }
+        .desktop-block {
+            display: block !important;
+        }
+        .desktop-flex {
+            display: flex !important;
+        }
+        .desktop-p-6 {
+            padding: 1.5rem !important;
+        }
+        .desktop-p-8 {
+            padding: 2rem !important;
+        }
+        .desktop-grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        }
+        .desktop-grid-cols-4 {
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        }
+    }
+
+    @media (max-width: 1920px) {
+        .desk-land-p-8 {
+            padding: 2rem !important;
+        }
+        .desk-land-p-10 {
+            padding: 2.5rem !important;
+        }
+        .desk-land-grid-cols-4 {
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        }
+        .desk-land-grid-cols-5 {
+            grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+        }
+    }
+
+    @media (max-width: 2560px) {
+        .desk-wide-p-10 {
+            padding: 2.5rem !important;
+        }
+        .desk-wide-p-12 {
+            padding: 3rem !important;
+        }
+        .desk-wide-grid-cols-5 {
+            grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+        }
+        .desk-wide-grid-cols-6 {
+            grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+        }
     }
 }
 
@@ -387,14 +694,15 @@ body {
         @apply px-4 py-2 desktop:py-1  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
     }
     .bg-circle {
-        @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] group-hover:size-10 group-hover:right-1 rounded-full bg-white-50 transition-all duration-500;
+        @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] group-hover:size-5 group-hover:right-2 rounded-full bg-white-50 transition-all duration-500;
     }
     .text {
-        @apply md:text-lg text-black transition-all duration-300 group-hover:text-white-50 group-hover:-translate-x-[0.2rem] xl:translate-x-0  z-30;
+        @apply text-black transition-all duration-300 group-hover:text-white-50 group-hover:-translate-x-[0.2rem] xl:translate-x-0  z-30;
+        font-size: inherit;
     }
 
-    .arrow-wrapper {
-        @apply group-hover:bg-white-50 size-9 rounded-full absolute top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden right-1;
+    .arrow-wrapper{
+        @apply rounded-full absolute top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden right-1;
     }
 
     @keyframes bounce-x {
@@ -533,6 +841,16 @@ body {
 }
 
 .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
 .hero-title {

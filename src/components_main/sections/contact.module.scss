@@ -1,4 +1,9 @@
 // Base styling for the form
+.container_form{
+   animation: slide 1.5s linear 1;
+}
+
+
 .form {
     display: flex;
     flex-direction: column;
@@ -8,6 +13,7 @@
     margin: 0 4rem 0rem 2rem;
     // padding: 2rem 0;
     // height: auto;
+ 
 }
 
 // Styling for each input group (label, input, error)
@@ -179,4 +185,32 @@
     //     display: none;
     opacity: 0;
     transition: opacity 0.3s;
+    // transform: translateY(4rem);
+}
+
+
+
+
+/* animation */
+@keyframes slide {
+    0% {
+        transform: translateX(-400px);
+        opacity: 0.1;
+    }
+    25% {
+        transform: translateX(-300px);
+        opacity: 0.25;
+    }
+    50% {
+        transform: translateX(-200px);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateX(-100px);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }

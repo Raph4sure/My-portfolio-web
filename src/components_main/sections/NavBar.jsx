@@ -9,11 +9,11 @@ function NavBar() {
             <div className="flex justify-between w-full px-4 items-center">
                 <a
                     href="#section1"
-                    className="font-playwrite font-[700] text-text-primary tablet:text-[0.8rem] phone:text-[0.4rem] hover:cursor-pointer hover:text-blue-50"
+                    className="font-playwrite font-[700] tablet:text-[0.8rem] phone:text-[0.4rem] hover:cursor-pointer hover:text-blue-50 text-blue-700"
                 >
                     Raph Web
                 </a>
-                <nav className="hidden lg:flex">
+                <nav className="flex tab-land:hidden">
                     <ul className="flex gap-x-4">
                         {navItems.map((item, index) => (
                             <li key={index} className="">
@@ -31,7 +31,7 @@ function NavBar() {
                 <ThemeSwitch />
                 <Header />
 
-                <div className="w-35 h-full -mr-8 laptop:hidden ">
+                <div className="w-35 h-full -mr-8 flex tab-land:hidden">
                     <a
                         href="/contact"
                         className="bg-white-50 text-black-50  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] px-3 hover:cursor-pointer hover:bg-blue-50"

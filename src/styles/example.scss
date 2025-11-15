@@ -1,0 +1,133 @@
+// ===== COMPLETE EXAMPLE OF RESPONSIVE SCSS USAGE =====
+
+@import "./responsive.scss";
+
+// Example 1: Basic component with responsive text and spacing
+.my-component {
+    // Use responsive text mixin
+    @include responsive-text("lg");
+
+    // Use predefined responsive spacing
+    @include responsive-space("padding", "4");
+    @include responsive-space("margin-bottom", "2");
+
+    // Custom responsive spacing
+    @include responsive-spacing("border-radius", 8);
+
+    .title {
+        // Direct CSS custom property usage
+        font-size: var(--text-3xl);
+        margin-bottom: var(--space-3);
+
+        // Use breakpoint mixins
+        @include tablet {
+            @include responsive-text("2xl");
+        }
+
+        @include mobile {
+            @include responsive-text("xl");
+        }
+    }
+
+    .subtitle {
+        @include responsive-text("xl");
+        color: var(--color-text-secondary);
+
+        @include tablet {
+            @include responsive-text("lg");
+        }
+    }
+}
+
+// Example 2: Using utility mixins
+.card-component {
+    @include responsive-card;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .card-title {
+        @include responsive-text("2xl");
+        font-weight: bold;
+        @include responsive-spacing("margin-bottom", 12);
+    }
+
+    .card-content {
+        @include responsive-text("base");
+        line-height: 1.6;
+    }
+}
+
+// Example 3: Responsive button
+.my-button {
+    @include responsive-button;
+    background-color: var(--color-pink-button);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--color-pink-button-hover);
+    }
+
+    // Different sizes
+    &.small {
+        @include responsive-text("sm");
+        @include responsive-spacing("padding", 6);
+    }
+
+    &.large {
+        @include responsive-text("lg");
+        @include responsive-spacing("padding", 12);
+    }
+}
+
+// Example 4: Complex responsive layout
+.hero-section {
+    @include responsive-container;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .hero-content {
+        max-width: 600px;
+
+        .hero-title {
+            @include responsive-text("5xl");
+            font-weight: bold;
+            @include responsive-spacing("margin-bottom", 20);
+
+            @include desk-land {
+                @include responsive-text("4xl");
+            }
+
+            @include tablet {
+                @include responsive-text("3xl");
+            }
+
+            @include mobile {
+                @include responsive-text("2xl");
+            }
+        }
+
+        .hero-subtitle {
+            @include responsive-text("xl");
+            color: var(--color-text-secondary);
+            @include responsive-spacing("margin-bottom", 30);
+
+            @include tablet {
+                @include responsive-text("lg");
+            }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: calc(16px * var(--font-scale));
+
+            @include mobile {
+                flex-direction: column;
+                gap: calc(12px * var(--font-scale));
+            }
+        }
+    }
+}

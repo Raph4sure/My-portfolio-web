@@ -13,6 +13,8 @@ import Review from "./components_main/sections/Review";
 import Counter from "./components_main/sections/Counter";
 import Test1 from "./Test1";
 import About from "./components_main/sections/About";
+import ResponsiveDemo from "./components/ResponsiveDemo";
+import ResponsiveTest from "./components_main/sections/ResponsiveTest";
 
 function App() {
     return (
@@ -31,8 +33,12 @@ function App() {
                         <Section1 />
                     </div>
                 </section>
+                {/* <section>
+                    { <ResponsiveDemo/> }
+                    <ResponsiveTest/>
+                </section> */}
 
-                {/* <section className="bg-yellow-400">
+                <section className="bg-yellow-400">
                     <LogoSection />
                 </section>
                 <section>
@@ -43,13 +49,13 @@ function App() {
                 </section>
                 <section className="">
                     <Tools />
-                </section> */}
+                </section>
                 <section>
                     <Contact/>
                 </section>
-                {/* <section>
+                <section>
                     <About />
-                </section> */}
+                </section>
             </div>
         </ThemeProvider>
 

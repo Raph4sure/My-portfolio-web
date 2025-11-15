@@ -43,7 +43,7 @@ export default function Nav() {
             initial="initial"
             animate="enter"
             exit="exit"
-            className={styles.menu}
+            className={`${styles.menu} invisible tab-land:visible`}
         >
             <div className={styles.body}>
                 <div
