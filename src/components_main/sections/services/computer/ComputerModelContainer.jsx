@@ -11,7 +11,7 @@ function ComputerModelContainer() {
                     <ComputerModel />
                 </Stage>
                 <OrbitControls enableZoom={false} autoRotate />
-                <PerspectiveCamera makeDefault position={[-1, 0, 1.8]} zoom={0.7}/>
+                <PerspectiveCamera makeDefault position={[-1, 0, 1.8]} zoom={0.5}/>
             </Suspense>
         </Canvas>
     );
