@@ -1,5 +1,5 @@
 import Header from "../../components/header/Header";
-import {navItems} from "../../components/header/nav/Nav"
+import { navItems } from "../../components/header/nav/Nav";
 import ThemeSwitch from "../../components/ThemeSwitch";
 // import Buttton from "../reUsable/Buttton";
 import Button2 from "../reUsable/Button2";
@@ -33,19 +33,19 @@ function NavBar() {
                 <Header />
 
                 <div className="w-35 h-full -mr-8 flex tab-land:hidden">
-                    <a
+                    {/* <a
                         href="/contact"
                         className="bg-white-50 text-black-50  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] px-3 hover:cursor-pointer hover:bg-blue-50"
                     >
                         Contact me
-                    </a>
+                    </a> */}
+                    <Button2 to="/contact" className="bg-white-50">
+                        Contact me
+                    </Button2>
                 </div>
-                <Button2 to="/contact" className="bg-white-50">
-                    Contact me
-                </Button2>
             </div>
         </header>
     );
 }
 
-export default NavBar
+export default NavBar;

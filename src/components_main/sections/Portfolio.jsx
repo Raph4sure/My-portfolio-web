@@ -178,20 +178,25 @@
 import React, { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import styles from "./portfolio.module.scss";
+import Button2 from "../reUsable/Button2";
+import Buttton from "../reUsable/Buttton";
+import clsx from "clsx";
 
 const portfolioItems = [
     {
         id: 1,
-        bgColor: "#3b82f6", // A nice blue
+        bgColorBtn: "var(--color-project-1)", // A nice blue
+        bgColor: "#7CA5FA",
         image: "/images2/img1.png",
         title: "Full Stack Blog Application",
         description:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
-        link: "/project-1",
+        link: "https://naijastay.netlify.app",
     },
     {
         id: 2,
-        bgColor: "#8b5cf6", // A nice purple
+        bgColorBtn: "var(--color-project-2)", // A nice purple
+        bgColor: "#B092FA", // A nice purple
         image: "/images2/img2.png",
         title: "School Management System",
         description:
@@ -200,7 +205,8 @@ const portfolioItems = [
     },
     {
         id: 3,
-        bgColor: "#10b981", // A nice green
+        bgColorBtn: "var(--color-project-3)", // A nice green
+        bgColor: "#4ED0A8", // A nice green
         image: "/images2/img3.png",
         title: "Real-time Chat Application",
         description:
@@ -209,33 +215,35 @@ const portfolioItems = [
     },
     {
         id: 4,
-        bgColor: "#f59e0b", // A nice yellow
+        bgColorBtn: "var(--color-project-4)", // A nice yellow
+        bgColor: "#D38300", // A nice yellow
         image: "/images2/img4.png",
         title: "E-commerce Platform",
         description:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
         link: "/project-4",
     },
-    // Add as many more projects as you like!
 ];
 
 const PortfolioSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const itemCount = portfolioItems.length;
 
+    const currentProject = portfolioItems[currentSlide];
+    const activeColor = currentProject ?  currentProject.bgColorBtn : "#fff";
+
+  
+
     // --- Button Logic ---
     const handleNext = () => {
-        // Loop back to the first slide if at the end
         setCurrentSlide((prev) => (prev === itemCount - 1 ? 0 : prev + 1));
     };
 
     const handlePrevious = () => {
-        // Loop to the last slide if at the beginning
         setCurrentSlide((prev) => (prev === 0 ? itemCount - 1 : prev - 1));
     };
 
     // --- Smooth Progress Bar Logic ---
-    // We use a motion value and a spring for a smooth, physical animation
     const motionProgress = useMotionValue(1 / itemCount);
     const smoothProgress = useSpring(motionProgress, {
         damping: 30,
@@ -253,7 +261,6 @@ const PortfolioSlider = () => {
 
             <motion.div
                 className={styles.slider}
-                // Animate the 'x' property to move the entire container
                 animate={{ x: `-${currentSlide * 100}%` }}
                 transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
             >
@@ -264,7 +271,9 @@ const PortfolioSlider = () => {
                         style={{ backgroundColor: item.bgColor }}
                     >
                         <div className={styles.content}>
-                            <h2 className={styles.title}>Completed Project ({item.id})</h2>
+                            <h2 className={styles.title}>
+                                Completed Project ({item.id})
+                            </h2>
                             <div className={styles.slide_content}>
                                 <motion.div
                                     className={styles.imageContainer}
@@ -331,15 +340,33 @@ const PortfolioSlider = () => {
                                             className={styles.projectLink}
                                             href={item.link}
                                         >
-                                            <button>View Project</button>
+                                            {/* <button>View Project</button> */}
+                                            <Button2
+                                                className="bg-white-50"
+                                                buttonColor={activeColor}
+                                                to={item.link}
+                                            >
+                                                View Project
+                                            </Button2>
                                         </a>
                                     </div>
                                 </motion.div>
                             </div>
                             {/* Navigation Buttons */}
                             <div className={styles.navButtons}>
-                                <button onClick={handlePrevious}>Prev</button>
-                                <button onClick={handleNext}>Next</button>
+                                {/* <button onClick={handlePrevious}>Prev</button>
+                                <button onClick={handleNext}>Next</button> */}
+
+                                <Buttton
+                                    onClick={handlePrevious}
+                                    text="Prev"
+                                    className=""
+                                />
+                                <Buttton
+                                    onClick={handleNext}
+                                    text="Next"
+                                    className="bg-transparent-10"
+                                />
                             </div>
                         </div>
                     </div>

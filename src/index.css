@@ -99,34 +99,43 @@
         --color-pink-button-disabled: #ff8b9c;
         --color-pink-button-text: #ffffff;
         --color-red-error-text: #ee0653;
+        --color-transparent-10: rgba(255, 255, 255, 0.1);
+
+        /* Portfolio Color */
+        --color-project-1: #1d6ae3;
+        --color-project-2: #603bdb;
+        --color-project-3: #058a5e;
+        --color-project-4: #ffc446;
+        /* --color-project-1: #7CA5FA;
+        --color-project-2: #B092FA;
+        --color-project-3: #4ED0A8; */
 
         /* Gradients */
         --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 
-   /* Base font scale - starts small for mobile */
-    --font-scale: 0.75;
+        /* Base font scale - starts small for mobile */
+        --font-scale: 0.75;
 
-    /* Responsive font sizes using the scale */
-    --text-xs: calc(12px * var(--font-scale));
-    --text-sm: calc(14px * var(--font-scale));
-    --text-base: calc(16px * var(--font-scale));
-    --text-lg: calc(18px * var(--font-scale));
-    --text-xl: calc(20px * var(--font-scale));
-    --text-2xl: calc(24px * var(--font-scale));
-    --text-3xl: calc(30px * var(--font-scale));
-    --text-4xl: calc(36px * var(--font-scale));
-    --text-5xl: calc(48px * var(--font-scale));
-    --text-6xl: calc(60px * var(--font-scale));
+        /* Responsive font sizes using the scale */
+        --text-xs: calc(12px * var(--font-scale));
+        --text-sm: calc(14px * var(--font-scale));
+        --text-base: calc(16px * var(--font-scale));
+        --text-lg: calc(18px * var(--font-scale));
+        --text-xl: calc(20px * var(--font-scale));
+        --text-2xl: calc(24px * var(--font-scale));
+        --text-3xl: calc(30px * var(--font-scale));
+        --text-4xl: calc(36px * var(--font-scale));
+        --text-5xl: calc(48px * var(--font-scale));
+        --text-6xl: calc(60px * var(--font-scale));
 
-    /* Spacing scale */
-    --space-scale: var(--font-scale);
-    --space-1: calc(4px * var(--space-scale));
-    --space-2: calc(8px * var(--space-scale));
-    --space-3: calc(12px * var(--space-scale));
-    --space-4: calc(16px * var(--space-scale));
-    --space-5: calc(20px * var(--space-scale));
-    --space-6: calc(24px * var(--space-scale));
-        
+        /* Spacing scale */
+        --space-scale: var(--font-scale);
+        --space-1: calc(4px * var(--space-scale));
+        --space-2: calc(8px * var(--space-scale));
+        --space-3: calc(12px * var(--space-scale));
+        --space-4: calc(16px * var(--space-scale));
+        --space-5: calc(20px * var(--space-scale));
+        --space-6: calc(24px * var(--space-scale));
     }
 
     /* --- DARK MODE OVERRIDES --- */
@@ -167,9 +176,6 @@
         scroll-behavior: smooth;
     }
 }
-
-
-
 
 /* Responsive breakpoints - scale increases with screen size */
 @media (min-width: 360px) {
@@ -237,44 +243,37 @@ body {
 }
 
 @layer utilities {
-
-/* Utility classes that work with Tailwind */
-.text-responsive-xs {
-    font-size: var(--text-xs) !important;
-}
-.text-responsive-sm {
-    font-size: var(--text-sm) !important;
-}
-.text-responsive-base {
-    font-size: var(--text-base) !important;
-}
-.text-responsive-lg {
-    font-size: var(--text-lg) !important;
-}
-.text-responsive-xl {
-    font-size: var(--text-xl) !important;
-}
-.text-responsive-2xl {
-    font-size: var(--text-2xl) !important;
-}
-.text-responsive-3xl {
-    font-size: var(--text-3xl) !important;
-}
-.text-responsive-4xl {
-    font-size: var(--text-4xl) !important;
-}
-.text-responsive-5xl {
-    font-size: var(--text-5xl) !important;
-}
-.text-responsive-6xl {
-    font-size: var(--text-6xl) !important;
-}
-
-
-
-
-
-
+    /* Utility classes that work with Tailwind */
+    .text-responsive-xs {
+        font-size: var(--text-xs) !important;
+    }
+    .text-responsive-sm {
+        font-size: var(--text-sm) !important;
+    }
+    .text-responsive-base {
+        font-size: var(--text-base) !important;
+    }
+    .text-responsive-lg {
+        font-size: var(--text-lg) !important;
+    }
+    .text-responsive-xl {
+        font-size: var(--text-xl) !important;
+    }
+    .text-responsive-2xl {
+        font-size: var(--text-2xl) !important;
+    }
+    .text-responsive-3xl {
+        font-size: var(--text-3xl) !important;
+    }
+    .text-responsive-4xl {
+        font-size: var(--text-4xl) !important;
+    }
+    .text-responsive-5xl {
+        font-size: var(--text-5xl) !important;
+    }
+    .text-responsive-6xl {
+        font-size: var(--text-6xl) !important;
+    }
 
     /* Font family utilities */
     .font-playwrite {
@@ -694,14 +693,14 @@ body {
         @apply px-4 py-2 desk-wide:py-1  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
     }
     .bg-circle {
-        @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] group-hover:size-5 group-hover:right-2 rounded-full bg-white-50 transition-all duration-500;
+        @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-white-50 group-hover:size-5 group-hover:right-2 rounded-full transition-all duration-500;
     }
     .text {
         @apply text-black transition-all duration-300 group-hover:text-white-50 group-hover:-translate-x-[0.2rem] xl:translate-x-0  z-30;
         font-size: inherit;
     }
 
-    .arrow-wrapper{
+    .arrow-wrapper {
         @apply rounded-full absolute top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden right-1;
     }
 

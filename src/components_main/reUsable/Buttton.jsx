@@ -1,17 +1,19 @@
 import { motion } from "motion/react";
 // import styles from "./../../styles/responsive.scss";
 
+function Buttton({ text, className, id, link, variants, buttonColor, onClick }) {
+    const inlineStyle = buttonColor ? { backgroundColor: buttonColor } : {};
 
-function Buttton({ text, className, id, link, variants }) {
     return (
         <motion.a
             variants={variants}
             className={`${className ?? ""} cta-wrapper`}
             href={link}
+            onClick={onClick}
         >
             <div className="cta-button group w-[7rem]">
-                <div className="bg-circle"/>
-                <p className='text text-responsive-sm font-[500] -ml-5'>
+                <div className="bg-circle" style={inlineStyle} />
+                <p className="text text-responsive-sm font-[500] -ml-5">
                     {text}
                 </p>
                 <div className="arrow-wrapper">

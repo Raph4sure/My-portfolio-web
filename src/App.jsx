@@ -40,11 +40,11 @@ function App() {
 
                 {/* <section className="bg-yellow-400">
                     <LogoSection />
-                </section>
+                </section> */}
                 <section>
                     <Portfolio />
                 </section>
-                <section>
+                {/* <section>
                     <Certification />
                 </section>
                 <section className="">
