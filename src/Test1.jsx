@@ -6,10 +6,10 @@ function Test1() {
     return (
         <div>
             <p>hi there</p>
-            <Button2 to="/some-path">Click Me</Button2>
+            <Button2 to="/some-path">Click Me </Button2>
         </div>
     );
 }
 
+
 export default Test1
-// 

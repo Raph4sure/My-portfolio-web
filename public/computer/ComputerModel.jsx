@@ -14,4 +14,4 @@ export function ComputerModel(props) {
   )
 }
 
-useGLTF.preload('/computer.glb')
+useGLTF.preload('/computerModel.glb');

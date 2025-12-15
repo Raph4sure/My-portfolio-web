@@ -38,7 +38,7 @@ function App() {
                     <ResponsiveTest/>
                 </section> */}
 
-                <section className="bg-yellow-400">
+                {/* <section className="bg-yellow-400">
                     <LogoSection />
                 </section>
                 <section>
@@ -55,7 +55,7 @@ function App() {
                 </section>
                 <section>
                     <About />
-                </section>
+                </section> */}
             </div>
         </ThemeProvider>
 

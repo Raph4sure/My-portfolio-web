@@ -1,4 +1,4 @@
-// import { Shape } from "@react-three/drei";
+import { Html } from "@react-three/drei";
 import Shape from "./Shape.jsx";
 
 import { motion } from "motion/react";
@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Buttton from "../reUsable/Buttton.jsx";
 import { useTheme } from "../../context/ThemeContext.jsx";
+import Button2 from "../reUsable/Button2.jsx";
 
 const skills = [
     { text: "Software Engineer", imgPath: "/images1/Link.png" },
@@ -31,9 +32,9 @@ function Section1() {
     const { theme } = useTheme();
 
     return (
-        <main className="w-full h-full relative overflow-hidden grid grid-cols-2 place-items-center tab-land:grid-cols-1 gap-8 t-[1.8rem]">
-            <header className="w-full grid grid-cols-1 place-items-center ">
-                <div className="flex flex-col gap-7 tab-land:-ml-7 mt-3">
+        <main className="w-full h-full relative overflow-hidden grid grid-cols-2 place-items-center tab-land:grid-cols-1 gap-8 t-[1.8rem] ">
+            <header className="w-full grid grid-cols-1 justify-items-start  tablet:place-items-center">
+                <div className="flex flex-col gap-7 mob-land:-ml-7 tablet:-ml-20 desk-wide:ml-15 mt-3">
                     <motion.div
                         variants={sliding1}
                         initial="initial"
@@ -75,7 +76,7 @@ function Section1() {
                     variants={sliding1}
                     initial="initial"
                     animate="animate"
-                    className="w-full grid grid-cols-2 place-items-center gap-3 phone:gap-1 mt-6 laptop-land2:mt-4 laptop:mt-4 tablet:mt-3 phone:mt-2"
+                    className="w-full grid grid-cols-2 place-items-center gap-3 phone:gap-1 tablet:gap-0 mt-6 laptop-land2:mt-4 laptop:mt-4 tablet:mt-3 phone:mt-2"
                 >
                     <Buttton
                         variants={sliding1}
@@ -86,16 +87,17 @@ function Section1() {
                     />
                     <Buttton
                         variants={sliding1}
-                        className=""
+                        className="tablet:-ml-10 mob-land:ml-0"
                         id="button"
                         text="My Github"
                         link="https://github.com/Raph4sure"
                     />
+                    {/* <Button2/> */}
                 </motion.aside>
             </header>
             <header className="relative w-[25rem] h-[25rem] laptop-land2:w-[19rem] laptop-land2:h-[19rem] laptop:w-[20rem] laptop:h-[20rem] tablet:w-[20rem] tablet:h-[20rem] laptop:mr-[-1rem] phone:w-[14rem] phone:h-[20rem] phone:-mt-5">
                 <Canvas>
-                    <Suspense fallback="Loading...">
+                    <Suspense fallback={<Html center>Loading...</Html>}>
                         <Shape />
                     </Suspense>
                 </Canvas>
