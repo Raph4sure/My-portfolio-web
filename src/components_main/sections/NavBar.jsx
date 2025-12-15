@@ -2,6 +2,7 @@ import Header from "../../components/header/Header";
 import {navItems} from "../../components/header/nav/Nav"
 import ThemeSwitch from "../../components/ThemeSwitch";
 // import Buttton from "../reUsable/Buttton";
+import Button2 from "../reUsable/Button2";
 
 function NavBar() {
     return (
@@ -39,6 +40,9 @@ function NavBar() {
                         Contact me
                     </a>
                 </div>
+                <Button2 to="/contact" className="bg-white-50">
+                    Contact me
+                </Button2>
             </div>
         </header>
     );
