@@ -692,16 +692,30 @@ body {
     .cta-button {
         @apply px-4 py-2 desk-wide:py-1  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
     }
+    .cta-buttonPrev {
+        @apply px-4 py-2 desk-wide:py-1  rounded-tl-[1.5rem]  rounded-tr-[0rem]  rounded-bl-[0rem]  rounded-br-[1.5rem] bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    }
     .bg-circle {
         @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-white-50 group-hover:size-5 group-hover:right-2 rounded-full transition-all duration-500;
+    }
+    .bg-circlePrev {
+        @apply absolute -left-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-white-50 group-hover:size-5 group-hover:left-2 rounded-full transition-all duration-500;
     }
     .text {
         @apply text-black transition-all duration-300 group-hover:text-white-50 group-hover:-translate-x-[0.2rem] xl:translate-x-0  z-30;
         font-size: inherit;
     }
+    .textPrev {
+        @apply text-black transition-all duration-300 group-hover:text-white-50 group-hover:translate-x-[0.2rem] xl:translate-x-0  z-30;
+        font-size: inherit;
+    }
 
     .arrow-wrapper {
         @apply rounded-full absolute top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden right-1;
+    }
+    .arrow-wrapperPrev {
+        @apply rounded-full absolute top-1/2 flex justify-center items-center overflow-hidden left-1;
+        transform: translateY(-50%) rotate(180deg);
     }
 
     @keyframes bounce-x {

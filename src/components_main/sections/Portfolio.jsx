@@ -180,6 +180,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import styles from "./portfolio.module.scss";
 import Button2 from "../reUsable/Button2";
 import Buttton from "../reUsable/Buttton";
+import ButttonPrev from "../reUsable/ButtonPrev";
 import clsx from "clsx";
 
 const portfolioItems = [
@@ -230,9 +231,7 @@ const PortfolioSlider = () => {
     const itemCount = portfolioItems.length;
 
     const currentProject = portfolioItems[currentSlide];
-    const activeColor = currentProject ?  currentProject.bgColorBtn : "#fff";
-
-  
+    const activeColor = currentProject ? currentProject.bgColorBtn : "#fff";
 
     // --- Button Logic ---
     const handleNext = () => {
@@ -334,7 +333,9 @@ const PortfolioSlider = () => {
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                 >
                                     <div className={styles.textInner}>
-                                        <h1>{item.title}</h1>
+                                        <h1 style={{ color: item.bgColorBtn }}>
+                                            {item.title}
+                                        </h1>
                                         <p>{item.description}</p>
                                         <a
                                             className={styles.projectLink}
@@ -357,15 +358,15 @@ const PortfolioSlider = () => {
                                 {/* <button onClick={handlePrevious}>Prev</button>
                                 <button onClick={handleNext}>Next</button> */}
 
-                                <Buttton
+                                <ButttonPrev
                                     onClick={handlePrevious}
                                     text="Prev"
-                                    className=""
+                                    classNameWidth="w-[5rem]"
                                 />
                                 <Buttton
                                     onClick={handleNext}
                                     text="Next"
-                                    className="bg-transparent-10"
+                                    classNameWidth="w-[5rem]"
                                 />
                             </div>
                         </div>

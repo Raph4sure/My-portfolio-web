@@ -81,6 +81,7 @@ function Section1() {
                     <Buttton
                         variants={sliding1}
                         className=""
+                        classNameWidth="w-[7rem]"
                         id="button"
                         text="My Resume"
                         link="https://drive.google.com/drive/folders/14F3sKJKJ4hMEs893wt3uF9cVbVCeM8MZ?usp=sharing"
@@ -88,6 +89,7 @@ function Section1() {
                     <Buttton
                         variants={sliding1}
                         className="tablet:-ml-10 mob-land:ml-0"
+                        classNameWidth="w-[7rem]"
                         id="button"
                         text="My Github"
                         link="https://github.com/Raph4sure"
