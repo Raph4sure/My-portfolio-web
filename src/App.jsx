@@ -29,9 +29,9 @@ function App() {
                     {/* <Test2 /> */}
                     <NavBar className="bg-brown-400" />
 
-                    <div>
+                    {/* <div>
                         <Section1 />
-                    </div>
+                    </div> */}
                 </section>
                 {/* <section>
                     { <ResponsiveDemo/> }

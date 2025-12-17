@@ -249,14 +249,13 @@ const PortfolioSlider = () => {
         stiffness: 200,
     });
 
-    // Update the progress bar value whenever the current slide changes
+    // Updating the progress bar value whenever the current slide changes
     useEffect(() => {
         motionProgress.set((currentSlide + 1) / itemCount);
     }, [currentSlide, itemCount, motionProgress]);
 
     return (
         <div className={styles.sliderContainer}>
-            {/* --- The Sliding Area --- */}
 
             <motion.div
                 className={styles.slider}

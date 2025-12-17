@@ -39,7 +39,10 @@ function NavBar() {
                     >
                         Contact me
                     </a> */}
-                    <Button2 to="/contact" className="bg-white-50">
+                    <Button2
+                        to="/contact"
+                        className="text-text-primary"
+                    >
                         Contact me
                     </Button2>
                 </div>

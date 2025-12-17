@@ -9,6 +9,7 @@
 
 @custom-variant desk-wide (@media (max-width: 2560px));
 @custom-variant desk-land (@media (max-width: 1920px));
+@custom-variant desk-med (@media (max-width: 1720px));
 @custom-variant desktop (@media (max-width: 1366px));
 @custom-variant tab-land (@media (max-width: 1024px));
 @custom-variant tablet (@media (max-width: 768px));
@@ -65,6 +66,7 @@
         /* Background Colors */
         --color-background: #ffffff;
         --color-background-secondary: #f0f0f0;
+        --color-bg-button2: #d9ecff;
 
         /* Text Colors */
         --color-text-primary: #1c1c21; /* Dark color for main text */
@@ -142,14 +144,15 @@
     .dark {
         /* Background Colors */
         /* --color-background: #0e0e10; */
-        --color-background: black;
+        --color-background: #000000;
         --color-background-secondary: #1c1c21;
+        --color-bg-button2: #2c3539;
 
         /* Text Colors */
-        --color-text-primary: #d9ecff; /* Light color for main text */
-        --color-text-secondary: #839cb5; /* Lighter blue for secondary text */
-        --color-text-accent: #dd4c62; /* Pink can often stay the same */
-
+        /* --color-text-primary: #ffffff; */
+        --color-text-primary: #d9ecff;
+        --color-text-secondary: #839cb5;
+        --color-text-accent: #dd4c62;
         /* Border Colors */
         --color-border: #2d2d38;
     }

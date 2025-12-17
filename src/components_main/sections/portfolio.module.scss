@@ -191,7 +191,7 @@
 
     .content {
         display: grid;
-        grid-template-rows: 0.9fr auto 0.3fr;
+        grid-template-rows: 0.2fr auto 0.3fr;
         // flex-direction: column;
         // align-items: center;
         // justify-content: center;
@@ -199,6 +199,7 @@
         height: 100%;
         gap: 5%;
         padding: 0.5vw 3vw ;
+        align-items: center;
         // For mobile, stack the content vertically
         @media (max-width: 768px) {
             flex-direction: column;
@@ -210,8 +211,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 500;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            // font-size: var(--text-3xl);
+            font-weight: 700;
         }
 
         .slide_content {
@@ -283,12 +285,12 @@
     flex: 1;
     max-width: 100%;
     h1 {
-        font-size: clamp(2rem, 5vw, 1.5rem);
+        font-size: clamp(1rem, 3vw, 2rem);
         margin-bottom: 1rem;
-        font-weight: 700;
+        font-weight: 600;
     }
     p {
-        font-size: clamp(1rem, 2vw, 1rem);
+        font-size: clamp(1rem, 2vw, 2rem);
         line-height: 1.6;
         margin-bottom: 2rem;
         color: rgba(255, 255, 255, 0.8);
@@ -343,8 +345,9 @@
 
     .progressBar {
         fill: none;
-        stroke: #ffdde1; // Same pink as the button
-        stroke-width: 5;
+        // stroke: #ffdde1;
+        stroke: var(--color-text-accent);
+        stroke-width: 8;
         stroke-linecap: round;
     }
 }
