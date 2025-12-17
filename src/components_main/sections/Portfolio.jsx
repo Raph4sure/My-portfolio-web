@@ -342,7 +342,7 @@ const PortfolioSlider = () => {
                                         >
                                             {/* <button>View Project</button> */}
                                             <Button2
-                                                className="bg-white-50"
+                                                className="bg-white-50 grid"
                                                 buttonColor={activeColor}
                                                 to={item.link}
                                             >

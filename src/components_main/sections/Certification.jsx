@@ -107,7 +107,7 @@ const Certification = () => {
 
     // Get live window width
     const width = useWindowWidth();
-  const isMobile = width < 768;
+  const isMobile = width < 1024;
 
     const cardVariants = isMobile ? mobileCardVariants : desktopCardVariants;
 

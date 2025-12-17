@@ -162,6 +162,11 @@
         @content;
     }
 }
+@mixin desk-med {
+    @media (max-width: 1720px) {
+        @content;
+    }
+}
 
 @mixin desk-land {
     @media (max-width: 1920px) {

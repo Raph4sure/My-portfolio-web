@@ -41,13 +41,13 @@ function App() {
                 {/* <section className="bg-yellow-400">
                     <LogoSection />
                 </section> */}
-                <section>
-                    <Portfolio />
-                </section>
                 {/* <section>
+                    <Portfolio />
+                </section> */}
+                <section>
                     <Certification />
                 </section>
-                <section className="">
+              {/* /*   <section className="">
                     <Tools />
                 </section>
                 <section>

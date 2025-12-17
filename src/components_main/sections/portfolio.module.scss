@@ -167,6 +167,10 @@
 //     }
 //   }
 
+@use './../../styles/responsive.scss' as *;
+
+
+
 .sliderContainer {
     position: relative;
     width: 100vw;
@@ -198,13 +202,16 @@
         width: 100%;
         height: 100%;
         gap: 5%;
-        padding: 0.5vw 3vw ;
+        padding: 0.5vw 3vw;
         align-items: center;
         // For mobile, stack the content vertically
-        @media (max-width: 768px) {
-            flex-direction: column;
-            text-align: center;
-        }
+
+  
+
+        // @media (max-width: 768px) {
+        //     flex-direction: column;
+        //     text-align: center;
+        // }
 
         .title {
             grid-row: 1 / 2;
@@ -220,6 +227,18 @@
             display: flex;
             gap: 3%;
             // margin-top: -2rem
+
+      @include tab-land {
+        // display: grid;
+           flex-direction: column;
+           align-items: center;
+        //    margin-top: -1rem;
+        }
+      @include mob-land {
+           margin-top: -3rem;
+        }
+
+
         }
         .textInner {
             display: flex;
@@ -228,6 +247,9 @@
 
             .projectLink {
                 text-align: end;
+                @include tab-land {
+                    text-align: center;
+                }
             }
         }
 
@@ -247,6 +269,7 @@
             // gap: 15px;
             z-index: 10;
             pointer-events: auto;
+            margin-bottom: 0.2rem;
 
             .button {
                 // padding: 10px 20px;
@@ -268,32 +291,71 @@
 .imageContainer {
     flex: 1;
     max-width: 50%;
+      @include tab-land {
+            max-width: 80%;
+            // padding-bottom: 2rem;
+        }
+      @include tablet {
+            max-width: 70%;
+            // padding-bottom: 2rem;
+        }
+          @include mob-land {
+            max-width: 90%;
+        }
+
     img {
         width: 100%;
         height: auto;
         object-fit: contain;
         border-radius: 12px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        // @include tab-land {
+        //     max-width: 80%;
+        //     margin-bottom: 2rem;
+        // }
     }
-    @media (max-width: 768px) {
-        max-width: 80%;
-        margin-bottom: 2rem;
-    }
+
+
+
+    // @media (max-width: 768px) {
+    //     max-width: 80%;
+    //     margin-bottom: 2rem;
+    // }
 }
 
 .textContainer {
     flex: 1;
     max-width: 100%;
+    padding-top: 1.5rem;
+    @include tablet {
+        padding-top: 0.8rem;
+    }
     h1 {
         font-size: clamp(1rem, 3vw, 2rem);
         margin-bottom: 1rem;
-        font-weight: 600;
+        font-weight: 700;
+        @include tab-land {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            // padding-top: 2rem;
+            align-self: center;
+        }
+        @include mob-land {
+            font-size: clamp(1.3rem, 3vw, 2.5rem);
+            // padding-top: 2rem;
+        }
     }
     p {
         font-size: clamp(1rem, 2vw, 2rem);
         line-height: 1.6;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         color: rgba(255, 255, 255, 0.8);
+        align-self: center;
+        text-align:justify;
+           @include tab-land {
+            // font-size: clamp(0.8rem, 3vw, 2.5rem);
+            // padding-top: -9rem;
+            // margin-bottom: 1rem;
+        }
     }
     button {
         background-color: #ffdde1; // A soft pink
@@ -308,9 +370,9 @@
             transform: scale(1.05);
         }
     }
-    @media (max-width: 768px) {
-        max-width: 90%;
-    }
+    // @media (max-width: 768px) {
+    //     max-width: 90%;
+    // }
 }
 
 // --- UI Controls Styling ---
@@ -321,7 +383,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; // Allows clicks to pass through
+    pointer-events: none; 
+        @include mob-land {
+        top: 1.2%;
+        left: -6%;
+    }
 }
 
 .progressBarContainer {
@@ -329,9 +395,16 @@
     top: 30px;
     left: 30px;
     width: 80px;
-    height: 80px;
+    height: auto;
     z-index: 10;
     pointer-events: auto;
+
+    @include tab-land {
+        width: 60px;
+    }
+    @include mob-land {
+        width: 30px;
+    }
 
     svg {
         transform: rotate(-90deg);
@@ -347,7 +420,7 @@
         fill: none;
         // stroke: #ffdde1;
         stroke: var(--color-text-accent);
-        stroke-width: 8;
+        stroke-width: 10;
         stroke-linecap: round;
     }
 }
