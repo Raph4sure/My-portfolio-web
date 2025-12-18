@@ -20,19 +20,19 @@ function App() {
     return (
         <ThemeProvider>
             <div className="container">
-                <section className="bg-p">
+                {/* <section className="bg-p"> */}
                     <div className="z-50 bg-green-400">
                         {/* <Header /> */}
                         {/* <ThemeSwitch /> */}
                     </div>
                     {/* <Test1 /> */}
                     {/* <Test2 /> */}
-                    <NavBar className="bg-brown-400" />
+                    {/* <NavBar className="bg-brown-400" /> */}
 
                     {/* <div>
                         <Section1 />
                     </div> */}
-                </section>
+                {/* </section> */}
                 {/* <section>
                     { <ResponsiveDemo/> }
                     <ResponsiveTest/>

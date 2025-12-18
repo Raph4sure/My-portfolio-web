@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import images from "../../helpers/imageLoader.";
+import styles from "./certification.module.scss";
+import Buttton from "../reUsable/Buttton";
+import ButttonPrev from "../reUsable/ButtonPrev";
 
 const certificateItems = [
     // {
@@ -64,7 +67,7 @@ const certificateItems = [
     {
         id: 12,
         img: images["certificate/Oracle_new.jpg"],
-        title: "Power Concept (Oracle DataBase Admin)",
+        title: "Power Concept (Oracle D.B Admin)",
     },
 ];
 
@@ -91,11 +94,11 @@ const desktopCardVariants = {
 
 // --- MOBILE VARIANTS (Vertical) ---
 const mobileCardVariants = {
-    center: { y: "0%", x: "0%", scale: 1, zIndex: 5, opacity: 1 },
-    top1: { y: "-60%", x: "0%", scale: 0.7, zIndex: 3, opacity: 1 },
-    top2: { y: "-120%", x: "0%", scale: 0.5, zIndex: 2, opacity: 1 },
-    bottom1: { y: "60%", x: "0%", scale: 0.7, zIndex: 3, opacity: 1 },
-    bottom2: { y: "120%", x: "0%", scale: 0.5, zIndex: 2, opacity: 1 },
+    center: { y: "0%", x: "0%", scale: 1.2, zIndex: 5, opacity: 1 },
+    top1: { y: "-95%", x: "0%", scale: 0.7, zIndex: 3, opacity: 1 },
+    top2: { y: "-155%", x: "0%", scale: 0.5, zIndex: 2, opacity: 1 },
+    bottom1: { y: "95%", x: "0%", scale: 0.7, zIndex: 3, opacity: 1 },
+    bottom2: { y: "155%", x: "0%", scale: 0.5, zIndex: 2, opacity: 1 },
     hide: { y: "0%", x: "0%", scale: 0, opacity: 0, zIndex: 0 },
 };
 
@@ -107,7 +110,7 @@ const Certification = () => {
 
     // Get live window width
     const width = useWindowWidth();
-  const isMobile = width < 1024;
+    const isMobile = width < 768;
 
     const cardVariants = isMobile ? mobileCardVariants : desktopCardVariants;
 
@@ -132,9 +135,11 @@ const Certification = () => {
     // };
 
     return (
-        <div className="w- full h-full grid grid-rows-[auto_1fr]">
-            <h1 className="justify-self-center text-5xl">Certification</h1>
-            <div className="flex items-center flex-col justify-center -mt-10 overflow-hidden">
+        <div className="w- full h-full grid grid-rows-[auto_1fr_auto] mob-land:grid-rows-[auto_1fr] mob-land:grid-cols-[1fr_auto] ">
+            <h1 className="justify-self-center text-[clamp(2rem,5vw,2.5rem)] font-[600] row-span-1 mob-land:row-span-1 mob-land:col-span-2">
+                Certification
+            </h1>
+            <div className="flex items-center flex-col justify-center -mt-10 h-full overflow-hidden row-span-1 mob-land:row-span-1 mob-land:col-span-1 mob-land:justify-self-center mob-land:mt-0">
                 {certificateItems.map((item, index) => {
                     // 3. For each image, we determine its position relative to the center.
                     let position = "hide"; // Default to hidden
@@ -180,47 +185,58 @@ const Certification = () => {
                                 width: isMobile ? "65%" : "43%",
                                 position: "absolute",
                             }}
+                            className="flex flex-col items-center justify-center"
                         >
                             <img
                                 src={item.img}
                                 alt={item.title}
-                                className="rounded-[12px]"
+                                className="rounded-[12px] h-[8rem] w-auto"
                             />
                             <motion.p
                                 initial={{ opacity: 0 }}
                                 animate={{
                                     opacity: position === "center" ? 1 : 0,
+                                    // y: position === "center" ? 10 : 0,
                                 }}
                                 transition={{ duration: 0.3, delay: 0.2 }}
-                                className="text-[1rem] mt-0 text-center"
+                                className="text-[1rem] mt-0 text-center text-[clamp(0.7rem,2vw,1rem)] text-[nowrap]"
                             >
                                 {item.title}
                             </motion.p>
                         </motion.div>
                     );
                 })}
-                <div
-                    className={`z-10 flex gap-4 ${
-                        isMobile
-                            ? "flex-col mr-4 relative left-20 gap-60"
-                            : "flex-row relative top-45"
+            </div>
+
+            {/* Change this line */}
+            <div className="flex justify-center gap-30 mb-5 mob-land:grid-col-start-2 mob-land:col-end-3 mob-land:row-start-2 mob-land:row-end-3 mob-land:flex-col mob-land:gap-98 mob-land:-mx-5">
+                <ButttonPrev
+                    text={isMobile ? "Prev" : "Backward"}
+                    onClick={handleBack}
+                    classNameWidth={isMobile ? "w-[5rem]" : "w-[7rem]"}
+                    className="mob-land:rotate-90"
+                />
+                <Buttton
+                    text={isMobile ? "Next" : "Forward"}
+                    onClick={handleNext}
+                    classNameWidth={isMobile ? "w-[5rem]" : "w-[7rem]"}
+                    className="mob-land:rotate-90"
+                />
+
+                {/* <button
+                    className={`bg-indigo-400 rounded-md ${
+                        isMobile ? "py-0 px-0" : "py-2 px-4"
                     }`}
+                    onClick={handleBack}
                 >
-                    <button
-                        className={`bg-indigo-400 rounded-md ${
-                            isMobile ? "py-0 px-0" : "py-2 px-4"
-                        }`}
-                        onClick={handleBack}
-                    >
-                        {isMobile ? "↑" : "Back"}
-                    </button>
-                    <button
-                        className="bg-indigo-400 rounded-md py-2 px-4"
-                        onClick={handleNext}
-                    >
-                        {isMobile ? "↓" : "Next"}
-                    </button>
-                </div>
+                    {isMobile ? "↑" : "Back"}
+                </button>
+                <button
+                    className="bg-indigo-400 rounded-md py-2 px-4"
+                    onClick={handleNext}
+                >
+                    {isMobile ? "↓" : "Next"}
+                </button> */}
             </div>
         </div>
     );
