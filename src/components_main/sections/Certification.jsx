@@ -190,7 +190,7 @@ const Certification = () => {
                             <img
                                 src={item.img}
                                 alt={item.title}
-                                className="rounded-[12px] h-[8rem] w-auto"
+                                className="rounded-[12px] mob-land:h-[8rem] w-auto"
                             />
                             <motion.p
                                 initial={{ opacity: 0 }}

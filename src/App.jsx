@@ -44,16 +44,16 @@ function App() {
                 {/* <section>
                     <Portfolio />
                 </section> */}
-                <section>
+                {/* <section>
                     <Certification />
-                </section>
-              {/* /*   <section className="">
+                </section> */}
+              <section className="">
                     <Tools />
                 </section>
-                <section>
+                {/* <section>
                     <Contact/>
-                </section>
-                <section>
+                </section> */}
+                {/* <section>
                     <About />
                 </section> */}
             </div>
