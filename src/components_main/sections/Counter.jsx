@@ -11,7 +11,7 @@ const counterItems = [
 
 function Counter() {
     return (
-        <div className="w-full -mt-5 flex flex-col gap-[-2rem] text-text-primary bg-red-600">
+        <div className="w-full -mt-5 flex flex-col gap-[-2rem] text-text-primary">
             {counterItems.map((item, index) => (
                 // <div className="w-full flex flex-col">
                 <div key={index} className="w-full">

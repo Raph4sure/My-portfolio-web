@@ -20,42 +20,40 @@ function App() {
     return (
         <ThemeProvider>
             <div className="container">
-                {/* <section className="bg-p"> */}
-                    <div className="z-50 bg-green-400">
-                        {/* <Header /> */}
-                        {/* <ThemeSwitch /> */}
-                    </div>
-                    {/* <Test1 /> */}
-                    {/* <Test2 /> */}
-                    {/* <NavBar className="bg-brown-400" /> */}
-
+                <section>
                     {/* <div>
-                        <Section1 />
+                        <Header />
+                        <ThemeSwitch />
                     </div> */}
-                {/* </section> */}
+                    <NavBar />
+
+                    <div>
+                        <Section1 />
+                    </div>
+                </section>
                 {/* <section>
                     { <ResponsiveDemo/> }
                     <ResponsiveTest/>
                 </section> */}
 
-                {/* <section className="bg-yellow-400">
+                <section >
                     <LogoSection />
-                </section> */}
-                {/* <section>
+                </section>
+                <section>
                     <Portfolio />
-                </section> */}
-                {/* <section>
+                </section>
+                <section>
                     <Certification />
-                </section> */}
-              <section className="">
+                </section>
+              <section >
                     <Tools />
                 </section>
-                {/* <section>
+                <section>
                     <Contact/>
-                </section> */}
-                {/* <section>
+                </section>
+                <section>
                     <About />
-                </section> */}
+                </section>
             </div>
         </ThemeProvider>
 
