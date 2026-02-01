@@ -1,0 +1,5 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="20" fill="#0F172A"/> <path d="M30 35L20 50L30 65" stroke="#61DAFB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/> <text x="35" y="62" fill="white" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 32px;">AR</text>
+  <path d="M70 35L80 50L70 65" stroke="#61DAFB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/> <rect x="52" y="68" width="12" height="3" fill="#61DAFB"> <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+  </rect>
+</svg>
