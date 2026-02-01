@@ -8,12 +8,18 @@ function NavBar() {
     return (
         <header className="text-[1rem] w-full py-3 ">
             <div className="flex justify-between w-full px-4 items-center">
-                <a
+                {/* <a
                     href="#section1"
                     className="font-playwrite font-[700] tablet:text-[0.8rem] phone:text-[0.4rem] hover:cursor-pointer hover:text-blue-50 text-blue-700"
                 >
                     Raph Web
-                </a>
+                </a> */}
+                <img
+                    src="/main1_logo.png"
+                    alt="Logo"
+                    className="h-6 w-object-fit hover:cursor-pointer hover:opacity-70 text-blue-700"
+                />
+
                 <nav className="flex tab-land:hidden">
                     <ul className="flex gap-x-4">
                         {navItems.map((item, index) => (
@@ -39,10 +45,7 @@ function NavBar() {
                     >
                         Contact me
                     </a> */}
-                    <Button2
-                        to="/contact"
-                        className="text-text-primary"
-                    >
+                    <Button2 to="/contact" className="text-text-primary">
                         Contact me
                     </Button2>
                 </div>
