@@ -573,9 +573,17 @@ body {
         scroll-snap-align: center;
     } */
     section {
-        height: 100vh;
+        /* height: 100dvh; */
         scroll-snap-align: center;
+        min-height: 100dvh;
+
         /* overflow: hidden; */
+    }
+
+    .sub_section {
+        max-height: 90%;
+        overflow-y: auto;
+        overflow-x:hidden;
     }
 
     /* .sectioning_container {

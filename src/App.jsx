@@ -21,14 +21,16 @@ function App() {
         <ThemeProvider>
             <div className="container">
                 <section>
-                    {/* <div>
+                    <div className="sub_section">
+                        {/* <div>
                         <Header />
                         <ThemeSwitch />
                     </div> */}
-                    <NavBar />
+                        <NavBar />
 
-                    <div>
-                        <Section1 />
+                        <div>
+                            <Section1 />
+                        </div>
                     </div>
                 </section>
                 {/* <section>
@@ -36,23 +38,35 @@ function App() {
                     <ResponsiveTest/>
                 </section> */}
 
-                <section >
-                    <LogoSection />
+                <section>
+                    <div className="sub_section">
+                        <LogoSection />
+                    </div>
                 </section>
                 <section>
-                    <Portfolio />
+                    <div className="sub_section">
+                        <Portfolio />
+                    </div>
                 </section>
                 <section>
-                    <Certification />
-                </section>
-              <section >
-                    <Tools />
-                </section>
-                <section>
-                    <Contact/>
+                    <div className="sub_section">
+                        <Certification />
+                    </div>
                 </section>
                 <section>
-                    <About />
+                    <div className="sub_section">
+                        <Tools />
+                    </div>
+                </section>
+                <section>
+                    <div className="sub_section">
+                        <Contact />
+                    </div>
+                </section>
+                <section>
+                    <div className="sub_section">
+                        <About />
+                    </div>
                 </section>
             </div>
         </ThemeProvider>

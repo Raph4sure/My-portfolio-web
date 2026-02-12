@@ -32,13 +32,13 @@ function Section1() {
     const { theme } = useTheme();
 
     return (
-        <main className="w-full h-full relative overflow-hidden grid grid-cols-2 place-items-center tab-land:grid-cols-1 gap-8 t-[1.8rem] ">
+        <main className="w-full h-full relative overflow-hidden grid grid-cols-2 gap-8 place-items-center tab-land:gap-0 tablet:grid-cols-1 tablet:gap-8">
             <header
-                className="w-full desk-wide:w-[75%] desk-wide:ml-12 tab-land:ml-0 desk-land:w-[80%]
-            desktop:w-[90%] tab-land:w-[80%] mob-land:w-[89%] flex flex-col justify-center items-start gap-3"
+                className="w-full desk-wide:w-[75%] desk-wide:ml-12 tablet:ml-0 desk-land:w-[80%]
+            desktop:w-[90%] tablet:w-[80%] mob-land:w-[89%] flex flex-col justify-center items-start gap-3 tab-land:gap-0"
             >
                 {/* <div className="flex flex-col gap-7 ml-10 mob-land:-ml-4 tablet:-ml-20 tab-land:ml-15 desktop:ml-12 desk-med:ml-12 desk-land:ml-12 desk-wide:ml-15 mt-3"> */}
-                <div className="mt-4 mb-2 flex flex-col">
+                <div className="mt-4 mb-2 flex flex-col ">
                     <div className="">
                         <motion.div
                             variants={sliding1}
@@ -51,7 +51,7 @@ function Section1() {
                             </motion.h1>
                             <motion.h1
                                 variants={sliding1}
-                                className="text-responsive-3xl font-bold"
+                                className="text-responsive-2xl font-bold"
                             >
                                 I'm Alabi Raphael,
                             </motion.h1>
@@ -80,7 +80,7 @@ function Section1() {
                                     </span>
                                 </span>
                             </motion.span>
-                            <p className="py-3">
+                            <p className="py-3 tab-land:py-0">
                                 I build scaalable{" "}
                                 <span className="text-blue-700">
                                     software solutions
@@ -123,9 +123,9 @@ function Section1() {
                     {/* <Button2/> */}
                 </motion.aside>
             </header>
-            <header className="relative w-[25rem] h-[25rem] laptop:w-[20rem] laptop:h-[20rem] tablet:w-[20rem] tablet:h-[20rem] laptop:mr-[-1rem] phone:w-[14rem] phone:h-[20rem] phone:-mt-5">
+            <header className="relative w-[25rem] h-[25rem]">
                 {/* <div className=""> */}
-                <Canvas className="tab-land:-mt-18">
+                <Canvas className="tab-land:-mt-10 tablet:-mt-18">
                     <Suspense fallback={<Html center>Loading...</Html>}>
                         <Shape />
                     </Suspense>
@@ -136,7 +136,7 @@ function Section1() {
                         <img
                             src="/images1/light_pics.png"
                             alt="profile_pics"
-                            className="w-[75%] desk-wide:w-[60%] h-auto object-cover mt-6 desk-wide:-mt-8 tab-land:w-[35%] tab-land:-mt-39 tablet:-mt-35 mob-land:w-[45%] mob-land:-mt-25 mobile:-mt-25"
+                            className="w-[75%] desk-wide:w-[60%] h-auto object-cover mt-6 desk-wide:-mt-8 tab-land:w-[35%] tab-land:-mt-15 tablet:-mt-35 mob-land:w-[45%] mob-land:-mt-25 mobile:-mt-25"
                         />
                     ) : (
                         <img
