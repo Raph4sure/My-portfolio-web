@@ -135,11 +135,11 @@ const Certification = () => {
     // };
 
     return (
-        <div className="w- full h-full grid grid-rows-[auto_1fr_auto] mob-land:grid-rows-[auto_1fr] mob-land:grid-cols-[1fr_auto] ">
+        <div className="w-full h-full grid grid-rows-[auto_1fr_auto] mob-land:grid-rows-[auto_1fr] mob-land:grid-cols-[1fr_auto] ">
             <h1 className="justify-self-center text-[clamp(2rem,5vw,2.5rem)] font-[600] row-span-1 mob-land:row-span-1 mob-land:col-span-2">
                 Certification
             </h1>
-            <div className="flex items-center flex-col justify-center -mt-10 h-full overflow-hidden row-span-1 mob-land:row-span-1 mob-land:col-span-1 mob-land:justify-self-center mob-land:mt-0">
+            <div className="flex items-center flex-col justify-center h-full overflow-hidden row-span-1 mob-land:row-span-1 mob-land:col-span-1 mob-land:justify-self-center mobile:-mt-1">
                 {certificateItems.map((item, index) => {
                     // 3. For each image, we determine its position relative to the center.
                     let position = "hide"; // Default to hidden

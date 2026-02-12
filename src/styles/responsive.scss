@@ -140,7 +140,7 @@
 }
 
 @mixin mob-land {
-    @media (max-width: 440px) {
+    @media (max-width: 430px) {
         @content;
     }
 }
@@ -158,7 +158,13 @@
 }
 
 @mixin desktop {
-    @media (max-width: 1366px) {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin desk-land {
+    @media (max-width: 1536px) {
         @content;
     }
 }
@@ -168,14 +174,8 @@
     }
 }
 
-@mixin desk-land {
-    @media (max-width: 1920px) {
-        @content;
-    }
-}
-
 @mixin desk-wide {
-    @media (max-width: 2560px) {
+    @media (max-width: 1920px) {
         @content;
     }
 }

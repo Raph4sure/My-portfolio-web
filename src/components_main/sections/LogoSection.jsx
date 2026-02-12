@@ -36,7 +36,7 @@ const LogoIcon = ({ icon }) => {
 function LogoSection() {
     return (
         <main className="h-full phone:text-sm">
-                <h1 className="font-playwrite -mb-13 mt-9 text-center text-lg phone:text-[0.6rem]">
+                <h1 className="font-playwrite -mb-13 text-center text-lg phone:text-[0.6rem]">
                     My work Experience
                 </h1>
             <div className="relative alignleft h-28">
