@@ -209,7 +209,8 @@ const Certification = () => {
             </div>
 
             {/* Change this line */}
-            <div className="flex justify-center gap-30 mb-5 mob-land:grid-col-start-2 mob-land:col-end-3 mob-land:row-start-2 mob-land:row-end-3 mob-land:flex-col mob-land:gap-98 mob-land:-mx-5">
+            {/* <div className="flex justify-center gap-30 mb-5 mob-land:grid-col-start-2 mob-land:col-end-3 mob-land:row-start-2 mob-land:row-end-3 mob-land:flex-col mob-land:gap-98 mob-land:-mx-5"> */}
+            <div className="flex justify-center gap-30 mb-5 mob-land:grid-col-start-2 mob-land:col-end-3 mob-land:row-start-2 mob-land:row-end-3 mob-land:flex-col mob-land:gap-98 mob-land:-ml-11">
                 <ButttonPrev
                     text={isMobile ? "Prev" : "Backward"}
                     onClick={handleBack}
