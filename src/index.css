@@ -205,7 +205,7 @@
     }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1280px) {
     :root {
         --font-scale: 2;
     }
@@ -579,8 +579,8 @@ body {
         width: 100%;
 
         display: flex;
-        /* align-items: center;
-        justify-content: center; */
+        /* align-items: center; */
+        /* justify-content: center; */
     }
 
     .sub_section {

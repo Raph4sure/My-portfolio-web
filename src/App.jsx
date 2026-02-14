@@ -20,12 +20,8 @@ function App() {
     return (
         <ThemeProvider>
             <div className="container">
-                <section>
+                {/* <section>
                     <div className="sub_section">
-                        {/* <div>
-                        <Header />
-                        <ThemeSwitch />
-                    </div> */}
                         <NavBar />
 
                         <div>
@@ -33,10 +29,6 @@ function App() {
                         </div>
                     </div>
                 </section>
-                {/* <section>
-                    { <ResponsiveDemo/> }
-                    <ResponsiveTest/>
-                </section> */}
 
                 <section>
                     <div className="sub_section">
@@ -52,22 +44,22 @@ function App() {
                     <div className="sub_section">
                         <Certification />
                     </div>
-                </section>
-                <section>
+                </section> */}
+                {/* <section>
                     <div className="sub_section">
                         <Tools />
                     </div>
-                </section>
+                </section> */}
                 <section>
                     <div className="sub_section">
                         <Contact />
                     </div>
                 </section>
-                <section>
+                {/* <section>
                     <div className="sub_section">
                         <About />
                     </div>
-                </section>
+                </section> */}
             </div>
         </ThemeProvider>
 
