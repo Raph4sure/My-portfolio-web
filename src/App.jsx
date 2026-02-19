@@ -50,16 +50,16 @@ function App() {
                         <Tools />
                     </div>
                 </section> */}
-                <section>
+                {/* <section>
                     <div className="sub_section">
                         <Contact />
                     </div>
-                </section>
-                {/* <section>
+                </section> */}
+                <section>
                     <div className="sub_section">
                         <About />
                     </div>
-                </section> */}
+                </section>
             </div>
         </ThemeProvider>
 

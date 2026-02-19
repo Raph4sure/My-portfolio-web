@@ -21,7 +21,7 @@ function ComputerModelContainer() {
         </Stage>
         <Environment files={`/assets/environment/${currentEnvironment}.hdr`} />
         <OrbitControls enableZoom={false} autoRotate />
-        <PerspectiveCamera makeDefault position={[-1, 0, 1.8]} zoom={0.5} />
+        <PerspectiveCamera makeDefault position={[-1, 0, 1.8]} zoom={0.8} />
       </Suspense>
     </Canvas>
   );
