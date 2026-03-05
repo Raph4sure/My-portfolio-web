@@ -4,6 +4,7 @@ import FormValidator from "../reUsable/FormValidator";
 import styles from "./../sections/contact.module.scss";
 // import { StatefulButtonDemo } from "../../submit_button/components/ui/ButtonSubmit";
 import { Button2 } from "../../submit_button/components/ui/stateful-button";
+import NavigateHome from "../reUsable/NavigateHome";
 
 function Contact() {
     // --- STATE MANAGEMENT ---
@@ -121,7 +122,7 @@ function Contact() {
     };
 
     return (
-        <div className="w-full h-full tab-land:h-[calc(100vh-2rem)] grid grid-rows-[auto_1fr] items-start mt-1 mb-20 desktop:mb-40 tab-land:mb-55 tablet:mb-0">
+        <div className="w-full h-full tab-land:h-[calc(100vh-2rem)] grid grid-rows-[auto_1fr] items-start mt-1 mb-20 desktop:mb-40 tab-land:mb-55 tablet:mb-0 relative">
             <h1 className="justify-self-center desk-wide:mb-10 mob-land:mb-0">
                 Contact Me
             </h1>
@@ -200,6 +201,7 @@ function Contact() {
                     </form>
                 </div>
             </div>
+            <NavigateHome className="bottom-15 right-10" />
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./tools.module.scss";
 import images from "../../helpers/imageLoader.";
+import NavigateHome from "../reUsable/NavigateHome";
 
 // --- Data for our carousel ---
 // Add or remove images here to change the carousel
@@ -48,7 +49,7 @@ const carouselItems = [
     },
 ];
 
-const Tools = () => {
+const TechStacks = () => {
     // this dynamically get the number of items for our CSS variable
     const itemCount = carouselItems.length;
 
@@ -87,8 +88,9 @@ const Tools = () => {
                     </div>
                 </div>
             </div>
+               <NavigateHome className="bottom-12 right-3" />
         </div>
     );
 };
 
-export default Tools;
+export default TechStacks;

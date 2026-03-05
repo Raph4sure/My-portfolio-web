@@ -49,7 +49,7 @@ const portfolioItems = [
     },
 ];
 
-const PortfolioSlider = () => {
+const Projects = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const itemCount = portfolioItems.length;
 
@@ -221,4 +221,4 @@ const PortfolioSlider = () => {
     );
 };
 
-export default PortfolioSlider;
+export default Projects;

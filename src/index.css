@@ -5,6 +5,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&family=Signika:wght@300..700&display=swap");
 
 @import "tailwindcss";
+
+@plugin "./hero.js";
+
+@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+
+@custom-variant dark (&:is(.dark *));
+
+@import "tailwindcss";
 /* @import "./styles/responsive.scss"; */
 
 @custom-variant desk-wide (@media (max-width: 1920px));

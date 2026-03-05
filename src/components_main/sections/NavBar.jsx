@@ -1,8 +1,31 @@
 import Header from "../../components/header/Header";
-import { navItems } from "../../components/header/nav/Nav";
+// import { navItems } from "../../components/header/nav/Nav";
 import ThemeSwitch from "../../components/ThemeSwitch";
 // import Buttton from "../reUsable/Buttton";
 import Button2 from "../reUsable/Button2";
+import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
+import { Button } from "@heroui/button";
+import DropdownLink from "../reUsable/DropdownLink";
+
+// export const navItems = [
+//     {
+//         title: "Home",
+//         href: "/",
+//     },
+//     {
+//         title: "Experience",
+//         href: "/work",
+//     },
+//     {
+//         title: "Projects",
+//         href: "/projects",
+//     },
+//     {
+//         title: "About",
+//         // href: "/about",
+//         href: "#about",
+//     },
+// ];
 
 function NavBar() {
     return (
@@ -22,17 +45,42 @@ function NavBar() {
 
                 <nav className="flex tab-land:hidden">
                     <ul className="flex gap-x-4">
-                        {navItems.map((item, index) => (
-                            <li key={index} className="">
-                                <a
-                                    href={item.href}
-                                    className="underline-animation text-text-primary"
-                                >
-                                    <span>{item.title}</span>
-                                    <span className="" />
-                                </a>
-                            </li>
-                        ))}
+                        {/* {navItems.map((item, index) => ( */}
+                        <li className="">
+                            <a
+                                href="#"
+                                className="underline-animation text-text-primary"
+                            >
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <DropdownLink
+                                child="Work"
+                                child1="Experience"
+                                child2="Projects"
+                                href1='#experience'
+                                href2='#projects'
+                            />
+                        </li>
+                        <li>
+                            <DropdownLink
+                                child="Skills"
+                                child1="Certification"
+                                child2="Tech Stacks"
+                                href1='#certification'
+                                href2='#tech-stacks'
+                            />
+                        </li>
+                        <li className="">
+                            <a
+                                href="#about"
+                                className="underline-animation text-text-primary"
+                            >
+                                <span>About</span>
+                            </a>
+                        </li>
+                        {/* ))} */}
                     </ul>
                 </nav>
                 <ThemeSwitch />
@@ -45,7 +93,7 @@ function NavBar() {
                     >
                         Contact me
                     </a> */}
-                    <Button2 to="/contact" className="text-text-primary">
+                    <Button2 href="#contact" className="text-text-primary">
                         Contact me
                     </Button2>
                 </div>

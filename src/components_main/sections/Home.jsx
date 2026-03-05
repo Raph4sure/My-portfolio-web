@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Buttton from "../reUsable/Buttton.jsx";
 import { useTheme } from "../../context/ThemeContext.jsx";
+import SpinnerTriangle from "../reUsable/SpinnerTriangle.jsx";
 import Button2 from "../reUsable/Button2.jsx";
 
 const skills = [
@@ -28,7 +29,7 @@ const sliding1 = {
     },
 };
 
-function Section1() {
+function Home() {
     const { theme } = useTheme();
 
     return (
@@ -126,7 +127,7 @@ function Section1() {
             <header className="relative w-[25rem] h-[25rem]">
                 {/* <div className=""> */}
                 <Canvas className="tab-land:-mt-10 tablet:-mt-18">
-                    <Suspense fallback={<Html center>Loading...</Html>}>
+                    <Suspense fallback={<SpinnerTriangle/>}>
                         <Shape />
                     </Suspense>
                 </Canvas>
@@ -186,4 +187,4 @@ function Section1() {
     );
 }
 
-export default Section1;
+export default Home;

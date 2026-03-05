@@ -1,10 +1,12 @@
 import React from "react";
 import ComputerModelContainer from "./services/computer/ComputerModelContainer";
 import { Link } from "react-router-dom";
+import Button2 from "../reUsable/Button2";
+import NavigateHome from "../reUsable/NavigateHome";
 
 function About() {
     return (
-        <div className="grid grid-rows-[auto_1fr_auto] h-screen">
+        <div className="grid grid-rows-[auto_1fr_auto] h-screen relative">
             <div>
                 <h1 className="text-2xl font-bold text-center">About Me</h1>
                 {/* <p className="text-[1rem] text-justify w-[95%] mx-auto -mb-30">
@@ -20,11 +22,15 @@ function About() {
                     from an offline quiz app that cut grading time by 90% to the
                     'Digital Doctor' telemedicine platform that connect patients
                     with healthcare providers online. Leveraging my background
-                    in Backend Engineering (ALX), Software Development (PLP) and
-                    Data Science (3MTT). I am currently mastering Cloud
-                    Infrastructure and DevOps to build resilient, automated
-                    solutions.
+                    in{" "}
+                    <span className="font-bold text-blue-500">
+                        Backend Engineering (ALX), Software Development (PLP)
+                        and Data Science (3MTT)
+                    </span>
+                    . I am currently mastering Cloud Infrastructure and DevOps
+                    to build resilient, automated solutions.
                 </p>
+                <NavigateHome className="bottom-15 right-10" />
             </div>
             <div className="place-self-center w-full h-full">
                 <ComputerModelContainer />

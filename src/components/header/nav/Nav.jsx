@@ -10,19 +10,33 @@ import Footer from "./footer/Footer";
 export const navItems = [
     {
         title: "Home",
-        href: "/",
+        href: "#",
     },
     {
-        title: "Work",
-        href: "/work",
+        title: "Experience",
+        href: "/experience",
+    },
+    {
+        title: "Projects",
+        // href: "/about",
+        href: "#projects",
+    },
+    {
+        title: "Certification",
+        href: "#certification",
+    },
+    {
+        title: "Tech-Stack",
+        href: "#tech-stacks",
     },
     {
         title: "About",
-        href: "/about",
+        // href: "/about",
+        href: "#about",
     },
     {
-        title: "Contact",
-        href: "/contact",
+        title: "Contact Me",
+        href: "#contact",
     },
 ];
 

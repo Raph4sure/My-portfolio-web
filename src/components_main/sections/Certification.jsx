@@ -5,6 +5,7 @@ import images from "../../helpers/imageLoader.";
 import styles from "./certification.module.scss";
 import Buttton from "../reUsable/Buttton";
 import ButttonPrev from "../reUsable/ButtonPrev";
+import NavigateHome from "../reUsable/NavigateHome";
 
 const certificateItems = [
     // {
@@ -135,7 +136,7 @@ const Certification = () => {
     // };
 
     return (
-        <div className="w-full h-full grid grid-rows-[auto_1fr_auto] mob-land:grid-rows-[auto_1fr] mob-land:grid-cols-[1fr_auto] ">
+        <div className="w-full h-full grid grid-rows-[auto_1fr_auto] mob-land:grid-rows-[auto_1fr] mob-land:grid-cols-[1fr_auto] relative ">
             <h1 className="justify-self-center text-[clamp(2rem,5vw,2.5rem)] font-[600] row-span-1 mob-land:row-span-1 mob-land:col-span-2">
                 Certification
             </h1>
@@ -239,6 +240,7 @@ const Certification = () => {
                     {isMobile ? "↓" : "Next"}
                 </button> */}
             </div>
+            <NavigateHome className="bottom-12 right-3" />
         </div>
     );
 };

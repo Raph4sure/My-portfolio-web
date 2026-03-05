@@ -33,7 +33,7 @@ const LogoIcon = ({ icon }) => {
     );
 };
 
-function LogoSection() {
+function Experience() {
     return (
         <main className="h-full phone:text-sm">
                 <h1 className="font-playwrite -mb-13 text-center text-lg phone:text-[0.6rem]">
@@ -69,4 +69,4 @@ function LogoSection() {
     );
 }
 
-export default LogoSection;
+export default Experience;
