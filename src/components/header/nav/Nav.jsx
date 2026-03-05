@@ -28,14 +28,15 @@ export const navItems = [
         title: "Tech-Stack",
         href: "#tech-stacks",
     },
-    {
-        title: "About",
-        href: "#about",
-    },
+
     {
         title: "Contact Me",
         href: "#contact",
     },
+    {
+        title: "About",
+        href: "#about",
+    }
 ];
 
 export default function Nav() {

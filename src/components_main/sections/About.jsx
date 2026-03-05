@@ -49,7 +49,7 @@ function About() {
                         <img
                             src="/footer_img/github3.svg"
                             alt="Github Logo"
-                            className="w-[clamp(0.5rem,1.7vw,1.5rem)] object-contain"
+                            className="w-[clamp(0.7rem,1.7vw,1.5rem)] object-contain pt-[0.1rem]"
                         />
                     </Link>
                     <Link to="https://www.linkedin.com/in/alabi-raphael/">

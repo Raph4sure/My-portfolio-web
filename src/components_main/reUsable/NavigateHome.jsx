@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 const NavigateHome = ({className}) => {
     return (
-            <div className={clsx("absolute z-50 bg-black-100/5 rounded-full flex items-center justify-center w-7 h-7 hover:bg-black-100/20 ", className)}>
+            <div className={clsx("absolute z-50 bg-black-100/5 rounded-full flex items-center justify-center w-7 h-7 hover:bg-black-100/20 tab-land:hidden", className)}>
                 <a
                     href="#"
                     className="cursor-pointer text-black-100 hover:text-blue-500"

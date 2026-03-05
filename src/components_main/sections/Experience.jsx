@@ -27,7 +27,11 @@ const logoIconList = [
 const LogoIcon = ({ icon }) => {
     return (
         <div className="flex gap-x-2 items-center marquee-item">
-            <img src={icon.imagePath} alt={icon.name ?? "logo"} className="phone:w-3" />
+            <img
+                src={icon.imagePath}
+                alt={icon.name ?? "logo"}
+                className="phone:w-3"
+            />
             <p className="text-sm phone:text-[0.5rem]">{icon.name}</p>
         </div>
     );
@@ -38,7 +42,7 @@ function Experience() {
         <main className="h-full phone:text-sm mt-2">
             <h1
                 data-content="My work Experience"
-                className="text-center phone:text-[0.6rem] headers"
+                className="text-center headers !text-[clamp(1.5rem,100%,3rem)]"
             >
                 {/* <h1 className="font-playwrite -mb-13 text-center text-lg phone:text-[0.6rem] headers"> */}
                 My work Experience
