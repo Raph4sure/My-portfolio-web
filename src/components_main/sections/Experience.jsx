@@ -35,10 +35,14 @@ const LogoIcon = ({ icon }) => {
 
 function Experience() {
     return (
-        <main className="h-full phone:text-sm">
-                <h1 className="font-playwrite -mb-13 text-center text-lg phone:text-[0.6rem]">
-                    My work Experience
-                </h1>
+        <main className="h-full phone:text-sm mt-2">
+            <h1
+                data-content="My work Experience"
+                className="text-center phone:text-[0.6rem] headers"
+            >
+                {/* <h1 className="font-playwrite -mb-13 text-center text-lg phone:text-[0.6rem] headers"> */}
+                My work Experience
+            </h1>
             <div className="relative alignleft h-28">
                 {/* Edge fade handled by CSS mask on .marquee; keep these if you plan custom edges */}
                 <div className="marquee">

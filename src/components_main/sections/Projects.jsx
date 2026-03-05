@@ -79,7 +79,6 @@ const Projects = () => {
 
     return (
         <div className={styles.sliderContainer}>
-
             <motion.div
                 className={styles.slider}
                 animate={{ x: `-${currentSlide * 100}%` }}
@@ -92,7 +91,10 @@ const Projects = () => {
                         style={{ backgroundColor: item.bgColor }}
                     >
                         <div className={styles.content}>
-                            <h2 className={styles.title}>
+                            <h2
+                                data-content={`Completed Project (${item.id})`}
+                                className={clsx(styles.headers, styles.title)}
+                            >
                                 Completed Project ({item.id})
                             </h2>
                             <div className={styles.slide_content}>

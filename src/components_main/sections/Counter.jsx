@@ -22,6 +22,9 @@ function Counter() {
                             suffix={item.suffix}
                             end={item.value}
                             duration={3}
+                            enableScrollSpy={true}
+                            scrollSpyOnce={false}
+                            scrollSpyDelay={100}
                         />
                         <p>{item.label}</p>
                     </GlowCard>

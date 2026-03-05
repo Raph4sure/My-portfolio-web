@@ -6,16 +6,16 @@ import NavigateHome from "../reUsable/NavigateHome";
 
 function About() {
     return (
-        <div className="grid grid-rows-[auto_1fr_auto] h-screen relative">
+        <div className="grid grid-rows-[auto_1fr_auto] h-screen relative mt-2">
             <div>
-                <h1 className="text-2xl font-bold text-center">About Me</h1>
+                <h1 data-content="About Me" className="text-2xl font-bold text-center headers">About Me</h1>
                 {/* <p className="text-[1rem] text-justify w-[95%] mx-auto -mb-30">
           Am a highly motivated and focused technology professional with
           expertise in developing scalable solutions, analyzing complex data,
           and delivering innovative software applications across multiple
           platforms and technologies.
         </p> */}
-                <p className="text-[clamp(0.8rem,2vw,1rem)] text-justify w-[95%] mx-auto -pb-20">
+                <p className="text-[clamp(0.8rem,2vw,1rem)] text-justify w-[95%] mx-auto -pb-20 mt-3">
                     I am a Data-Driven Full-Stack Software Engineer with 3+
                     years of experience and a B.Sc. in Statistics. I specialize
                     in building secured and responsive web applications, ranging

@@ -136,8 +136,11 @@ const Certification = () => {
     // };
 
     return (
-        <div className="w-full h-full grid grid-rows-[auto_1fr_auto] mob-land:grid-rows-[auto_1fr] mob-land:grid-cols-[1fr_auto] relative ">
-            <h1 className="justify-self-center text-[clamp(2rem,5vw,2.5rem)] font-[600] row-span-1 mob-land:row-span-1 mob-land:col-span-2">
+        <div className="w-full h-full grid grid-rows-[auto_1fr_auto] mob-land:grid-rows-[auto_1fr] mob-land:grid-cols-[1fr_auto] relative mt-2">
+            <h1
+                data-content="Certification"
+                className="justify-self-center row-span-1 mob-land:row-span-1 mob-land:col-span-2 headers"
+            >
                 Certification
             </h1>
             <div className="flex items-center flex-col justify-center h-full overflow-hidden row-span-1 mob-land:row-span-1 mob-land:col-span-1 mob-land:justify-self-center mobile:-mt-1">

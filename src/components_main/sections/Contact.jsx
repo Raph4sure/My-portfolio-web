@@ -123,7 +123,7 @@ function Contact() {
 
     return (
         <div className="w-full h-full tab-land:h-[calc(100vh-2rem)] grid grid-rows-[auto_1fr] items-start mt-1 mb-20 desktop:mb-40 tab-land:mb-55 tablet:mb-0 relative">
-            <h1 className="justify-self-center desk-wide:mb-10 mob-land:mb-0">
+            <h1 data-content="Contact Me" className="justify-self-center desk-wide:mb-10 mob-land:mb-0 headers">
                 Contact Me
             </h1>
             <div
@@ -136,7 +136,7 @@ function Contact() {
                         className={styles.form}
                         ref={form}
                     >
-                        <h1 className="text-xl font-[500] text-center tablet:text-[1rem] pb-2">
+                        <h1 className="text-md font-[600] text-center tablet:text-[1rem] pb-2 font-family-playwrite">
                             Let's Connect
                         </h1>
                         <FormValidator

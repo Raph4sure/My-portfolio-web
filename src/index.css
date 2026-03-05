@@ -79,6 +79,10 @@
         /* Text Colors */
         --color-text-primary: #1c1c21; /* Dark color for main text */
         --color-text-secondary: #666666; /* Lighter grey for secondary text */
+        --color-text-headers:#25283b;
+
+        --color-text-headers-bg:#d2d2d2;
+        
         --color-text-accent: #dd4c62; /* Your pink for accents */
 
         /* Border Colors */
@@ -155,6 +159,9 @@
         --color-background: #000000;
         --color-background-secondary: #1c1c21;
         --color-bg-button2: #2c3539;
+
+        --color-text-headers:#d9ecff;
+        --color-text-headers-bg:#2e363a;
 
         /* Text Colors */
         /* --color-text-primary: #ffffff; */
@@ -1280,4 +1287,30 @@ body {
 
 .author-handle {
     color: #888;
+}
+
+.headers {
+    font-family: "ICA Rubrik", sans-serif;
+    margin: 0;
+    font-size: clamp(2rem, 100%, 5rem);
+    /* color: #25283b; */
+   color: var( --color-text-headers);
+    position: relative;
+    white-space: nowrap;
+    display: block;
+    margin: 0;
+    line-height: 0.75;
+    /* writing-mode: vertical-rl; */
+    /* transform: rotate(180deg); */
+
+
+    &::after {
+        position: absolute;
+        inset: 0;
+        content: attr(data-content);
+        z-index: 2;
+        /* -webkit-text-stroke: 2px #d2d2d2; */
+        -webkit-text-stroke: 2px var(--color-text-headers-bg);
+        color: transparent;
+    }
 }

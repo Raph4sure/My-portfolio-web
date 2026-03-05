@@ -37,13 +37,15 @@ function NavBar() {
                 >
                     Raph Web
                 </a> */}
-                <img
-                    src="/main1_logo.png"
-                    alt="Logo"
-                    className="h-6 w-object-fit hover:cursor-pointer hover:opacity-70 text-blue-700"
-                />
+                <a href="#">
+                    <img
+                        src="/main1_logo.png"
+                        alt="Logo"
+                        className="h-6 w-object-fit hover:cursor-pointer hover:opacity-70 text-blue-700"
+                    />
+                </a>
 
-                <nav className="flex tab-land:hidden">
+                <nav className="flex tab-land:hidden font-[600]">
                     <ul className="flex gap-x-4">
                         {/* {navItems.map((item, index) => ( */}
                         <li className="">
@@ -59,8 +61,8 @@ function NavBar() {
                                 child="Work"
                                 child1="Experience"
                                 child2="Projects"
-                                href1='#experience'
-                                href2='#projects'
+                                href1="#experience"
+                                href2="#projects"
                             />
                         </li>
                         <li>
@@ -68,8 +70,8 @@ function NavBar() {
                                 child="Skills"
                                 child1="Certification"
                                 child2="Tech Stacks"
-                                href1='#certification'
-                                href2='#tech-stacks'
+                                href1="#certification"
+                                href2="#tech-stacks"
                             />
                         </li>
                         <li className="">

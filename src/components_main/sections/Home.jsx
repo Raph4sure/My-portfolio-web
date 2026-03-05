@@ -127,7 +127,13 @@ function Home() {
             <header className="relative w-[25rem] h-[25rem]">
                 {/* <div className=""> */}
                 <Canvas className="tab-land:-mt-10 tablet:-mt-18">
-                    <Suspense fallback={<SpinnerTriangle/>}>
+                    <Suspense
+                        fallback={
+                            <Html center>
+                                <SpinnerTriangle />
+                            </Html>
+                        }
+                    >
                         <Shape />
                     </Suspense>
                 </Canvas>
