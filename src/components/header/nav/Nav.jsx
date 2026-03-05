@@ -14,11 +14,10 @@ export const navItems = [
     },
     {
         title: "Experience",
-        href: "/experience",
+        href: "#experience",
     },
     {
         title: "Projects",
-        // href: "/about",
         href: "#projects",
     },
     {
@@ -31,7 +30,6 @@ export const navItems = [
     },
     {
         title: "About",
-        // href: "/about",
         href: "#about",
     },
     {

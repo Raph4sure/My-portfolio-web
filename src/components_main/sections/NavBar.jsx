@@ -51,7 +51,7 @@ function NavBar() {
                         <li className="">
                             <a
                                 href="#"
-                                className="underline-animation text-text-primary"
+                                className="underline-animation text-text-primary hover:text-black-100/60"
                             >
                                 <span>Home</span>
                             </a>
@@ -77,7 +77,7 @@ function NavBar() {
                         <li className="">
                             <a
                                 href="#about"
-                                className="underline-animation text-text-primary"
+                                className="underline-animation text-text-primary hover:text-black-100/60"
                             >
                                 <span>About</span>
                             </a>

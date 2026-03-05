@@ -6,7 +6,7 @@ const DropdownLink = ({child, child1, child2, href1, href2}) => {
         <a className="underline-animation text-text-primary">
             <Popover placement="bottom" showArrow={true} offset={20}>
                 <PopoverTrigger>
-                    <Button className="p-0 min-w-0 h-auto bg-transparent text-text-primary text-[1rem] font-[600]">
+                    <Button className="p-0 min-w-0 h-auto bg-transparent text-text-primary text-[1rem] font-[600] hover:text-black-100/60">
                         {child}
                     </Button>
                 </PopoverTrigger>

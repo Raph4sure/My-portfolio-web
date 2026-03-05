@@ -8,7 +8,12 @@ function About() {
     return (
         <div className="grid grid-rows-[auto_1fr_auto] h-screen relative mt-2">
             <div>
-                <h1 data-content="About Me" className="text-2xl font-bold text-center headers">About Me</h1>
+                <h1
+                    data-content="About Me"
+                    className="text-2xl font-bold text-center headers"
+                >
+                    About Me
+                </h1>
                 {/* <p className="text-[1rem] text-justify w-[95%] mx-auto -mb-30">
           Am a highly motivated and focused technology professional with
           expertise in developing scalable solutions, analyzing complex data,
@@ -40,21 +45,21 @@ function About() {
                     <p>&copy; 2025 raphweb.tech</p>
                 </aside>
                 <aside className="flex gap-1">
-                    <Link>
+                    <Link to="https://github.com/raph4sure">
                         <img
-                            src="/footer_img/github.svg"
+                            src="/footer_img/github3.svg"
                             alt="Github Logo"
                             className="w-[clamp(0.5rem,1.7vw,1.5rem)] object-contain"
                         />
                     </Link>
-                    <Link>
+                    <Link to="https://www.linkedin.com/in/alabi-raphael/">
                         <img
                             src="/footer_img/linkedin.png"
                             alt="LinkedIn Logo"
                             className="w-[clamp(1rem,2vw,2rem)] object-contain"
                         />
                     </Link>
-                    <Link>
+                    <Link to='https://x.com/raph4sure007?s=09'>
                         <img
                             src="/footer_img/twitter.png"
                             alt="Twitter Logo"
