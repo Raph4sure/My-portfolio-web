@@ -3,6 +3,9 @@
    animation: slide 1.5s linear 1;
     width: clamp(10rem, 100%, 25rem);
     margin: 0 4rem 0rem 4rem;
+    background-color: var(--color-card);
+    border:2px solid var(--color-border);
+
 
     place-self: center;
 
@@ -80,7 +83,8 @@
     font-family: inherit;
     padding: 0.7rem 1rem; // Adjusted padding for a better feel
     border-radius: 15px; // Slightly smaller radius
-    background-color: var(--color-background-secondary);
+    // background-color: var(--color-background-secondary);
+    background-color: var(--color-form-input);
     color: var(--color-text-primary);
     border-bottom: 3px solid transparent; // Use border instead of border-bottom for consistency
     // border-bottom-color: #ccc; // Default bottom border color

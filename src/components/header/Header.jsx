@@ -23,7 +23,7 @@ export default function Header() {
                         onClick={() => {
                             setIsActive(!isActive);
                         }}
-                        className={`${styles.button} bg-blue-500`}
+                        className={`${styles.button} bg-[var(--color-button2)]`}
                         // className="bg-red-900"
                     >
                         <div

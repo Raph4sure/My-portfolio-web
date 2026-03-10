@@ -1,8 +1,11 @@
 .card {
     // --- Basic Styling ---
     position: relative;
-    background-color: #1a1a1a;
+    background-color: var(--color-card);
     border-radius: 12px;
+    // border-color: var(--color-border);
+    border:2px solid var(--color-border);
+
     padding: 2.5px; // A small padding to act as the border thickness
     z-index: 1;
 
@@ -14,6 +17,11 @@
         width: 100%;
         height: 100%;
         border-radius: inherit; // Match the parent's border radius
+        // background: radial-gradient(
+        //     400px circle at var(--mouse-x) var(--mouse-y),
+        //     var(--color-border),
+        //     transparent 40%
+        // );
         background: radial-gradient(
             400px circle at var(--mouse-x) var(--mouse-y),
             rgba(238, 6, 83, 0.5),
@@ -31,11 +39,14 @@
 
 // This div ensures that the content sits correctly within the card
 .cardContent {
-    background-color: var(--color-background); // Same as the card's background
+    background-color:  var(--color-card); // Same as the card's background
     border-radius: 10px; // Slightly smaller than the parent's radius
     padding: 30px; // The original padding
     position: relative;
     z-index: 2;
+    // border-color: var(--color-border);
+    // border:2px solid var(--color-border);
+
 }
 
 

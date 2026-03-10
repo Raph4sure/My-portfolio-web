@@ -137,8 +137,10 @@ export const Button2 = ({ className, children, ...props }) => {
             ref={scope}
             className={cn(
                 "flex min-w-[120px] cursor-pointer items-center justify-center gap-2 rounded-tl-3xl rounded-br-3xl px-4 py-1 font-medium text-white ring-offset-2 transition-colors duration-200 hover:ring-2 dark:ring-offset-black",
-                status === "idle" && "bg-blue-500 hover:ring-blue-500",
-                status === "loading" && "bg-blue-500 hover:ring-blue-500",
+                status === "idle" &&
+                    "bg-[var(--color-button)] hover:ring-[var(--color-button)]",
+                status === "loading" &&
+                    "bg-[var(--color-button2)] hover:ring-[var(--color-button2)]",
                 status === "success" && "bg-green-500 hover:ring-green-500",
                 status === "error" && "bg-red-500 hover:ring-red-500",
                 className

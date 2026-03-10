@@ -1,13 +1,14 @@
 .menu {
     height: 100dvh;
-    width: 100dvw; // Make the menu full-width
+    width: 100vw; // Make the menu full-width
     background-color: rgb(41, 41, 41);
+    // background-color: var(--color-background);
     position: fixed;
     right: 0;
     top: 0;
     color: white;
     z-index: 100;
-    overflow-x: hidden;
+
 
     .body {
         box-sizing: border-box;

@@ -3,10 +3,19 @@ import { NavLink } from "react-router-dom";
 import styles from "./button2.module.scss";
 import clsx from "clsx";
 
-const Button2 = ({ to, href, children, className, buttonColor, ...props }) => {
-    const inlineStyle = buttonColor
-        ? { "--button-dynamic-color": buttonColor }
-        : {};
+const Button2 = ({
+    to,
+    href,
+    children,
+    className,
+    buttonColor,
+    textColor,
+    ...props
+}) => {
+    const inlineStyle = {
+        ...(buttonColor ? { "--button-dynamic-color": buttonColor } : {}),
+        ...(textColor ? { "--button-dynamic-text": textColor } : {}),
+    };
 
     if (href) {
         return (

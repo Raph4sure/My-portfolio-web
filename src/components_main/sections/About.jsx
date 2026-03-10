@@ -40,9 +40,10 @@ function About() {
             <div className="place-self-center w-full h-full">
                 <ComputerModelContainer />
             </div>
-            <div className="w-full bg-blue-500 h-full grid grid-cols-3 place-items-center text-[clamp(0.5rem,2vw,1rem)] my-1">
+            <hr className="w-full bg-[var(--color-card)] border-t-[0.07rem]"/>
+            <div className="w-full bg-[var(--color-card)] h-full grid grid-cols-3 place-items-center text-[clamp(0.5rem,2vw,1rem)] my-[0.1rem]">
                 <aside>
-                    <p>&copy; 2025 raphweb.tech</p>
+                    <p>&copy; 2025 <a href="https://raphweb.tech" className="text-[var(--color-button)]">raphweb.tech</a></p>
                 </aside>
                 <aside className="flex gap-1">
                     <Link to="https://github.com/raph4sure">

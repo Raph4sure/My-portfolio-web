@@ -28,7 +28,7 @@ function ButttonPrev({
                     <img
                         src="/images1/arrow-right1.svg"
                         alt="arrow"
-                        className="w-5 object-cover img animate-bounce-x"
+                        className="w-[1.3rem] object-cover img animate-bounce-x"
                     />
                 </div>
                 <p className="textPrev text-responsive-sm font-[600] ml-5">

@@ -6,7 +6,7 @@ const DropdownLink = ({child, child1, child2, href1, href2}) => {
         <a className="underline-animation text-text-primary">
             <Popover placement="bottom" showArrow={true} offset={20}>
                 <PopoverTrigger>
-                    <Button className="p-0 min-w-0 h-auto bg-transparent text-text-primary text-[1rem] font-[600] hover:text-black-100/60">
+                    <Button className="p-0 min-w-0 h-auto bg-transparent text-text-primary text-[1rem] font-[600] hover:text-[var(--color-text-hover)]">
                         {child}
                     </Button>
                 </PopoverTrigger>
@@ -15,13 +15,13 @@ const DropdownLink = ({child, child1, child2, href1, href2}) => {
                         <div className="text-small font-[600] flex flex-col text-black-100">
                             <a
                                 href={href1}
-                                className="text-black-100 underline-animation text-text-primary mb-3 hover:text-black-100/60 cursor-pointer"
+                                className="text-black-100 underline-animation text-text-primary mb-3 hover:text-[var(--color-text-hover)] cursor-pointer"
                             >
                                 {child1}
                             </a>
                             <a
                                 href={href2}
-                                className="text-black-100 underline-animation text-text-primary hover:text-black-100/60 cursor-pointer"
+                                className="text-black-100 underline-animation text-text-primary hover:text-[var(--color-text-hover)] cursor-pointer"
                             >
                                 {child2}
                             </a>

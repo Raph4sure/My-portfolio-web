@@ -15,6 +15,26 @@
 @import "tailwindcss";
 /* @import "./styles/responsive.scss"; */
 
+/* Light Mode */
+/* 
+Text: #070707;
+backgroumd: #f9f9fd
+primary(button): #2f27ce
+background(secondary): #dedcff;
+secondary(button)#433bff
+
+*/
+
+/* Dark Mode */
+/* 
+Text: #f7f7f7
+backgroumd: #030307
+primary(button): #3a31d8;
+background(secondary): #020024;
+secondary(button): #0600c2;
+
+*/
+
 @custom-variant desk-wide (@media (max-width: 1920px));
 @custom-variant desk-med (@media (max-width: 1720px));
 @custom-variant desk-land (@media (max-width: 1536px));
@@ -49,6 +69,11 @@
     --color-pink-button-text: #ffffff;
     --color-red-error-text: #ee0653;
 
+    /* New update */
+    --color-button2: #2f27ce;
+    --color-text-hover: #2f27ce;
+    --color-footer-bg: #2f27ce;
+
     /* Text colors for Tailwind classes */
     --color-text-primary: var(--color-text-primary);
     --color-text-secondary: var(--color-text-secondary);
@@ -72,17 +97,17 @@
         --breakpoint-desk-wide: 2560px; */
 
         /* Background Colors */
-        --color-background: #ffffff;
+        /* --color-background: #ffffff; */
         --color-background-secondary: #f0f0f0;
         --color-bg-button2: #d9ecff;
 
         /* Text Colors */
         --color-text-primary: #1c1c21; /* Dark color for main text */
         --color-text-secondary: #666666; /* Lighter grey for secondary text */
-        --color-text-headers:#25283b;
+        --color-text-headers: #25283b;
 
-        --color-text-headers-bg:#d2d2d2;
-        
+        --color-text-headers-bg: #d2d2d2;
+
         --color-text-accent: #dd4c62; /* Your pink for accents */
 
         /* Border Colors */
@@ -124,6 +149,20 @@
         --color-project-2: #B092FA;
         --color-project-3: #4ED0A8; */
 
+        /* Test 1 color */
+        --color-text-button: #f3f4f6;
+        --color-background: #f9f9fd;
+        /* --color-card:#F9FAFB; */
+        /* --color-card2: #dedcff; */
+        --color-card: #f1f5f9;
+        --color-border: rgb(153, 153, 153);
+        --color-form-input: #e5e7eb;
+        --color-button: #3a31d8;
+        --color-nav-icon: #f3f4f6;
+        --color-nav-icon-hover: #3a31d8;
+
+        /* --color-button: #2f27ce; */
+
         /* Gradients */
         --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 
@@ -156,12 +195,12 @@
     .dark {
         /* Background Colors */
         /* --color-background: #0e0e10; */
-        --color-background: #000000;
+        /* --color-background: #000000; */
         --color-background-secondary: #1c1c21;
         --color-bg-button2: #2c3539;
 
-        --color-text-headers:#d9ecff;
-        --color-text-headers-bg:#2e363a;
+        --color-text-headers: #d9ecff;
+        --color-text-headers-bg: #2e363a;
 
         /* Text Colors */
         /* --color-text-primary: #ffffff; */
@@ -170,6 +209,19 @@
         --color-text-accent: #dd4c62;
         /* Border Colors */
         --color-border: #2d2d38;
+
+        /* Test 1 color */
+        /* --color-background: #030307; */
+        --color-background: #030712;
+        /* --color-card: #020024; */
+        --color-card: #0b1120;
+        --color-border: #1f2937;
+        --color-form-input: #1f2937;
+        --color-button: #3a31d8;
+        /* --color-text-button:#111827; */
+        --color-text-button: #f3f4f6;
+        --color-nav-icon: #050c1d;
+        --color-nav-icon-hover: #3a31d8;
     }
 
     *,
@@ -625,8 +677,64 @@ body {
         width: 100%;
     } */
 
-    .marquee {
-        /* width: 100dvw; */
+
+.marquee {
+        width: 100dvw;
+        overflow: hidden;
+        position: relative;
+        height: 6rem;
+    }
+
+    .marquee:before,
+    .marquee:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 10rem;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    
+/* Light theme (default) */
+.marquee:before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--color-background),  
+    rgba(255, 255, 255, 0)
+  );
+}
+.marquee:after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--color-background),   
+    rgba(255, 255, 255, 0)
+  );
+}
+
+/* Dark theme */
+.dark .marquee:before {
+  background: linear-gradient(
+    to right,
+    var(--color-background),  
+    rgba(0, 0, 0, 0)
+  );
+}
+.dark .marquee:after {
+  background: linear-gradient(
+    to left,
+    var(--color-background),  
+    rgba(0, 0, 0, 0)
+  );
+}
+
+
+
+
+    /* .marquee {
         width: 100dvw;
         overflow: hidden;
         position: relative;
@@ -673,7 +781,7 @@ body {
             rgba(0, 0, 0, 1),
             rgba(0, 0, 0, 0)
         );
-    }
+    } */
 
     .marquee-track {
         display: flex;
@@ -733,19 +841,33 @@ body {
         @apply px-4 py-2 desk-wide:py-1  rounded-tl-[1.5rem]  rounded-tr-[0rem]  rounded-bl-[0rem]  rounded-br-[1.5rem] bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
     }
     .bg-circle {
+        @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-[var(--color-button)] group-hover:size-5 group-hover:right-2 rounded-full transition-all duration-500;
+    }
+    /* .bg-circle {
         @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-white-50 group-hover:size-5 group-hover:right-2 rounded-full transition-all duration-500;
-    }
+    } */
     .bg-circlePrev {
-        @apply absolute -left-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-white-50 group-hover:size-5 group-hover:left-2 rounded-full transition-all duration-500;
+        @apply absolute -left-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-[var(--color-button)] group-hover:size-5 group-hover:left-2 rounded-full transition-all duration-500;
     }
+    /* .bg-circlePrev {
+        @apply absolute -left-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-white-50 group-hover:size-5 group-hover:left-2 rounded-full transition-all duration-500;
+    } */
     .text {
+        @apply text-[var(--color-text-button)] transition-all duration-300 group-hover:text-white-50 group-hover:-translate-x-[0.2rem] xl:translate-x-0  z-30;
+        font-size: inherit;
+    }
+    /* .text {
         @apply text-black transition-all duration-300 group-hover:text-white-50 group-hover:-translate-x-[0.2rem] xl:translate-x-0  z-30;
         font-size: inherit;
-    }
+    } */
     .textPrev {
-        @apply text-black transition-all duration-300 group-hover:text-white-50 group-hover:translate-x-[0.2rem] xl:translate-x-0  z-30;
+        @apply text-[var(--color-text-button)] transition-all duration-300 group-hover:text-white-50 group-hover:translate-x-[0.2rem] xl:translate-x-0  z-30;
         font-size: inherit;
     }
+    /* .textPrev {
+        @apply text-black transition-all duration-300 group-hover:text-white-50 group-hover:translate-x-[0.2rem] xl:translate-x-0  z-30;
+        font-size: inherit;
+    } */
 
     .arrow-wrapper {
         @apply rounded-full absolute top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden right-1;
@@ -1294,7 +1416,7 @@ body {
     margin: 0;
     font-size: clamp(2rem, 100%, 5rem);
     /* color: #25283b; */
-   color: var( --color-text-headers);
+    color: var(--color-text-headers);
     position: relative;
     white-space: nowrap;
     display: block;
@@ -1302,7 +1424,6 @@ body {
     line-height: 0.75;
     /* writing-mode: vertical-rl; */
     /* transform: rotate(180deg); */
-
 
     &::after {
         position: absolute;

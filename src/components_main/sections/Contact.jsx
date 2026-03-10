@@ -127,7 +127,7 @@ function Contact() {
                 Contact Me
             </h1>
             <div
-                className={`${styles.container_form} rounded-4xl py-4 bg-text-primary/10`}
+                className={`${styles.container_form} rounded-4xl py-4`}
             >
                 <div className="flex justify-center h-full items-center">
                     <form

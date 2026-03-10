@@ -29,8 +29,8 @@ import DropdownLink from "../reUsable/DropdownLink";
 
 function NavBar() {
     return (
-        <header className="text-[1rem] w-full py-3 ">
-            <div className="flex justify-between w-full px-4 items-center">
+        <header className="text-[1rem] w-full py-1">
+            <div className="flex justify-between w-full px-2 items-center">
                 {/* <a
                     href="#section1"
                     className="font-playwrite font-[700] tablet:text-[0.8rem] phone:text-[0.4rem] hover:cursor-pointer hover:text-blue-50 text-blue-700"
@@ -51,7 +51,7 @@ function NavBar() {
                         <li className="">
                             <a
                                 href="#"
-                                className="underline-animation text-text-primary hover:text-black-100/60"
+                                className="underline-animation text-text-primary hover:text-[var(--color-text-hover)]"
                             >
                                 <span>Home</span>
                             </a>
@@ -77,7 +77,7 @@ function NavBar() {
                         <li className="">
                             <a
                                 href="#about"
-                                className="underline-animation text-text-primary hover:text-black-100/60"
+                                className="underline-animation text-text-primary hover:text-[var(--color-text-hover)]"
                             >
                                 <span>About</span>
                             </a>
@@ -88,14 +88,18 @@ function NavBar() {
                 <ThemeSwitch />
                 <Header />
 
-                <div className="w-35 h-full -mr-8 flex tab-land:hidden">
+                <div className="w-35 h-full -mr-6 flex tab-land:hidden">
                     {/* <a
                         href="/contact"
                         className="bg-white-50 text-black-50  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] px-3 hover:cursor-pointer hover:bg-blue-50"
                     >
                         Contact me
                     </a> */}
-                    <Button2 href="#contact" className="text-text-primary">
+                    <Button2
+                        href="#contact"
+                        textColor="var(--color-text-button)"
+                        buttonColor="var(--color-button)"
+                    >
                         Contact me
                     </Button2>
                 </div>
