@@ -41,7 +41,7 @@ function About() {
                 <ComputerModelContainer />
             </div>
             <hr className="w-full bg-[var(--color-card)] border-t-[0.07rem]"/>
-            <div className="w-full bg-[var(--color-card)] h-full grid grid-cols-3 place-items-center text-[clamp(0.5rem,2vw,1rem)] my-[0.1rem]">
+            <div className="w-full bg-[var(--color-card)] h-full grid grid-cols-3 place-items-center text-[clamp(0.5rem,2vw,1rem)] tablet:text-[clamp(0.6rem,2vw,1.1rem)] my-[0.1rem]">
                 <aside>
                     <p>&copy; 2025 <a href="https://raphweb.tech" className="text-[var(--color-button)]">raphweb.tech</a></p>
                 </aside>

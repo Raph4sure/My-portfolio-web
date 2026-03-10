@@ -13,13 +13,13 @@ function ThemeSwitch() {
                     <img
                         src={dayMode}
                         alt="day mode"
-                        className="w-5 h-auto tab-land:w-[1rem]"
+                        className="w-4 h-auto tab-land:w-[1rem]"
                     />
                 ) : (
                     <img
                         src={nightMode}
                         alt="night mode"
-                        className="w-5 h-auto tab-land:w-[1rem]"
+                        className="w-4 h-auto tab-land:w-[1rem]"
                     />
                 )}
             </div>
