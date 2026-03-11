@@ -141,9 +141,11 @@ secondary(button): #0600c2;
         --color-transparent-10: rgba(255, 255, 255, 0.1);
 
         /* Portfolio Color */
-        --color-project-1: #1d6ae3;
-        --color-project-2: #603bdb;
-        --color-project-3: #058a5e;
+        --color-project-1: #dc143c;
+        /* --color-project-2: #603bdb; */
+        --color-project-2: #FACC15;;
+        --color-project-3:  #A890F0 ;
+        /* --color-project-3: #058a5e; */
         --color-project-4: #ffc446;
         /* --color-project-1: #7CA5FA;
         --color-project-2: #B092FA;
@@ -153,7 +155,7 @@ secondary(button): #0600c2;
         --color-text-button: #f3f4f6;
         --color-background: #f9f9fd;
         /* --color-card:#F9FAFB; */
-        /* --color-card2: #dedcff; */
+        --color-card2: #dedcff;
         --color-card: #f1f5f9;
         --color-border: rgb(153, 153, 153);
         --color-form-input: #e5e7eb;
@@ -215,6 +217,7 @@ secondary(button): #0600c2;
         --color-background: #030712;
         /* --color-card: #020024; */
         --color-card: #0b1120;
+        --color-card2: #0b1120;
         --color-border: #1f2937;
         --color-form-input: #1f2937;
         --color-button: #3a31d8;
@@ -677,8 +680,7 @@ body {
         width: 100%;
     } */
 
-
-.marquee {
+    .marquee {
         width: 100dvw;
         overflow: hidden;
         position: relative;
@@ -696,43 +698,39 @@ body {
         pointer-events: none;
     }
 
-    
-/* Light theme (default) */
-.marquee:before {
-  left: 0;
-  background: linear-gradient(
-    to right,
-    var(--color-background),  
-    rgba(255, 255, 255, 0)
-  );
-}
-.marquee:after {
-  right: 0;
-  background: linear-gradient(
-    to left,
-    var(--color-background),   
-    rgba(255, 255, 255, 0)
-  );
-}
+    /* Light theme (default) */
+    .marquee:before {
+        left: 0;
+        background: linear-gradient(
+            to right,
+            var(--color-background),
+            rgba(255, 255, 255, 0)
+        );
+    }
+    .marquee:after {
+        right: 0;
+        background: linear-gradient(
+            to left,
+            var(--color-background),
+            rgba(255, 255, 255, 0)
+        );
+    }
 
-/* Dark theme */
-.dark .marquee:before {
-  background: linear-gradient(
-    to right,
-    var(--color-background),  
-    rgba(0, 0, 0, 0)
-  );
-}
-.dark .marquee:after {
-  background: linear-gradient(
-    to left,
-    var(--color-background),  
-    rgba(0, 0, 0, 0)
-  );
-}
-
-
-
+    /* Dark theme */
+    .dark .marquee:before {
+        background: linear-gradient(
+            to right,
+            var(--color-background),
+            rgba(0, 0, 0, 0)
+        );
+    }
+    .dark .marquee:after {
+        background: linear-gradient(
+            to left,
+            var(--color-background),
+            rgba(0, 0, 0, 0)
+        );
+    }
 
     /* .marquee {
         width: 100dvw;
@@ -786,8 +784,8 @@ body {
     .marquee-track {
         display: flex;
         align-items: center;
-        gap: 2rem;
         width: max-content;
+        will-change: transform;
         animation: marquee-x 22s linear infinite;
     }
 
@@ -807,10 +805,10 @@ body {
 
     @keyframes marquee-x {
         0% {
-            transform: translateX(0);
+            transform: translate3d(0, 0, 0);
         }
         100% {
-            transform: translateX(-50%);
+            transform: translate3d(-50%, 0, 0);
         }
     }
 
@@ -1435,3 +1433,13 @@ body {
         color: transparent;
     }
 }
+
+
+.profile-mask {
+  -webkit-mask-image: linear-gradient(to bottom, var(--color-background) 95%, transparent 100%);
+  mask-image: linear-gradient(to bottom, var(--color-background) 95%, transparent 100%);
+}
+/* .profile-mask-dark {
+  -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+} */

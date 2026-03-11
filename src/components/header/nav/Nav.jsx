@@ -75,7 +75,8 @@ export default function Nav() {
                                 data={{ ...data, index }}
                                 isActive={selectedIndicator == data.href}
                                 setSelectedIndicator={setSelectedIndicator}
-                            ></LinkItem>
+                                className={styles.link}
+                        />
                         );
                     })}
                 </div>

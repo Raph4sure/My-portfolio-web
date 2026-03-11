@@ -359,10 +359,10 @@
         }
     }
     p {
-        font-size: clamp(1rem, 2vw, 2rem);
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
         line-height: 1.6;
         margin-bottom: 1rem;
-        color: rgba(255, 255, 255, 0.8);
+        color: var(--color-text-primary);
         align-self: center;
         text-align: justify;
         @include tab-land {
@@ -426,7 +426,7 @@
 
     .progressTrack {
         fill: none;
-        stroke: rgba(255, 255, 255, 0.2);
+        stroke: var(--color-text-primary);
         stroke-width: 5;
     }
 

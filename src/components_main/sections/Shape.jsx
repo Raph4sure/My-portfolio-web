@@ -26,7 +26,7 @@ const useResponsiveScale = () => {
             // if (window.matchMedia(queries.deskLand).matches)
             //     return setScale(2.0);
             if (window.matchMedia(queries.deskWide).matches)
-                return setScale(1.9);
+                return setScale(1.8);
 
             setScale(2.2);
         };

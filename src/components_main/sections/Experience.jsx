@@ -26,13 +26,15 @@ const logoIconList = [
 
 const LogoIcon = ({ icon }) => {
     return (
-        <div className="flex gap-x-2 items-center marquee-item">
+        <div className="flex shrink-0 gap-x-2 items-center marquee-item">
             <img
                 src={icon.imagePath}
                 alt={icon.name ?? "logo"}
                 className="phone:w-3"
             />
-            <p className="text-sm phone:text-[0.5rem]">{icon.name}</p>
+            <p className="text-sm phone:text-[0.5rem] whitespace-nowrap">
+                {icon.name}
+            </p>
         </div>
     );
 };
@@ -50,13 +52,7 @@ function Experience() {
             <div className="relative alignleft h-28">
                 {/* Edge fade handled by CSS mask on .marquee; keep these if you plan custom edges */}
                 <div className="marquee">
-                    <div className="marquee-track md:gap-12 gap-5">
-                        {/* Start label */}
-                        <div className="marquee-item flex items-center">
-                            {/* <span className="text-sm font-semibold">
-                            Work Experience
-                        </span> */}
-                        </div>
+                    <div className="marquee-track md:gap-12 gap-5 md:pr-12 pr-5">
                         {logoIconList.map((icon, index) => (
                             <LogoIcon icon={icon} key={`logo-a-${index}`} />
                         ))}

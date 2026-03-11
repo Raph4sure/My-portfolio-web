@@ -40,31 +40,39 @@ function About() {
             <div className="place-self-center w-full h-full">
                 <ComputerModelContainer />
             </div>
-            <hr className="w-full bg-[var(--color-card)] border-t-[0.07rem]"/>
+            <hr className="w-full bg-[var(--color-card)] border-t-[0.07rem]" />
             <div className="w-full bg-[var(--color-card)] h-full grid grid-cols-3 place-items-center text-[clamp(0.5rem,2vw,1rem)] tablet:text-[clamp(0.6rem,2vw,1.1rem)] my-[0.1rem]">
                 <aside>
-                    <p>&copy; 2025 <a href="https://raphweb.tech" className="text-[var(--color-button)]">raphweb.tech</a></p>
+                    <p>
+                        &copy; 2025{" "}
+                        <a
+                            href="https://raphweb.tech"
+                            className="text-[var(--color-button)]"
+                        >
+                            raphweb.tech
+                        </a>
+                    </p>
                 </aside>
                 <aside className="flex gap-1">
                     <Link to="https://github.com/raph4sure">
                         <img
                             src="/footer_img/github3.svg"
                             alt="Github Logo"
-                            className="w-[clamp(0.7rem,1.7vw,1.5rem)] object-contain pt-[0.1rem]"
+                            className="w-[clamp(0.7rem,1.7vw,1.5rem)] object-contain pt-[0.1rem] hover:scale-110 transition-all active:scale-105"
                         />
                     </Link>
                     <Link to="https://www.linkedin.com/in/alabi-raphael/">
                         <img
                             src="/footer_img/linkedin.png"
                             alt="LinkedIn Logo"
-                            className="w-[clamp(1rem,2vw,2rem)] object-contain"
+                            className="w-[clamp(1rem,2vw,2rem)] object-contain hover:scale-110 transition-all active:scale-105"
                         />
                     </Link>
-                    <Link to='https://x.com/raph4sure007?s=09'>
+                    <Link to="https://x.com/raph4sure007?s=09">
                         <img
                             src="/footer_img/twitter.png"
                             alt="Twitter Logo"
-                            className="w-[clamp(1rem,2vw,2rem)] object-contain"
+                            className="w-[clamp(1rem,2vw,2rem)] object-contain hover:scale-110 transition-all active:scale-105"
                         />
                     </Link>
                 </aside>

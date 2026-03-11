@@ -143,13 +143,13 @@ function Home() {
                         <img
                             src="/images1/light_pics.png"
                             alt="profile_pics"
-                            className="w-[75%] desk-wide:w-[60%] h-auto object-cover mt-6 desk-wide:-mt-8 tab-land:w-[35%] tab-land:-mt-15 tablet:-mt-35 mob-land:w-[45%] mob-land:-mt-25 mobile:-mt-25"
+                            className="w-[75%] desk-wide:w-[60%] h-auto object-cover mt-6 desk-wide:-mt-8 tab-land:w-[35%] tab-land:-mt-15 tablet:-mt-35 mob-land:w-[45%] mob-land:-mt-25 mobile:-mt-25 profile-mask"
                         />
                     ) : (
                         <img
                             src="/images1/dark_pics.png"
                             alt="profile_pics"
-                            className="w-[75%] h-auto object-cover mt-6 "
+                            className="w-[75%] desk-wide:w-[60%] h-auto object-cover mt-6 desk-wide:-mt-8 tab-land:w-[35%] tab-land:-mt-15 tablet:-mt-35 mob-land:w-[45%] mob-land:-mt-25 mobile:-mt-25 profile-mask"
                         />
                     )}
                 </div>

@@ -10,43 +10,46 @@ const portfolioItems = [
     {
         id: 1,
         bgColorBtn: "var(--color-project-1)", // A nice blue
-        bgColor: "#7CA5FA",
-        image: "/images2/img1.png",
-        title: "Full Stack Blog Application",
+        // bgColor: "#fdb0b0",
+        bgColor: "var(--color-background)",
+        image: "/images2/digital_doctor.png",
+        title: "Full-Stack (Digital Doctor)",
         description:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
-        link: "https://naijastay.netlify.app",
+            "This is a full-stack web application that connects patients with doctors for online appointment booking, eliminating hospital visits. Built with Node.js, Express, and MySQL, it features secure authentication, role-based dashboards for patients, doctors, and admins, session management",
+        link: "https://digital-doctor.onrender.com",
     },
     {
         id: 2,
         bgColorBtn: "var(--color-project-2)", // A nice purple
-        bgColor: "#B092FA", // A nice purple
-        image: "/images2/img2.png",
-        title: "School Management System",
+        // bgColor: "#B092FA", // A nice purple
+        bgColor: "var(--color-background)",
+        image: "/images2/pizza-shopping.png",
+        title: "Frontend (Pizza Shopping)",
         description:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
-        link: "/project-2",
+            "This is a React-based web application for ordering pizza online, featuring a dynamic menu, shopping cart functionality, and responsive design. Built with modern JavaScript and CSS, it allows users to browse pizza options, add items to their cart, and simulate the checkout process for a seamless food ordering experience",
+        link: "https://pizzas-shops.vercel.app",
     },
     {
         id: 3,
         bgColorBtn: "var(--color-project-3)", // A nice green
-        bgColor: "#4ED0A8", // A nice green
-        image: "/images2/img3.png",
-        title: "Real-time Chat Application",
+        bgColor: "var(--color-background)",
+        // bgColor: "#4ED0A8", // A nice green
+        image: "/images2/habit_tracking.png",
+        title: "Backend (Habit Tracking)",
         description:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
-        link: "/project-3",
+            "This API is a RESTful backend service built with Node.js and Express that helps users build and maintain daily habits through automated tracking. It features user authentication with JWT tokens, CRUD operations for habits, streak counting, progress analytics, and daily reminders.",
+        link: "https://github.com/Raph4sure/habit_tracking_api",
     },
-    {
-        id: 4,
-        bgColorBtn: "var(--color-project-4)", // A nice yellow
-        bgColor: "#D38300", // A nice yellow
-        image: "/images2/img4.png",
-        title: "E-commerce Platform",
-        description:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
-        link: "/project-4",
-    },
+    // {
+    //     id: 4,
+    //     bgColorBtn: "var(--color-project-4)", // A nice yellow
+    //     bgColor: "#D38300", // A nice yellow
+    //     image: "/images2/img4.png",
+    //     title: "E-commerce Platform",
+    //     description:
+    //         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
+    //     link: "/project-4",
+    // },
 ];
 
 const Projects = () => {
@@ -92,10 +95,10 @@ const Projects = () => {
                     >
                         <div className={styles.content}>
                             <h2
-                                data-content={`Completed Project (${item.id})`}
+                                data-content={`Project (${item.id})`}
                                 className={clsx(styles.headers, styles.title)}
                             >
-                                Completed Project ({item.id})
+                                Project ({item.id})
                             </h2>
                             <div className={styles.slide_content}>
                                 <motion.div
