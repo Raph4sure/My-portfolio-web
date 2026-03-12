@@ -73,7 +73,7 @@ function Home() {
                                                     alt={skill.text}
                                                     className="size-6 p-0.5 rounded-full bg-white-50"
                                                 />
-                                                <span className="text-blue-700 font-[700]">
+                                                <span className="text-[var(--color-title)] font-[700]">
                                                     {skill.text}
                                                 </span>
                                             </span>
@@ -83,11 +83,14 @@ function Home() {
                             </motion.span>
                             <p className="py-3 tab-land:py-0">
                                 I build scaalable{" "}
-                                <span className="text-blue-700">
+                                <span className="text-[var(--color-title)]">
                                     software solutions
                                 </span>{" "}
                                 and extract actionable insights from{" "}
-                                <span className="text-blue-700">data</span>.
+                                <span className="text-[var(--color-title)]">
+                                    data
+                                </span>
+                                .
                             </p>
                         </motion.div>
                     </div>

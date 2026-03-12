@@ -43,10 +43,10 @@ const useResponsiveScale = () => {
 const Shape = () => {
     const currentScale = useResponsiveScale();
     return (
- <>
+        <>
             <Sphere args={[1, 100, 200]} scale={currentScale}>
                 <MeshDistortMaterial
-                    color="#DB8B9B"
+                    color="#817eb3"
                     attach="material"
                     distort={0.5}
                     speed={2}

@@ -70,7 +70,7 @@ secondary(button): #0600c2;
     --color-red-error-text: #ee0653;
 
     /* New update */
-    --color-button2: #2f27ce;
+    /* --color-button2: #2f27ce; */
     --color-text-hover: #2f27ce;
     --color-footer-bg: #2f27ce;
 
@@ -143,8 +143,8 @@ secondary(button): #0600c2;
         /* Portfolio Color */
         --color-project-1: #dc143c;
         /* --color-project-2: #603bdb; */
-        --color-project-2: #FACC15;;
-        --color-project-3:  #A890F0 ;
+        --color-project-2: #facc15;
+        --color-project-3: #a890f0;
         /* --color-project-3: #058a5e; */
         --color-project-4: #ffc446;
         /* --color-project-1: #7CA5FA;
@@ -160,8 +160,11 @@ secondary(button): #0600c2;
         --color-border: rgb(153, 153, 153);
         --color-form-input: #e5e7eb;
         --color-button: #3a31d8;
+        --color-button2: #2f27ce;
         --color-nav-icon: #f3f4f6;
         --color-nav-icon-hover: #3a31d8;
+        --color-title:#8543d0;
+
 
         /* --color-button: #2f27ce; */
 
@@ -220,11 +223,17 @@ secondary(button): #0600c2;
         --color-card2: #0b1120;
         --color-border: #1f2937;
         --color-form-input: #1f2937;
-        --color-button: #3a31d8;
+        /* --color-button: #3a31d8; */
+        --color-button: #8543d0;
+        /* --color-button2: #8543d0; */
+
         /* --color-text-button:#111827; */
         --color-text-button: #f3f4f6;
         --color-nav-icon: #050c1d;
         --color-nav-icon-hover: #3a31d8;
+        --color-title:#3a31d8;
+
+
     }
 
     *,
@@ -1434,10 +1443,17 @@ body {
     }
 }
 
-
 .profile-mask {
-  -webkit-mask-image: linear-gradient(to bottom, var(--color-background) 95%, transparent 100%);
-  mask-image: linear-gradient(to bottom, var(--color-background) 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        var(--color-background) 95%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        var(--color-background) 95%,
+        transparent 100%
+    );
 }
 /* .profile-mask-dark {
   -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
