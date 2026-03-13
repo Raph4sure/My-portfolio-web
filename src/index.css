@@ -164,6 +164,8 @@ secondary(button): #0600c2;
         --color-nav-icon: #f3f4f6;
         --color-nav-icon-hover: #3a31d8;
         --color-title:#8543d0;
+        --color-shape: #7955a1;
+
 
 
         /* --color-button: #2f27ce; */
@@ -225,13 +227,15 @@ secondary(button): #0600c2;
         --color-form-input: #1f2937;
         /* --color-button: #3a31d8; */
         --color-button: #8543d0;
-        /* --color-button2: #8543d0; */
+        --color-button2: #8543d0;
 
         /* --color-text-button:#111827; */
         --color-text-button: #f3f4f6;
         --color-nav-icon: #050c1d;
         --color-nav-icon-hover: #3a31d8;
         --color-title:#3a31d8;
+        --color-shape: #524dad;
+
 
 
     }

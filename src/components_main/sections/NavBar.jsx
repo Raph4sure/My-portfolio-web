@@ -6,6 +6,7 @@ import Button2 from "../reUsable/Button2";
 import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
 import { Button } from "@heroui/button";
 import DropdownLink from "../reUsable/DropdownLink";
+import { useTheme } from "../../context/ThemeContext";
 
 // export const navItems = [
 //     {
@@ -28,6 +29,8 @@ import DropdownLink from "../reUsable/DropdownLink";
 // ];
 
 function NavBar() {
+    const { theme } = useTheme();
+
     return (
         <header className="text-[1rem] w-full py-1">
             <div className="flex justify-between w-full px-2 items-center">
@@ -37,13 +40,24 @@ function NavBar() {
                 >
                     Raph Web
                 </a> */}
-                <a href="#">
-                    <img
-                        src="/main1_logo.png"
-                        alt="Logo"
-                        className="h-6 w-object-fit hover:cursor-pointer hover:opacity-70 text-blue-700"
-                    />
-                </a>
+
+                {theme === "light" ? (
+                    <a href="#">
+                        <img
+                            src="/main1_logo.png"
+                            alt="Logo"
+                            className="h-6 w-object-fit hover:cursor-pointer hover:opacity-70 text-blue-700"
+                        />
+                    </a>
+                ) : (
+                    <a href="#">
+                        <img
+                            src="/main1_logo_dark.png"
+                            alt="Logo"
+                            className="h-6 w-object-fit hover:cursor-pointer hover:opacity-70 text-blue-700"
+                        />
+                    </a>
+                )}
 
                 <nav className="flex tab-land:hidden font-[600]">
                     <ul className="flex gap-x-4">
