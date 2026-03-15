@@ -60,23 +60,28 @@ const certificateItems = [
     },
     {
         id: 11,
+        img: images["certificate/3MTT-Data_Science.png"],
+        title: "3MTT (Data Science)",
+    },
+    {
+        id: 12,
         img: images["certificate/Data_Science.png"],
         title: "Hp Life (Data Science and Analytics)",
     },
     {
-        id: 12,
+        id: 13,
         img: images[
             "certificate/Data_Science_in_Precision_Medicine_and_Cloud_Computing.jpg"
         ],
         title: "Stanford Medicine (Data Science)",
     },
     {
-        id: 13,
+        id: 14,
         img: images["certificate/Data Analysis certificate.jpg"],
         title: "Udemy (Python Data Analysis)",
     },
     {
-        id: 14,
+        id: 15,
         img: images["certificate/Oracle_new.jpg"],
         title: "Power Concept (Oracle D.B Admin)",
     },
