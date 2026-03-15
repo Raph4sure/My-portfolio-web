@@ -42,7 +42,7 @@ function About() {
             </div>
             <hr className="w-full bg-[var(--color-card)] border-t-[0.07rem]" />
             <div className="w-full bg-[var(--color-card)] h-full grid grid-cols-3 place-items-center text-[clamp(0.5rem,2vw,1rem)] tablet:text-[clamp(0.6rem,2vw,1.1rem)] my-[0.1rem]">
-                <aside className="tablet:-mr-4">
+                <aside className="tablet:-mr-5">
                     <p>
                         &copy; 2025{" "}
                         <a
@@ -76,7 +76,7 @@ function About() {
                         />
                     </Link>
                 </aside>
-                <aside className="tablet:-ml-5">
+                <aside className="tablet:-ml-6">
                     <p>All rights reserved</p>
                 </aside>
             </div>

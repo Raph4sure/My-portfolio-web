@@ -18,7 +18,7 @@ export default function Header() {
         <>
             <div className={styles.main}>
                 <div className={`${styles.header} invisible tab-land:visible`}>
-                    {/* <div className="fixed right-0 top-0 p-[30px] z-10"> */}
+                  
                     <div
                         onClick={() => {
                             setIsActive(!isActive);
