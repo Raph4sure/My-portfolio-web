@@ -139,11 +139,11 @@
 // Validation state styles
 .form__input--success {
     border-bottom-color: rgb(57, 172, 57);
-    border-bottom-width: 3px; // Ensure border is thick enough to be visible
+    border-bottom-width: 2px; // Ensure border is thick enough to be visible
 }
 .form__input--error {
     border-bottom-color: rgb(243, 4, 4);
-    border-bottom-width: 3px; // Ensure border is thick enough to be visible
+    border-bottom-width: 2px; // Ensure border is thick enough to be visible
 }
 
 // Error message styling

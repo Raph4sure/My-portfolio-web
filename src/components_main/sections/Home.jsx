@@ -114,7 +114,7 @@ function Home() {
                         classNameWidth="w-[7rem]"
                         id="button"
                         text="My Resume"
-                        link="https://drive.google.com/drive/folders/14F3sKJKJ4hMEs893wt3uF9cVbVCeM8MZ?usp=sharing"
+                        link="https://drive.google.com/file/d/1TxCywD6OBwkSUB5BNM6MIbQGDHhejgnQ/view?usp=drive_link"
                     />
                     <Buttton
                         // variants={sliding1}

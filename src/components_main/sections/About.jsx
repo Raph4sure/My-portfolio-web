@@ -21,14 +21,14 @@ function About() {
           platforms and technologies.
         </p> */}
                 <p className="text-[clamp(0.8rem,2vw,1rem)] text-justify w-[95%] mx-auto -pb-20 mt-3">
-                    I am a Data-Driven Full-Stack Software Engineer with 3+
+                    I am a Data-Driven Full-Stack Software Engineer with 4+
                     years of experience and a B.Sc. in Statistics. I specialize
                     in building secured and responsive web applications, ranging
                     from an offline quiz app that cut grading time by 90% to the
                     'Digital Doctor' telemedicine platform that connect patients
                     with healthcare providers online. Leveraging my background
                     in{" "}
-                    <span className="font-bold text-blue-500">
+                    <span className="font-bold text-[var(--color-button)]">
                         Backend Engineering (ALX), Software Development (PLP)
                         and Data Science (3MTT)
                     </span>
@@ -42,7 +42,7 @@ function About() {
             </div>
             <hr className="w-full bg-[var(--color-card)] border-t-[0.07rem]" />
             <div className="w-full bg-[var(--color-card)] h-full grid grid-cols-3 place-items-center text-[clamp(0.5rem,2vw,1rem)] tablet:text-[clamp(0.6rem,2vw,1.1rem)] my-[0.1rem]">
-                <aside>
+                <aside className="tablet:-mr-4">
                     <p>
                         &copy; 2025{" "}
                         <a
@@ -76,7 +76,7 @@ function About() {
                         />
                     </Link>
                 </aside>
-                <aside>
+                <aside className="tablet:-ml-5">
                     <p>All rights reserved</p>
                 </aside>
             </div>

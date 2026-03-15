@@ -3,8 +3,8 @@ import CountUp from "react-countup";
 import GlowCard from "../reUsable/GlowCard";
 
 const counterItems = [
-    { value: 3, suffix: "+", label: "Years of Experience" },
-    { value: 54, suffix: "+", label: "Completed Projects" },
+    { value: 4, suffix: "+", label: "Years of Experience" },
+    { value: 34, suffix: "+", label: "Completed Projects" },
     {value: 29, suffix: '+', label: 'Satisfied Clients'},
     // { value: 98, suffix: "%", label: "Cumulative Clients Rating" },
 ];
@@ -17,7 +17,7 @@ function Counter() {
                 <div key={index} className="w-full">
                     {/* {item.value} */}
                     {/* {item.suffix} */}
-                    <GlowCard className="m-5 phone:m-2">
+                    <GlowCard className="m-5 phone:m-2 font-[600]">
                         <CountUp
                             suffix={item.suffix}
                             end={item.value}

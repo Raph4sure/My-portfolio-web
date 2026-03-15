@@ -102,7 +102,7 @@ function NavBar() {
                 <ThemeSwitch />
                 <Header />
 
-                <div className="w-35 h-full -mr-6 flex tab-land:hidden">
+                <div className="w-35 h-full -mr-4 flex tab-land:hidden">
                     {/* <a
                         href="/contact"
                         className="bg-white-50 text-black-50  rounded-tl-[0rem]  rounded-tr-[2rem]  rounded-bl-[2rem]  rounded-br-[0rem] px-3 hover:cursor-pointer hover:bg-blue-50"
