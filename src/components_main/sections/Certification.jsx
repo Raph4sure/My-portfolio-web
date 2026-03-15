@@ -40,33 +40,43 @@ const certificateItems = [
     },
     {
         id: 7,
+        img: images["certificate/fullstack-app-next-v4.png"],
+        title: "Frontend Masters(Fullstack-Next-v4)",
+    },
+    {
+        id: 8,
+        img: images["certificate/api-design-nodejs-v5.png"],
+        title: "Frontend Masters(Api-Design-Node)",
+    },
+    {
+        id: 9,
         img: images["certificate/Typescript.png"],
         title: "LinkedIn (TypeScript Course)",
     },
     {
-        id: 8,
+        id: 10,
         img: images["certificate/INCO.png"],
         title: "INCO (Green Digital Skills)",
     },
     {
-        id: 9,
+        id: 11,
         img: images["certificate/Data_Science.png"],
         title: "Hp Life (Data Science and Analytics)",
     },
     {
-        id: 10,
+        id: 12,
         img: images[
             "certificate/Data_Science_in_Precision_Medicine_and_Cloud_Computing.jpg"
         ],
         title: "Stanford Medicine (Data Science)",
     },
     {
-        id: 11,
+        id: 13,
         img: images["certificate/Data Analysis certificate.jpg"],
         title: "Udemy (Python Data Analysis)",
     },
     {
-        id: 12,
+        id: 14,
         img: images["certificate/Oracle_new.jpg"],
         title: "Power Concept (Oracle D.B Admin)",
     },
