@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-// import styles from "./../../styles/responsive.scss";
 import clsx from "clsx";
 
 function Buttton({ text, className, id, link, variants, buttonColor, onClick, classNameWidth }) {

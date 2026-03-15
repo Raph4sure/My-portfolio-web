@@ -27,49 +27,6 @@
     --space-6: calc(24px * var(--space-scale));
 }
 
-// // Responsive breakpoints - scale increases with screen size
-/* @media (min-width: 360px) {
-    :root {
-        --font-scale: 0.8;
-    }
-}
-
-@media (min-width: 440px) {
-    :root {
-        --font-scale: 0.85;
-    }
-}
-
-@media (min-width: 768px) {
-    :root {
-        --font-scale: 0.9;
-    }
-}
-
-@media (min-width: 1024px) {
-    :root {
-        --font-scale: 0.95;
-    }
-}
-
-@media (min-width: 1366px) {
-    :root {
-        --font-scale: 1;
-    }
-}
-
-@media (min-width: 1920px) {
-    :root {
-        --font-scale: 1.05;
-    }
-}
-
-@media (min-width: 2560px) {
-    :root {
-        --font-scale: 1.1;
-    }
-}
-*/
 
 // Responsive breakpoints - scale increases with screen size
 @media (min-width: 360px) {

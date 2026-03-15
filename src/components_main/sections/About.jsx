@@ -1,7 +1,5 @@
-import React from "react";
 import ComputerModelContainer from "./services/computer/ComputerModelContainer";
 import { Link } from "react-router-dom";
-import Button2 from "../reUsable/Button2";
 import NavigateHome from "../reUsable/NavigateHome";
 
 function About() {
@@ -14,12 +12,6 @@ function About() {
                 >
                     About Me
                 </h1>
-                {/* <p className="text-[1rem] text-justify w-[95%] mx-auto -mb-30">
-          Am a highly motivated and focused technology professional with
-          expertise in developing scalable solutions, analyzing complex data,
-          and delivering innovative software applications across multiple
-          platforms and technologies.
-        </p> */}
                 <p className="text-[clamp(0.8rem,2vw,1rem)] text-justify w-[95%] mx-auto -pb-20 mt-3">
                     I am a Data-Driven Full-Stack Software Engineer with 4+
                     years of experience and a B.Sc. in Statistics. I specialize

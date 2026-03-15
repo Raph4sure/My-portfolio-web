@@ -26,8 +26,6 @@ const DropdownLink = ({child, child1, child2, href1, href2}) => {
                                 {child2}
                             </a>
                         </div>
-
-                        {/* <div className="text-tiny">This is the popover content</div> */}
                     </div>
                 </PopoverContent>
             </Popover>
@@ -37,33 +35,3 @@ const DropdownLink = ({child, child1, child2, href1, href2}) => {
 
 export default DropdownLink;
 
-// import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
-// import { Button } from "@heroui/button";
-
-// export default function Test1() {
-//     return (
-//         <a className="underline-animation text-text-primary">
-//             <Popover placement="bottom" showArrow={true}>
-//                 <PopoverTrigger>
-//                     <Button className="p-0 min-w-0 h-auto bg-transparent text-text-primary text-[1rem]">
-//                         Skills
-//                     </Button>
-//                 </PopoverTrigger>
-//                 <PopoverContent>
-//                     <div className="px-1 py-2">
-//                         <div className="text-small font-bold flex flex-col text-black-100">
-//                             <a className="text-black-100 underline-animation text-text-primary">
-//                                 About
-//                             </a>
-//                             <a className="text-black-100 underline-animation text-text-primary">
-//                                 About
-//                             </a>
-//                         </div>
-
-//                         {/* <div className="text-tiny">This is the popover content</div> */}
-//                     </div>
-//                 </PopoverContent>
-//             </Popover>
-//         </a>
-//     );
-// }

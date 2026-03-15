@@ -9,7 +9,7 @@ import clsx from "clsx";
 const portfolioItems = [
     {
         id: 1,
-        bgColorBtn: "var(--color-project-1)", // A nice blue
+        bgColorBtn: "var(--color-project-1)",
         // bgColor: "#fdb0b0",
         bgColor: "var(--color-background)",
         image: "/images2/digital_doctor.png",
@@ -40,16 +40,6 @@ const portfolioItems = [
             "This API is a RESTful backend service built with Node.js and Express that helps users build and maintain daily habits through automated tracking. It features user authentication with JWT tokens, CRUD operations for habits, streak counting, progress analytics, and daily reminders.",
         link: "https://github.com/Raph4sure/habit_tracking_api",
     },
-    // {
-    //     id: 4,
-    //     bgColorBtn: "var(--color-project-4)", // A nice yellow
-    //     bgColor: "#D38300", // A nice yellow
-    //     image: "/images2/img4.png",
-    //     title: "E-commerce Platform",
-    //     description:
-    //         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
-    //     link: "/project-4",
-    // },
 ];
 
 const Projects = () => {
@@ -168,7 +158,7 @@ const Projects = () => {
                                             className={styles.projectLink}
                                             href={item.link}
                                         >
-                                            {/* <button>View Project</button> */}
+                                          
                                             <Button2
                                                 className="bg-white-50 grid"
                                                 buttonColor={activeColor}
@@ -180,10 +170,8 @@ const Projects = () => {
                                     </div>
                                 </motion.div>
                             </div>
-                            {/* Navigation Buttons */}
                             <div className={styles.navButtons}>
-                                {/* <button onClick={handlePrevious}>Prev</button>
-                                <button onClick={handleNext}>Next</button> */}
+                         
 
                                 <ButttonPrev
                                     onClick={handlePrevious}

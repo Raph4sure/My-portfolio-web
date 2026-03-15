@@ -2,86 +2,80 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import images from "../../helpers/imageLoader.";
-import styles from "./certification.module.scss";
 import Buttton from "../reUsable/Buttton";
 import ButttonPrev from "../reUsable/ButtonPrev";
 import NavigateHome from "../reUsable/NavigateHome";
 
 const certificateItems = [
-    // {
-    //     id: 1,
-    //     img: images["certificate/BSc_Stats.png"],
-    //     title: "B.Sc Statistics",
-    // },
     {
-        id: 2,
+        id: 1,
         img: images["certificate/Alx.png"],
         title: "Software Engineering(Backend)",
     },
     {
-        id: 3,
+        id: 2,
         img: images["certificate/PLP.png"],
         title: "Software Development(FullStack)",
     },
     {
-        id: 4,
+        id: 3,
         img: images["certificate/DIF.jpg"],
         title: "DIF (Internship)",
     },
     {
-        id: 5,
+        id: 4,
         img: images["certificate/Web_Dev.jpg"],
         title: "Udemy (Web Development)",
     },
     {
-        id: 6,
+        id: 5,
         img: images["certificate/React_cert.jpg"],
         title: "Udemy (React, Next.js Course)",
     },
     {
-        id: 7,
+        id: 6,
         img: images["certificate/fullstack-app-next-v4.png"],
         title: "Frontend Masters(Fullstack-Next-v4)",
     },
     {
-        id: 8,
+        id: 7,
         img: images["certificate/api-design-nodejs-v5.png"],
         title: "Frontend Masters(Api-Design-Node)",
     },
     {
-        id: 9,
+        id: 8,
         img: images["certificate/Typescript.png"],
         title: "LinkedIn (TypeScript Course)",
     },
     {
-        id: 10,
+        id: 9,
         img: images["certificate/INCO.png"],
         title: "INCO (Green Digital Skills)",
     },
     {
-        id: 11,
+        id: 10,
         img: images["certificate/3MTT-Data_Science.png"],
         title: "3MTT (Data Science)",
     },
     {
-        id: 12,
+        id: 11,
         img: images["certificate/Data_Science.png"],
         title: "Hp Life (Data Science and Analytics)",
     },
     {
-        id: 13,
+        id: 12,
         img: images[
             "certificate/Data_Science_in_Precision_Medicine_and_Cloud_Computing.jpg"
         ],
         title: "Stanford Medicine (Data Science)",
     },
     {
-        id: 14,
+        id: 13,
         img: images["certificate/Data Analysis certificate.jpg"],
         title: "Udemy (Python Data Analysis)",
     },
     {
-        id: 15,
+        id: 14,
         img: images["certificate/Oracle_new.jpg"],
         title: "Power Concept (Oracle D.B Admin)",
     },
@@ -121,7 +115,6 @@ const mobileCardVariants = {
 const Certification = () => {
     const imageCount = certificateItems.length;
 
-    // 1. Our state is now just a single number: the index of the image in the center.
     const [centerIndex, setCenterIndex] = useState(0);
 
     // Get live window width
@@ -130,7 +123,6 @@ const Certification = () => {
 
     const cardVariants = isMobile ? mobileCardVariants : desktopCardVariants;
 
-    // 2. The button handlers are now much simpler.
     const handleNext = () => {
         setCenterIndex((prevIndex) => (prevIndex + 1) % imageCount);
     };
@@ -141,14 +133,7 @@ const Certification = () => {
         );
     };
 
-    // const cardVariants = {
-    //     center: { x: "0%", scale: 1, zIndex: 5, opacity: 1 },
-    //     left1: { x: "-50%", scale: 0.7, zIndex: 3, opacity: 1 },
-    //     left: { x: "-90%", scale: 0.5, zIndex: 2, opacity: 1 },
-    //     right: { x: "90%", scale: 0.5, zIndex: 1, opacity: 1 },
-    //     right1: { x: "50%", scale: 0.7, zIndex: 3, opacity: 1 },
-    //     hide: { scale: 0, opacity: 0, zIndex: 0 },
-    // };
+
 
     return (
         <div className="w-full h-full grid grid-rows-[auto_1fr_auto] mob-land:grid-rows-[auto_1fr] mob-land:grid-cols-[1fr_auto] relative mt-2">
@@ -160,7 +145,6 @@ const Certification = () => {
             </h1>
             <div className="flex items-center flex-col justify-center h-full overflow-hidden row-span-1 mob-land:row-span-1 mob-land:col-span-1 mob-land:justify-self-center mobile:-mt-1">
                 {certificateItems.map((item, index) => {
-                    // 3. For each image, we determine its position relative to the center.
                     let position = "hide"; // Default to hidden
                     if (isMobile) {
                         // Vertical carousel logic
@@ -215,7 +199,6 @@ const Certification = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{
                                     opacity: position === "center" ? 1 : 0,
-                                    // y: position === "center" ? 10 : 0,
                                 }}
                                 transition={{ duration: 0.3, delay: 0.2 }}
                                 className="text-[1rem] mt-0 text-center text-[clamp(0.7rem,2vw,1rem)] text-[nowrap]"
@@ -227,8 +210,7 @@ const Certification = () => {
                 })}
             </div>
 
-            {/* Change this line */}
-            {/* <div className="flex justify-center gap-30 mb-5 mob-land:grid-col-start-2 mob-land:col-end-3 mob-land:row-start-2 mob-land:row-end-3 mob-land:flex-col mob-land:gap-98 mob-land:-mx-5"> */}
+        
             <div className="flex justify-center gap-30 mb-5 mob-land:grid-col-start-2 mob-land:col-end-3 mob-land:row-start-2 mob-land:row-end-3 mob-land:flex-col mob-land:gap-98 mob-land:-ml-11">
                 <ButttonPrev
                     text={isMobile ? "Prev" : "Backward"}
@@ -243,20 +225,6 @@ const Certification = () => {
                     className="mob-land:rotate-90"
                 />
 
-                {/* <button
-                    className={`bg-indigo-400 rounded-md ${
-                        isMobile ? "py-0 px-0" : "py-2 px-4"
-                    }`}
-                    onClick={handleBack}
-                >
-                    {isMobile ? "↑" : "Back"}
-                </button>
-                <button
-                    className="bg-indigo-400 rounded-md py-2 px-4"
-                    onClick={handleNext}
-                >
-                    {isMobile ? "↓" : "Next"}
-                </button> */}
             </div>
             <NavigateHome className="bottom-12 right-3" />
         </div>

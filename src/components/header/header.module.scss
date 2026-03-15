@@ -22,11 +22,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        // @include tablet {
-        //     @include responsive-spacing("width", 25);
-        //     @include responsive-spacing("height", 25);
-        // }
     }
 
     .burger {

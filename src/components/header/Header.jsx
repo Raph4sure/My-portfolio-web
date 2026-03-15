@@ -24,7 +24,6 @@ export default function Header() {
                             setIsActive(!isActive);
                         }}
                         className={`${styles.button} bg-[var(--color-button2)]`}
-                        // className="bg-red-900"
                     >
                         <div
                             className={`${styles.burger} ${

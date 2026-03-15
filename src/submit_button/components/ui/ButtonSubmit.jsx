@@ -1,9 +1,5 @@
-"use client";
-
-import React from "react";
+// "use client";
 import { Button2 } from "./stateful-button";
-// import { Button2 } from "@/submit_button/components/ui/stateful-button";
-
 export function StatefulButtonDemo() {
     // dummy API call
     const handleClick = () => {

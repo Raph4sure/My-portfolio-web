@@ -26,7 +26,7 @@ const ValidatedInput = ({
     const InputComponent = isTextarea ? "textarea" : "input";
 
     // The 'type' prop is only valid on <input> elements.
-    // We also pass down other props like 'rows'.
+    // I also pass down other props like 'rows'.
     const inputProps = { ...props };
     if (InputComponent === "input") {
         inputProps.type = type;
@@ -37,7 +37,7 @@ const ValidatedInput = ({
 
     return (
         <div className={groupClassName}>
-            {/* 1. The input/textarea now comes BEFORE the label in the HTML */}
+        
             <InputComponent
                 id={id}
                 name={id}
@@ -48,12 +48,11 @@ const ValidatedInput = ({
                 onBlur={onBlur} // Pass onBlur to the input component
                 {...inputProps} // Use the cleaned props
             />
-            {/* 2. The label is now positioned absolutely relative to the group */}
+
             <label className={styles.form__label} htmlFor={id}>
                 {label}
             </label>
 
-            {/* 3. The icons are now inside their own container for better positioning */}
             <div className={styles.iconContainer}>
                 <span
                     className={`${styles["error-icon"]} ${
@@ -71,10 +70,9 @@ const ValidatedInput = ({
                 </span>
             </div>
 
-            {/* The error message div is always rendered to prevent layout shift */}
+    
             <div className={styles.error}>
                 {error || "\u00A0"}
-                {/* Use a non-breaking space to maintain height */}
             </div>
         </div>
     );

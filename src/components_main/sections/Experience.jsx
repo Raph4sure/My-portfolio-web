@@ -1,4 +1,3 @@
-import Button2 from "../reUsable/Button2";
 import Counter from "./Counter";
 
 const logoIconList = [
@@ -46,22 +45,14 @@ function Experience() {
                 data-content="My work Experience"
                 className="text-center headers !text-[clamp(1.5rem,100%,3rem)]"
             >
-                {/* <h1 className="font-playwrite -mb-13 text-center text-lg phone:text-[0.6rem] headers"> */}
                 My work Experience
             </h1>
             <div className="relative alignleft h-28">
-                {/* Edge fade handled by CSS mask on .marquee; keep these if you plan custom edges */}
                 <div className="marquee">
                     <div className="marquee-track md:gap-12 gap-5 md:pr-12 pr-5">
                         {logoIconList.map((icon, index) => (
                             <LogoIcon icon={icon} key={`logo-a-${index}`} />
                         ))}
-                        {/* Repeat label for seamless loop */}
-                        {/* <div className="marquee-item flex items-center">
-                        <span className="text-sm font-semibold font-playwrite">
-                            My Working Experience
-                        </span>
-                    </div> */}
                         {logoIconList.map((icon, index) => (
                             <LogoIcon icon={icon} key={`logo-b-${index}`} />
                         ))}

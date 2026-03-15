@@ -7,7 +7,6 @@ import { Canvas } from "@react-three/fiber";
 import Buttton from "../reUsable/Buttton.jsx";
 import { useTheme } from "../../context/ThemeContext.jsx";
 import SpinnerTriangle from "../reUsable/SpinnerTriangle.jsx";
-import Button2 from "../reUsable/Button2.jsx";
 
 const skills = [
     { text: "Software Engineer", imgPath: "/images1/software_engineer.png" },
@@ -38,7 +37,7 @@ function Home() {
                 className="w-full desk-wide:w-[75%] desk-wide:ml-12 tablet:ml-0 desk-land:w-[80%]
             desktop:w-[90%] tablet:w-[80%] mob-land:w-[89%] flex flex-col justify-center items-start gap-3 tab-land:gap-0"
             >
-                {/* <div className="flex flex-col gap-7 ml-10 mob-land:-ml-4 tablet:-ml-20 tab-land:ml-15 desktop:ml-12 desk-med:ml-12 desk-land:ml-12 desk-wide:ml-15 mt-3"> */}
+            
                 <div className="mt-4 mb-2 flex flex-col ">
                     <div className="">
                         <motion.div
@@ -96,12 +95,7 @@ function Home() {
                     </div>
                 </div>
 
-                {/* <motion.aside
-                    variants={sliding1}
-                    initial="initial"
-                    animate="animate"
-                    className="w-full grid grid-cols-2 place-items-center gap-3 phone:gap-1 tablet:gap-0 mt-6 laptop-land2:mt-4 laptop:mt-4 tablet:mt-3 phone:mt-2 tab-land:ml-2 tab-land:gap-0 desktop:ml-5 "
-                > */}
+        
                 <motion.aside
                     variants={sliding1}
                     initial="initial"
@@ -109,7 +103,6 @@ function Home() {
                     className="flex w-full justify-between"
                 >
                     <Buttton
-                        // variants={sliding1}
                         className=""
                         classNameWidth="w-[7rem]"
                         id="button"
@@ -117,18 +110,14 @@ function Home() {
                         link="https://drive.google.com/file/d/1TxCywD6OBwkSUB5BNM6MIbQGDHhejgnQ/view?usp=drive_link"
                     />
                     <Buttton
-                        // variants={sliding1}
-                        // className="tab-land:-pl-2"
                         classNameWidth="w-[7rem]"
                         id="button"
                         text="My Github"
                         link="https://github.com/Raph4sure"
                     />
-                    {/* <Button2/> */}
                 </motion.aside>
             </header>
             <header className="relative w-[25rem] h-[25rem]">
-                {/* <div className=""> */}
                 <Canvas className="tab-land:-mt-10 tablet:-mt-18">
                     <Suspense
                         fallback={
@@ -140,8 +129,7 @@ function Home() {
                         <Shape />
                     </Suspense>
                 </Canvas>
-                {/* </div> */}
-                <div className="absolute z-10 top-0 left-0 w-full h-full flex items-center justify-center">
+                <div className="absolute z-10 top-0 left-0  w-full h-full flex items-center justify-center">
                     {theme === "light" ? (
                         <img
                             src="/images1/light_pics.png"
@@ -158,41 +146,7 @@ function Home() {
                 </div>
             </header>
         </main>
-        // <section id="hero" className="relative overflow-hidden">
-        //     <div className="absolute top-0 left-0 z-10">
-        //         <img />
-        //     </div>
-        //     <div className="hero-layout">
-        //         {/* Left side */}
-        //         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
-        //             <div className="flex flex-col gap-7"></div>
-        //             <div className="header-text">
-        //                 <h1>
-        //                     Shaping <span className="slide">
-        //                         <span className="wrapper">
-        //                             {skills.map((skill) => (
-        //                                 <span
-        //                                     key={skill.text}
-        //                                     className=" flex items-center md:gap-3 gap-1 pb-2"
-        //                                 >
-        //                                     <img
-        //                                         src={skill.imgPath}
-        //                                         alt={skill.text}
-        //                                         className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-        //                                     />
-        //                                     <span>{skill.text}</span>
-        //                                 </span>
-        //                             ))}
-        //                         </span>
-        //                     </span>
-        //                 </h1>
-        //                 <h1>Shaping</h1>
-        //                 <h1>Shaping</h1>
-        //             </div>
-        //         </header>
-        //         {/* Right side */}
-        //     </div>
-        // </section>
+       
     );
 }
 

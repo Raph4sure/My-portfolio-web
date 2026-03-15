@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import FormValidator from "../reUsable/FormValidator";
 import styles from "./../sections/contact.module.scss";
-// import { StatefulButtonDemo } from "../../submit_button/components/ui/ButtonSubmit";
 import { Button2 } from "../../submit_button/components/ui/stateful-button";
 import NavigateHome from "../reUsable/NavigateHome";
 
@@ -208,77 +207,3 @@ function Contact() {
 
 export default Contact;
 
-// return (
-//     <div className="w-full h-screen flex flex-col items-center">
-//         <h1 className="pb-4">Contact Me </h1>
-//         <div
-//             className={`${styles.container_form} w-[50%] rounded-4xl py-3 bg-text-primary/10`}
-//         >
-//             <div className="flex justify-center h-full items-center p-0">
-//                 <form
-//                     onSubmit={(e) => e.preventDefault()}
-//                     noValidate
-//                     className={styles.form}
-//                     ref={form}
-//                 >
-//                     <h1 className="text-xl font-[500] text-center tablet:text-[1rem]">
-//                         Hire Me/let's Connect
-//                     </h1>
-//                     <FormValidator
-//                         id="name"
-//                         label="Full Name"
-//                         placeholder="Full Name"
-//                         value={formData.name}
-//                         onChange={handleChange}
-//                         onBlur={handleBlur}
-//                         error={touched.name ? errors.name : ""}
-//                         isSuccess={touched.name && !errors.name}
-//                     />
-//                     <FormValidator
-//                         id="email"
-//                         label="Email Address"
-//                         type="email"
-//                         placeholder="Email Address"
-//                         value={formData.email}
-//                         onChange={handleChange}
-//                         onBlur={handleBlur}
-//                         error={touched.email ? errors.email : ""}
-//                         isSuccess={touched.email && !errors.email}
-//                     />
-//                     <FormValidator
-//                         id="message"
-//                         label="Your Message"
-//                         type="textarea"
-//                         placeholder="Your Message"
-//                         value={formData.message}
-//                         onChange={handleChange}
-//                         onBlur={handleBlur}
-//                         error={touched.message ? errors.message : ""}
-//                         isSuccess={touched.message && !errors.message}
-//                         rows={5} // Pass textarea-specific props
-//                         className={styles.textarea}
-//                     />
-
-//                     <div className="flex justify-center mt-4">
-//                         <Button2 onClick={handleSubmit}>Send message</Button2>
-//                     </div>
-
-//                     <div className="text-green-500 text-center text-sm -mb-6 pt-4">
-//                         {(success && (
-//                             <span>Your message has been sent. Thank you!</span>
-//                         )) ||
-//                             "\u00A0"}
-//                     </div>
-//                     <div className="text-red-500 text-center text-sm -mb-2">
-//                         {(error && !success && (
-//                             <span>
-//                                 Please fill in all required fields correctly.
-//                             </span>
-//                         )) ||
-//                             "\u00A0"}
-//                     </div>
-//                 </form>
-//             </div>
-//         </div>
-//     </div>
-// );

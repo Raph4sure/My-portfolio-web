@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
 import styles from "./glowCard.module.scss";
 
-// This is a reusable wrapper component.
-// It accepts a 'className' prop to allow for additional styling,
-// and 'children' to render any content inside the card.
+
 const GlowCard = ({ children, className }) => {
     const cardRef = useRef(null);
 

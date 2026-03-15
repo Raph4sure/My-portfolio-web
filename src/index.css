@@ -13,27 +13,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @import "tailwindcss";
-/* @import "./styles/responsive.scss"; */
 
-/* Light Mode */
-/* 
-Text: #070707;
-backgroumd: #f9f9fd
-primary(button): #2f27ce
-background(secondary): #dedcff;
-secondary(button)#433bff
 
-*/
-
-/* Dark Mode */
-/* 
-Text: #f7f7f7
-backgroumd: #030307
-primary(button): #3a31d8;
-background(secondary): #020024;
-secondary(button): #0600c2;
-
-*/
 
 @custom-variant desk-wide (@media (max-width: 1920px));
 @custom-variant desk-med (@media (max-width: 1720px));
@@ -87,14 +68,7 @@ secondary(button): #0600c2;
 @layer base {
     /* --- LIGHT MODE (DEFAULT) --- */
     :root {
-        /* Custom breakpoints for responsive design */
-        /* --breakpoint-mobile: 360px;
-        --breakpoint-mob-land: 440px;
-        --breakpoint-tablet: 768px;
-        --breakpoint-tab-land: 1024px;
-        --breakpoint-desktop: 1366px;
-        --breakpoint-desk-land: 1920px;
-        --breakpoint-desk-wide: 2560px; */
+    
 
         /* Background Colors */
         /* --color-background: #ffffff; */
@@ -142,14 +116,10 @@ secondary(button): #0600c2;
 
         /* Portfolio Color */
         --color-project-1: #dc143c;
-        /* --color-project-2: #603bdb; */
         --color-project-2: #facc15;
         --color-project-3: #a890f0;
-        /* --color-project-3: #058a5e; */
         --color-project-4: #ffc446;
-        /* --color-project-1: #7CA5FA;
-        --color-project-2: #B092FA;
-        --color-project-3: #4ED0A8; */
+    
 
         /* Test 1 color */
         --color-text-button: #f3f4f6;
@@ -200,9 +170,7 @@ secondary(button): #0600c2;
 
     /* --- DARK MODE OVERRIDES --- */
     .dark {
-        /* Background Colors */
-        /* --color-background: #0e0e10; */
-        /* --color-background: #000000; */
+      
         --color-background-secondary: #1c1c21;
         --color-bg-button2: #2c3539;
 
@@ -210,7 +178,6 @@ secondary(button): #0600c2;
         --color-text-headers-bg: #2e363a;
 
         /* Text Colors */
-        /* --color-text-primary: #ffffff; */
         --color-text-primary: #d9ecff;
         --color-text-secondary: #aec0d3;
         --color-text-accent: #dd4c62;
@@ -218,18 +185,14 @@ secondary(button): #0600c2;
         --color-border: #2d2d38;
 
         /* Test 1 color */
-        /* --color-background: #030307; */
         --color-background: #030712;
-        /* --color-card: #020024; */
         --color-card: #0b1120;
         --color-card2: #0b1120;
         --color-border: #1f2937;
         --color-form-input: #1f2937;
-        /* --color-button: #3a31d8; */
         --color-button: #8543d0;
         --color-button2: #8543d0;
 
-        /* --color-text-button:#111827; */
         --color-text-button: #f3f4f6;
         --color-nav-icon: #050c1d;
         --color-nav-icon-hover: #3a31d8;
@@ -248,15 +211,7 @@ secondary(button): #0600c2;
         box-sizing: border-box;
     }
 
-    /* body {
-        font-family: Signika, Roboto, Helvetica, Arial, sans-serif;
-        font-size: 2.5rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: var(--color-grey-l1);
-        width: 100%;
-        overflow-x: hidden;
-    } */
+ 
 
     html {
         scroll-behavior: smooth;
@@ -306,10 +261,8 @@ secondary(button): #0600c2;
     }
 }
 
-/* Moved gradient to main :root selector above */
 
 body {
-    /* min-height: 100vh; */
     overflow-x: hidden;
 }
 
@@ -317,13 +270,12 @@ html,
 body {
     width: 100vw;
     min-height: 100vh;
-    /* overflow-x: hidden; */
     background-color: var(--color-background);
     color: var(--color-text-primary);
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     font-family: Signika, Roboto, Helvetica, Arial, sans-serif;
-    /* Responsive base font size using CSS custom properties */
+ 
     font-size: var(--text-base);
     line-height: 1.5;
 }
@@ -651,10 +603,7 @@ body {
 }
 
 @layer components {
-    /* .sectioning{
-        height: 100dvh;
-        scroll-snap-align: center;
-    } */
+
     section {
         scroll-snap-align: center;
         height: 100dvh;
@@ -662,8 +611,7 @@ body {
         width: 100%;
 
         display: flex;
-        /* align-items: center; */
-        /* justify-content: center; */
+        
     }
 
     .sub_section {
@@ -680,18 +628,7 @@ body {
         border-radius: 10px;
     }
 
-    /* .sectioning_container {
-        height: 100vh;
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-        scroll-behavior: smooth;
-    }
 
-    .sectioning {
-        height: 100vh;
-        scroll-snap-align: center;
-        width: 100%;
-    } */
 
     .marquee {
         width: 100dvw;
@@ -745,55 +682,7 @@ body {
         );
     }
 
-    /* .marquee {
-        width: 100dvw;
-        overflow: hidden;
-        position: relative;
-        height: 6rem;
-    }
-
-    .marquee:before,
-    .marquee:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 10rem;
-        height: 100%;
-        z-index: 2;
-        pointer-events: none;
-    }
-
-    .marquee:before {
-        left: 0;
-        background: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 0)
-        );
-    }
-    .marquee:after {
-        right: 0;
-        background: linear-gradient(
-            to left,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 0)
-        );
-    }
-    .dark .marquee:before {
-        background: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 0)
-        );
-    }
-    .dark .marquee:after {
-        background: linear-gradient(
-            to left,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 0)
-        );
-    } */
-
+    
     .marquee-track {
         display: flex;
         align-items: center;
@@ -854,31 +743,20 @@ body {
     .bg-circle {
         @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-[var(--color-button)] group-hover:size-5 group-hover:right-2 rounded-full transition-all duration-500;
     }
-    /* .bg-circle {
-        @apply absolute -right-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-white-50 group-hover:size-5 group-hover:right-2 rounded-full transition-all duration-500;
-    } */
+
     .bg-circlePrev {
         @apply absolute -left-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-[var(--color-button)] group-hover:size-5 group-hover:left-2 rounded-full transition-all duration-500;
     }
-    /* .bg-circlePrev {
-        @apply absolute -left-3 origin-center top-1/2 -translate-y-1/2 w-[130%] h-[120%] bg-white-50 group-hover:size-5 group-hover:left-2 rounded-full transition-all duration-500;
-    } */
+
     .text {
         @apply text-[var(--color-text-button)] transition-all duration-300 group-hover:text-white-50 group-hover:-translate-x-[0.2rem] xl:translate-x-0  z-30;
         font-size: inherit;
     }
-    /* .text {
-        @apply text-black transition-all duration-300 group-hover:text-white-50 group-hover:-translate-x-[0.2rem] xl:translate-x-0  z-30;
-        font-size: inherit;
-    } */
+
     .textPrev {
         @apply text-[var(--color-text-button)] transition-all duration-300 group-hover:text-white-50 group-hover:translate-x-[0.2rem] xl:translate-x-0  z-30;
         font-size: inherit;
     }
-    /* .textPrev {
-        @apply text-black transition-all duration-300 group-hover:text-white-50 group-hover:translate-x-[0.2rem] xl:translate-x-0  z-30;
-        font-size: inherit;
-    } */
 
     .arrow-wrapper {
         @apply rounded-full absolute top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden right-1;
@@ -903,9 +781,6 @@ body {
     .animate-bounce-x {
         animation: bounce-x 1s infinite;
     }
-    /* .img {
-        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce-x;
-      } */
 
     .navbar {
         @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
@@ -987,14 +862,7 @@ body {
         @apply my-10 md:mt-20 mt-10 text-white-50 px-5 md:px-20 xl:px-20 flex items-center justify-center;
     }
 
-    /* form {
-        @apply text-white-50 grid grid-cols-3 gap-5 md:gap-0 w-full;
-    } */
-    /* 
-    input,
-    textarea {
-        @apply w-full px-4 py-4 md:text-base text-sm placeholder:text-blue-50 bg-blue-100 border-0 focus:ring-0 outline-none rounded-lg;
-    } */
+
 
     a {
         @apply text-white-50 hover:text-blue-100 transition-all duration-300 ease-in-out;
@@ -1459,7 +1327,4 @@ body {
         transparent 100%
     );
 }
-/* .profile-mask-dark {
-  -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
-} */
+

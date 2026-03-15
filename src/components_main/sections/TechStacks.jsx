@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./tools.module.scss";
 import images from "../../helpers/imageLoader.";
 import NavigateHome from "../reUsable/NavigateHome";
@@ -9,7 +8,7 @@ const carouselItems = [
     { id: 1, name: "linux", src: images["logo/linux.png"], alt: "girl9" },
     {
         id: 2,
-        name: "Adobe XD",
+        name: "Adobe",
         src: images["logo/adobe-xd.png"],
         alt: "girl11",
     },

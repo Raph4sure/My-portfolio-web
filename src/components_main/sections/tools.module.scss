@@ -4,18 +4,7 @@
 // These styles were on the `body` tag, we move them to a container
 .sceneContainer {
     position: relative;
-    // background-color: #d2d2d2;
-    // background-image: repeating-linear-gradient(
-    //         to right,
-    //         transparent 0 100px,
-    //         #25283b22 100px 101px
-    //     ),
-    //     repeating-linear-gradient(
-    //         to bottom,
-    //         transparent 0 100px,
-    //         #25283b22 100px 101px
-    //     );
-    // color: var(--color-text-primary);
+
 
     // The `body::before` styles are now applied to our container
     &::before {
@@ -26,7 +15,6 @@
         height: 90%;
         transform: translateX(-50%);
         content: "";
-        // background-image: url(/tools/bg.png); // Path from public folder
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: top center;
@@ -61,8 +49,8 @@
         align-self: start;
         margin-top: 13vh;
 
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
 
         object-fit: cover;
 
@@ -100,7 +88,7 @@
         .item {
             position: absolute;
             inset: 0;
-            --responsive-z: clamp(160px, 35vw, 600px);
+            --responsive-z: clamp(160px, 35vw, 580px);
 
             transform: rotateY(
                     calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
